@@ -30,5 +30,20 @@ namespace SistemaInformacao
             this.Visible = false;
                 
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (progressBar1.Value < 100)
+            {
+                progressBar1.Value = progressBar1.Value + 2;
+            }
+            else
+            {
+                timer1.Enabled = false;
+                Frm_Login frm_Login = new Frm_Login();
+                frm_Login.Show();
+                this.Visible = false;
+            }
+        }
     }
 }
