@@ -51,7 +51,7 @@ namespace SistemaInformacao
             this.Btn_Entrar.Location = new System.Drawing.Point(7, 284);
             this.Btn_Entrar.Name = "Btn_Entrar";
             this.Btn_Entrar.Size = new System.Drawing.Size(75, 23);
-            this.Btn_Entrar.TabIndex = 0;
+            this.Btn_Entrar.TabIndex = 2;
             this.Btn_Entrar.Text = "Entrar";
             this.Btn_Entrar.UseVisualStyleBackColor = true;
             this.Btn_Entrar.Click += new System.EventHandler(this.Btn_Entrar_Click);
@@ -61,7 +61,7 @@ namespace SistemaInformacao
             this.Btn_Sair.Location = new System.Drawing.Point(132, 284);
             this.Btn_Sair.Name = "Btn_Sair";
             this.Btn_Sair.Size = new System.Drawing.Size(75, 23);
-            this.Btn_Sair.TabIndex = 0;
+            this.Btn_Sair.TabIndex = 3;
             this.Btn_Sair.Text = "Sair";
             this.Btn_Sair.UseVisualStyleBackColor = true;
             this.Btn_Sair.Click += new System.EventHandler(this.Btn_Sair_Click);
@@ -71,7 +71,7 @@ namespace SistemaInformacao
             this.txtBx_User.Location = new System.Drawing.Point(6, 19);
             this.txtBx_User.Name = "txtBx_User";
             this.txtBx_User.Size = new System.Drawing.Size(188, 20);
-            this.txtBx_User.TabIndex = 1;
+            this.txtBx_User.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -79,7 +79,7 @@ namespace SistemaInformacao
             this.groupBox1.Location = new System.Drawing.Point(7, 170);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 50);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Usuário";
             // 
@@ -89,7 +89,7 @@ namespace SistemaInformacao
             this.groupBox2.Location = new System.Drawing.Point(7, 228);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 50);
-            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Senha";
             // 
@@ -98,7 +98,7 @@ namespace SistemaInformacao
             this.txtBx_Senha.Location = new System.Drawing.Point(6, 19);
             this.txtBx_Senha.Name = "txtBx_Senha";
             this.txtBx_Senha.Size = new System.Drawing.Size(188, 20);
-            this.txtBx_Senha.TabIndex = 1;
+            this.txtBx_Senha.TabIndex = 0;
             // 
             // gestaoInformacaoDataSet
             // 
@@ -135,7 +135,7 @@ namespace SistemaInformacao
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_Login";
+            this.Text = "4";
             this.Load += new System.EventHandler(this.Frm_Login_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
