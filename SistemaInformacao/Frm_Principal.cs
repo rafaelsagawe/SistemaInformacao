@@ -37,5 +37,11 @@ namespace SistemaInformacao
         {
             StrpStsLbl_DataHora.Text = DateTime.Now.ToString();
         }
+
+        private void StrpBtn_Users_Click(object sender, EventArgs e)
+        {
+            Frm_Users frm_Users = new Frm_Users();
+            frm_Users.ShowDialog();
+        }
     }
 }
