@@ -36,19 +36,19 @@ namespace SistemaInformacao
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtBx_Senha = new System.Windows.Forms.TextBox();
-            this.gestaoInformacaoDataSet = new SistemaInformacao.gestaoInformacaoDataSet();
-            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuariosTableAdapter = new SistemaInformacao.gestaoInformacaoDataSetTableAdapters.usuariosTableAdapter();
-            this.tableAdapterManager = new SistemaInformacao.gestaoInformacaoDataSetTableAdapters.TableAdapterManager();
             this.btn_TestSQL = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.gestaoInformacaoDataSet = new SistemaInformacao.gestaoInformacaoDataSet();
+            this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usuariosTableAdapter = new SistemaInformacao.gestaoInformacaoDataSetTableAdapters.usuariosTableAdapter();
+            this.tableAdapterManager = new SistemaInformacao.gestaoInformacaoDataSetTableAdapters.TableAdapterManager();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gestaoInformacaoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // Btn_Entrar
@@ -77,6 +77,7 @@ namespace SistemaInformacao
             this.txtBx_User.Name = "txtBx_User";
             this.txtBx_User.Size = new System.Drawing.Size(188, 20);
             this.txtBx_User.TabIndex = 0;
+            this.txtBx_User.TextChanged += new System.EventHandler(this.txtBx_User_TextChanged);
             // 
             // groupBox1
             // 
@@ -104,28 +105,6 @@ namespace SistemaInformacao
             this.txtBx_Senha.Name = "txtBx_Senha";
             this.txtBx_Senha.Size = new System.Drawing.Size(188, 20);
             this.txtBx_Senha.TabIndex = 0;
-            // 
-            // gestaoInformacaoDataSet
-            // 
-            this.gestaoInformacaoDataSet.DataSetName = "gestaoInformacaoDataSet";
-            this.gestaoInformacaoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usuariosBindingSource
-            // 
-            this.usuariosBindingSource.DataMember = "usuarios";
-            this.usuariosBindingSource.DataSource = this.gestaoInformacaoDataSet;
-            // 
-            // usuariosTableAdapter
-            // 
-            this.usuariosTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.imp_supreTableAdapter = null;
-            this.tableAdapterManager.unidadeTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = SistemaInformacao.gestaoInformacaoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.usuariosTableAdapter = this.usuariosTableAdapter;
             // 
             // btn_TestSQL
             // 
@@ -165,6 +144,28 @@ namespace SistemaInformacao
             this.label1.TabIndex = 6;
             this.label1.Text = "label1";
             // 
+            // gestaoInformacaoDataSet
+            // 
+            this.gestaoInformacaoDataSet.DataSetName = "gestaoInformacaoDataSet";
+            this.gestaoInformacaoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuariosBindingSource
+            // 
+            this.usuariosBindingSource.DataMember = "usuarios";
+            this.usuariosBindingSource.DataSource = this.gestaoInformacaoDataSet;
+            // 
+            // usuariosTableAdapter
+            // 
+            this.usuariosTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.imp_supreTableAdapter = null;
+            this.tableAdapterManager.unidadeTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = SistemaInformacao.gestaoInformacaoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usuariosTableAdapter = this.usuariosTableAdapter;
+            // 
             // Frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -185,10 +186,10 @@ namespace SistemaInformacao
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gestaoInformacaoDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gestaoInformacaoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

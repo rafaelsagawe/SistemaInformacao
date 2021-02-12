@@ -17,6 +17,8 @@ namespace SistemaInformacao
             InitializeComponent();
         }
 
+
+
         private void Btn_Sair_Click(object sender, EventArgs e)
         {
             Dispose();
@@ -44,6 +46,7 @@ namespace SistemaInformacao
             if (valor == 1)
             {
                 Frm_Principal frm_Principal = new Frm_Principal();
+                frm_Principal.NomeUsuario = txtBx_User.Text;
                 frm_Principal.Show();
                 this.Visible = false;
             }
@@ -58,6 +61,11 @@ namespace SistemaInformacao
         private void btn_TestSQL_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtBx_User_TextChanged(object sender, EventArgs e)
+        {
+            //this.usuariosTableAdapter.Fill_UserNameFull(this.gestaoInformacaoDataSet.usuarios, txtBx_User.Text);
         }
     }
 }

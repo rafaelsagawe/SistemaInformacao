@@ -16,6 +16,7 @@ namespace SistemaInformacao
         {
             InitializeComponent();
         }
+        public string NomeUsuario_frm_users { get; set; }
 
         private void usuariosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -30,6 +31,17 @@ namespace SistemaInformacao
             // TODO: esta linha de código carrega dados na tabela 'gestaoInformacaoDataSet.usuarios'. Você pode movê-la ou removê-la conforme necessário.
             this.usuariosTableAdapter.Fill(this.gestaoInformacaoDataSet.usuarios);
 
+            //Propriodade para carregar o nome do usuário
+            if (!this.NomeUsuario_frm_users.Equals(""))
+            {
+                txtBx_Busca.Text = this.NomeUsuario_frm_users;
+            }
+
+        }
+
+        private void txtBx_Busca_TextChanged(object sender, EventArgs e)
+        {
+           // this.usuariosTableAdapter.Fill_UserNameFull(this.gestaoInformacaoDataSet.usuarios, txtBx_Busca.Text);
         }
     }
 }

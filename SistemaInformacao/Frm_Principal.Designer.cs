@@ -142,6 +142,7 @@ namespace SistemaInformacao
             this.Name = "Frm_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Principal";
+            this.Load += new System.EventHandler(this.Frm_Principal_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);

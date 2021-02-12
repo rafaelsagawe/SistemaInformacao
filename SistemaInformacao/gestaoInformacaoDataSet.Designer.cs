@@ -3709,8 +3709,8 @@ namespace SistemaInformacao.gestaoInformacaoDataSetTableAdapters {
             this._commandCollection[1].Parameters.Add(param);
             this._commandCollection[2] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT email, id_unidade, id_user, nome_compelto, user_name, user_pass FROM usuar" +
-                "ios WHERE (user_name LIKE @Param1)";
+            this._commandCollection[2].CommandText = "SELECT        nome_compelto\r\nFROM            usuarios\r\nWHERE        (user_name LI" +
+                "KE @Param1)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Param1";
