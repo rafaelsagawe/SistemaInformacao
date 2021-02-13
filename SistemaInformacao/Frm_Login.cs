@@ -54,5 +54,10 @@ namespace SistemaInformacao
                 MessageBox.Show("Usuário/Senha Invalido", "Erro ao logar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btn_TestSQL_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

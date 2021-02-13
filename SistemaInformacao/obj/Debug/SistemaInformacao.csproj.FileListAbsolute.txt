@@ -54,3 +54,5 @@ C:\Users\sagaw\Source\Repos\SistemaInformacao\SistemaInformacao\obj\Debug\Sistem
 C:\Users\sagaw\Source\Repos\SistemaInformacao\SistemaInformacao\obj\Debug\SistemaInformacao.csproj.CopyComplete
 C:\Users\sagaw\Source\Repos\SistemaInformacao\SistemaInformacao\obj\Debug\SistemaInformacao.exe
 C:\Users\sagaw\Source\Repos\SistemaInformacao\SistemaInformacao\obj\Debug\SistemaInformacao.pdb
+C:\Users\rafael.sagawe\source\repos\SistemaInformacao\SistemaInformacao\obj\Debug\SistemaInformacao.Frm_Users.resources
+C:\Users\sagaw\source\repos\SistemaInformacao\SistemaInformacao\obj\Debug\SistemaInformacao.Frm_Users.resources
