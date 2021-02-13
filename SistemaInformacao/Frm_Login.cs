@@ -17,9 +17,11 @@ namespace SistemaInformacao
             InitializeComponent();
         }
 
+
+
         private void Btn_Sair_Click(object sender, EventArgs e)
         {
-            Dispose();
+            Application.Exit();
         }
 
         private void usuariosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -44,6 +46,7 @@ namespace SistemaInformacao
             if (valor == 1)
             {
                 Frm_Principal frm_Principal = new Frm_Principal();
+                frm_Principal.NomeUsuario = label2.Text;
                 frm_Principal.Show();
                 this.Visible = false;
             }
@@ -58,6 +61,27 @@ namespace SistemaInformacao
         private void btn_TestSQL_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtBx_User_TextChanged(object sender, EventArgs e)
+        {
+            //this.usuariosTableAdapter.Fill_UserNameFull(this.gestaoInformacaoDataSet.usuarios, txtBx_User.Text);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void btn_TestSQL_Click_1(object sender, EventArgs e)
+        {
+            /*string NomeCompleto;
+            NomeCompleto = usuariosTableAdapter.Fill_Login(gestaoInformacaoDataSet.usuarios, txtBx_User.Text, txtBx_Senha.Text).ToString();
+            label1.Text = NomeCompleto;*/
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            txtBx_User_TextChanged(sender, e);
         }
     }
 }

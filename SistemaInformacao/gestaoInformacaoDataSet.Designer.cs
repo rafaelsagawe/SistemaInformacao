@@ -1240,7 +1240,6 @@ namespace SistemaInformacao {
                 this.columnid_user.AutoIncrementStep = -1;
                 this.columnid_user.AllowDBNull = false;
                 this.columnid_user.Unique = true;
-                this.columnnome_compelto.AllowDBNull = false;
                 this.columnnome_compelto.MaxLength = 150;
                 this.columnuser_name.AllowDBNull = false;
                 this.columnuser_name.MaxLength = 15;
@@ -1722,7 +1721,12 @@ namespace SistemaInformacao {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string nome_compelto {
                 get {
-                    return ((string)(this[this.tableusuarios.nome_compeltoColumn]));
+                    try {
+                        return ((string)(this[this.tableusuarios.nome_compeltoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'nome_compelto\' na tabela \'usuarios\' é DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableusuarios.nome_compeltoColumn] = value;
@@ -1792,6 +1796,18 @@ namespace SistemaInformacao {
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["usuarios_FK"]);
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isnome_compeltoNull() {
+                return this.IsNull(this.tableusuarios.nome_compeltoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setnome_compeltoNull() {
+                this[this.tableusuarios.nome_compeltoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3709,8 +3725,8 @@ namespace SistemaInformacao.gestaoInformacaoDataSetTableAdapters {
             this._commandCollection[1].Parameters.Add(param);
             this._commandCollection[2] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT email, id_unidade, id_user, nome_compelto, user_name, user_pass FROM usuar" +
-                "ios WHERE (user_name LIKE @Param1)";
+            this._commandCollection[2].CommandText = "SELECT        IFNULL(nome_compelto, 0) AS nome_compelto\r\nFROM            usuarios" +
+                "\r\nWHERE        (user_name LIKE @Param1)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@Param1";
@@ -3883,7 +3899,7 @@ namespace SistemaInformacao.gestaoInformacaoDataSetTableAdapters {
             }
             this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(p5));
             if ((p6 == null)) {
-                throw new global::System.ArgumentNullException("p6");
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(p6));
@@ -3934,7 +3950,7 @@ namespace SistemaInformacao.gestaoInformacaoDataSetTableAdapters {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             if ((p3 == null)) {
-                throw new global::System.ArgumentNullException("p3");
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = ((string)(p3));
@@ -3985,7 +4001,7 @@ namespace SistemaInformacao.gestaoInformacaoDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             if ((p3 == null)) {
-                throw new global::System.ArgumentNullException("p3");
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(p3));
@@ -4020,7 +4036,7 @@ namespace SistemaInformacao.gestaoInformacaoDataSetTableAdapters {
             }
             this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(p10));
             if ((p11 == null)) {
-                throw new global::System.ArgumentNullException("p11");
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(p11));

@@ -17,6 +17,9 @@ namespace SistemaInformacao
             InitializeComponent();
         }
 
+        // get e set da Propriedade NomeUsuario para pegar o nome do usuário logado e colocar na barra de status (StrpStsLbl_UserNameFull)
+        public string NomeUsuario {get; set; }
+
         private void StrpBtn_Fechar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -30,7 +33,6 @@ namespace SistemaInformacao
         private void StrpButton_Max_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -41,7 +43,17 @@ namespace SistemaInformacao
         private void StrpBtn_Users_Click(object sender, EventArgs e)
         {
             Frm_Users frm_Users = new Frm_Users();
+            frm_Users.NomeUsuario_frm_users = StrpStsLbl_UserNameFull.Text;
             frm_Users.ShowDialog();
+        }
+
+        private void Frm_Principal_Load(object sender, EventArgs e)
+        {
+            //Propriodade para carregar o nome do usuário
+            if (!this.NomeUsuario.Equals(""))
+            {
+                StrpStsLbl_UserNameFull.Text = this.NomeUsuario;
+            }
         }
     }
 }

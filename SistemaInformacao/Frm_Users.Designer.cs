@@ -53,7 +53,7 @@ namespace SistemaInformacao
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuariosTableAdapter = new SistemaInformacao.gestaoInformacaoDataSetTableAdapters.usuariosTableAdapter();
             this.tableAdapterManager = new SistemaInformacao.gestaoInformacaoDataSetTableAdapters.TableAdapterManager();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBx_Busca = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingNavigator)).BeginInit();
             this.usuariosBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
@@ -208,7 +208,7 @@ namespace SistemaInformacao
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.usuariosDataGridView.DataSource = this.usuariosBindingSource;
-            this.usuariosDataGridView.Location = new System.Drawing.Point(0, 105);
+            this.usuariosDataGridView.Location = new System.Drawing.Point(0, 250);
             this.usuariosDataGridView.Name = "usuariosDataGridView";
             this.usuariosDataGridView.Size = new System.Drawing.Size(566, 220);
             this.usuariosDataGridView.TabIndex = 1;
@@ -249,19 +249,20 @@ namespace SistemaInformacao
             this.tableAdapterManager.UpdateOrder = SistemaInformacao.gestaoInformacaoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usuariosTableAdapter = this.usuariosTableAdapter;
             // 
-            // textBox1
+            // txtBx_Busca
             // 
-            this.textBox1.Location = new System.Drawing.Point(58, 53);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(226, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtBx_Busca.Location = new System.Drawing.Point(120, 97);
+            this.txtBx_Busca.Name = "txtBx_Busca";
+            this.txtBx_Busca.Size = new System.Drawing.Size(117, 20);
+            this.txtBx_Busca.TabIndex = 2;
+            this.txtBx_Busca.TextChanged += new System.EventHandler(this.txtBx_Busca_TextChanged);
             // 
             // Frm_Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(566, 326);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(566, 471);
+            this.Controls.Add(this.txtBx_Busca);
             this.Controls.Add(this.usuariosDataGridView);
             this.Controls.Add(this.usuariosBindingNavigator);
             this.Name = "Frm_Users";
@@ -303,6 +304,6 @@ namespace SistemaInformacao
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBx_Busca;
     }
 }
