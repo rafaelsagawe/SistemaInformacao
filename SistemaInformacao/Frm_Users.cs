@@ -38,7 +38,6 @@ namespace SistemaInformacao
             }
 
         }
-
         private void txtBx_Busca_TextChanged(object sender, EventArgs e)
         {
            // this.usuariosTableAdapter.Fill_UserNameFull(this.gestaoInformacaoDataSet.usuarios, txtBx_Busca.Text);

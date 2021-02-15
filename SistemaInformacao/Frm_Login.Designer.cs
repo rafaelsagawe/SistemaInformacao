@@ -103,8 +103,10 @@ namespace SistemaInformacao
             // 
             this.txtBx_Senha.Location = new System.Drawing.Point(6, 19);
             this.txtBx_Senha.Name = "txtBx_Senha";
+            this.txtBx_Senha.PasswordChar = '*';
             this.txtBx_Senha.Size = new System.Drawing.Size(188, 20);
             this.txtBx_Senha.TabIndex = 0;
+            this.txtBx_Senha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBx_Senha_KeyPress);
             // 
             // btn_TestSQL
             // 
@@ -122,6 +124,7 @@ namespace SistemaInformacao
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 5;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // groupBox3
             // 
@@ -134,11 +137,12 @@ namespace SistemaInformacao
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "groupBox3";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 99);
+            this.label1.Location = new System.Drawing.Point(75, 99);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 6;
@@ -181,6 +185,7 @@ namespace SistemaInformacao
             this.Name = "Frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "4";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_Login_FormClosed);
             this.Load += new System.EventHandler(this.Frm_Login_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
