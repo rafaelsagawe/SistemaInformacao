@@ -36,10 +36,6 @@ namespace SistemaInformacao
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtBx_Senha = new System.Windows.Forms.TextBox();
-            this.btn_TestSQL = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.usuariosDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,10 +46,11 @@ namespace SistemaInformacao
             this.gestaoInformacaoDataSet = new SistemaInformacao.gestaoInformacaoDataSet();
             this.usuariosTableAdapter = new SistemaInformacao.gestaoInformacaoDataSetTableAdapters.usuariosTableAdapter();
             this.tableAdapterManager = new SistemaInformacao.gestaoInformacaoDataSetTableAdapters.TableAdapterManager();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_NomeUsuario = new System.Windows.Forms.Label();
+            this.lbl_NomeCompleto = new System.Windows.Forms.Label();
+            this.lbl_IdUnidade = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestaoInformacaoDataSet)).BeginInit();
             this.SuspendLayout();
@@ -62,7 +59,7 @@ namespace SistemaInformacao
             // 
             this.Btn_Entrar.Location = new System.Drawing.Point(7, 284);
             this.Btn_Entrar.Name = "Btn_Entrar";
-            this.Btn_Entrar.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Entrar.Size = new System.Drawing.Size(94, 23);
             this.Btn_Entrar.TabIndex = 2;
             this.Btn_Entrar.Text = "Entrar";
             this.Btn_Entrar.UseVisualStyleBackColor = true;
@@ -70,9 +67,9 @@ namespace SistemaInformacao
             // 
             // Btn_Sair
             // 
-            this.Btn_Sair.Location = new System.Drawing.Point(132, 284);
+            this.Btn_Sair.Location = new System.Drawing.Point(117, 284);
             this.Btn_Sair.Name = "Btn_Sair";
-            this.Btn_Sair.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Sair.Size = new System.Drawing.Size(90, 23);
             this.Btn_Sair.TabIndex = 3;
             this.Btn_Sair.Text = "Sair";
             this.Btn_Sair.UseVisualStyleBackColor = true;
@@ -115,82 +112,9 @@ namespace SistemaInformacao
             this.txtBx_Senha.TabIndex = 0;
             this.txtBx_Senha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBx_Senha_KeyPress);
             // 
-            // btn_TestSQL
-            // 
-            this.btn_TestSQL.Location = new System.Drawing.Point(686, 110);
-            this.btn_TestSQL.Name = "btn_TestSQL";
-            this.btn_TestSQL.Size = new System.Drawing.Size(75, 23);
-            this.btn_TestSQL.TabIndex = 4;
-            this.btn_TestSQL.Text = "button1";
-            this.btn_TestSQL.UseVisualStyleBackColor = true;
-            this.btn_TestSQL.Click += new System.EventHandler(this.btn_TestSQL_Click_1);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "label1";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(674, 84);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-<<<<<<< HEAD
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-=======
-            this.textBox1.TabIndex = 6;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
->>>>>>> cb4f02f6757e3f82f6457b6d52a5193c4ab31c79
-            // 
-            // usuariosDataGridView
-            // 
-<<<<<<< HEAD
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.btn_TestSQL);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Location = new System.Drawing.Point(7, 12);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 137);
-            this.groupBox3.TabIndex = 6;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
-=======
-            this.usuariosDataGridView.AutoGenerateColumns = false;
-            this.usuariosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.usuariosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.usuariosDataGridView.DataSource = this.usuariosBindingSource;
-            this.usuariosDataGridView.Location = new System.Drawing.Point(368, 38);
-            this.usuariosDataGridView.Name = "usuariosDataGridView";
-            this.usuariosDataGridView.Size = new System.Drawing.Size(300, 220);
-            this.usuariosDataGridView.TabIndex = 7;
->>>>>>> cb4f02f6757e3f82f6457b6d52a5193c4ab31c79
-            // 
             // dataGridViewTextBoxColumn1
             // 
-<<<<<<< HEAD
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 99);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "label1";
-=======
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_user";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id_user";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
->>>>>>> cb4f02f6757e3f82f6457b6d52a5193c4ab31c79
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -244,27 +168,45 @@ namespace SistemaInformacao
             this.tableAdapterManager.UpdateOrder = SistemaInformacao.gestaoInformacaoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usuariosTableAdapter = this.usuariosTableAdapter;
             // 
-            // label2
+            // lbl_NomeUsuario
             // 
-            this.label2.AutoSize = true;
-            this.label2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "user_name", true));
-            this.label2.Location = new System.Drawing.Point(38, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "label2";
+            this.lbl_NomeUsuario.AutoSize = true;
+            this.lbl_NomeUsuario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "user_name", true));
+            this.lbl_NomeUsuario.Location = new System.Drawing.Point(114, 52);
+            this.lbl_NomeUsuario.Name = "lbl_NomeUsuario";
+            this.lbl_NomeUsuario.Size = new System.Drawing.Size(71, 13);
+            this.lbl_NomeUsuario.TabIndex = 4;
+            this.lbl_NomeUsuario.Text = "NomeUsuario";
+            // 
+            // lbl_NomeCompleto
+            // 
+            this.lbl_NomeCompleto.AutoSize = true;
+            this.lbl_NomeCompleto.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "nome_compelto", true));
+            this.lbl_NomeCompleto.Location = new System.Drawing.Point(114, 76);
+            this.lbl_NomeCompleto.Name = "lbl_NomeCompleto";
+            this.lbl_NomeCompleto.Size = new System.Drawing.Size(79, 13);
+            this.lbl_NomeCompleto.TabIndex = 5;
+            this.lbl_NomeCompleto.Text = "NomeCompleto";
+            // 
+            // lbl_IdUnidade
+            // 
+            this.lbl_IdUnidade.AutoSize = true;
+            this.lbl_IdUnidade.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "id_unidade", true));
+            this.lbl_IdUnidade.Location = new System.Drawing.Point(117, 101);
+            this.lbl_IdUnidade.Name = "lbl_IdUnidade";
+            this.lbl_IdUnidade.Size = new System.Drawing.Size(56, 13);
+            this.lbl_IdUnidade.TabIndex = 6;
+            this.lbl_IdUnidade.Text = "IdUnidade";
             // 
             // Frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(215, 327);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.usuariosDataGridView);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_TestSQL);
+            this.ClientSize = new System.Drawing.Size(218, 321);
+            this.Controls.Add(this.lbl_IdUnidade);
+            this.Controls.Add(this.lbl_NomeCompleto);
+            this.Controls.Add(this.lbl_NomeUsuario);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Btn_Sair);
@@ -274,12 +216,11 @@ namespace SistemaInformacao
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "4";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_Login_FormClosed);
-            this.Load += new System.EventHandler(this.Frm_Login_Load);
+            this.Load += new System.EventHandler(this.Frm_Login_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usuariosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestaoInformacaoDataSet)).EndInit();
             this.ResumeLayout(false);
@@ -299,16 +240,14 @@ namespace SistemaInformacao
         private System.Windows.Forms.BindingSource usuariosBindingSource;
         private gestaoInformacaoDataSetTableAdapters.usuariosTableAdapter usuariosTableAdapter;
         private gestaoInformacaoDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.Button btn_TestSQL;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView usuariosDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_NomeUsuario;
+        private System.Windows.Forms.Label lbl_NomeCompleto;
+        private System.Windows.Forms.Label lbl_IdUnidade;
     }
 }

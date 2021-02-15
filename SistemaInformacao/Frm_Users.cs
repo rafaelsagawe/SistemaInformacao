@@ -37,13 +37,26 @@ namespace SistemaInformacao
             {
                 txtBx_Busca.Text = this.NomeUsuario_frm_users;
             }
-            
+            this.Text = txtBx_Busca.Text;
         }
         private void txtBx_Busca_TextChanged(object sender, EventArgs e)
         {
-            string senha;
-            senha = "123";
-           this.usuariosTableAdapter.Fill_Login(this.gestaoInformacaoDataSet.usuarios, txtBx_Busca.Text, senha );
+            
+        }
+
+        private void txtBx_Busca_TextChanged_1(object sender, EventArgs e)
+        {
+            /*string senha;
+            senha = "123";*/
+            this.usuariosTableAdapter.Fill_Login(this.gestaoInformacaoDataSet.usuarios, txtBx_Busca.Text, user_passTextBox.Text);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.usuariosBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.gestaoInformacaoDataSet);
+            MessageBox.Show("Sucesso", "Alteração de usuário", MessageBoxButtons.OK);
         }
     }
 }

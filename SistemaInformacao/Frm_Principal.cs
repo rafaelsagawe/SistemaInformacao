@@ -19,10 +19,15 @@ namespace SistemaInformacao
 
         // get e set da Propriedade NomeUsuario para pegar o nome do usuário logado e colocar na barra de status (StrpStsLbl_UserNameFull)
         public string NomeUsuario {get; set; }
+        public string NomeCompleto {get; set; }
+        public string IdUnidade {get; set; }
 
         private void StrpBtn_Fechar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
+            Dispose();
+            Frm_Login frm_Login_retorno = new Frm_Login();
+            frm_Login_retorno.Show();
         }
 
         private void StrpBtn_Restaurar_Click(object sender, EventArgs e)
@@ -42,18 +47,47 @@ namespace SistemaInformacao
 
         private void StrpBtn_Users_Click(object sender, EventArgs e)
         {
+            // Formulario de gestão de usuário será chamdo dentro da janela principal
             Frm_Users frm_Users = new Frm_Users();
-            frm_Users.NomeUsuario_frm_users = StrpStsLbl_UserNameFull.Text;
-            frm_Users.ShowDialog();
+            frm_Users.NomeUsuario_frm_users = StrpStsLbl_UserName.Text;
+            frm_Users.MdiParent = this;
+            frm_Users.Show();
         }
 
         private void Frm_Principal_Load(object sender, EventArgs e)
         {
             //Propriodade para carregar o nome do usuário
+            // Nome de usuário
             if (!this.NomeUsuario.Equals(""))
             {
-                StrpStsLbl_UserNameFull.Text = this.NomeUsuario;
+                StrpStsLbl_UserName.Text = this.NomeUsuario;
             }
+
+            //Nome completo do Usuário
+            if (!this.NomeCompleto.Equals(""))
+            {
+              StrpStsLbl_UserNameFull.Text = this.NomeCompleto;
+            }
+
+            // Id da Unidade cadastrada que o usuário gerencia
+            if (!this.IdUnidade.Equals(""));
+            {
+                StrpStsLbl_IdUnidade.Text = this.IdUnidade;
+            }
+
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Frm_Unidade frm_Unidade = new Frm_Unidade();
+
+            frm_Unidade.MdiParent = this;
+            frm_Unidade.Show();
         }
     }
 }

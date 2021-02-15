@@ -81,6 +81,12 @@
     <Compile Include="Frm_Splash.Designer.cs">
       <DependentUpon>Frm_Splash.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Unidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Unidade.Designer.cs">
+      <DependentUpon>Frm_Unidade.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Users.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Splash.resx">
       <DependentUpon>Frm_Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Unidade.resx">
+      <DependentUpon>Frm_Unidade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Users.resx">
       <DependentUpon>Frm_Users.cs</DependentUpon>
