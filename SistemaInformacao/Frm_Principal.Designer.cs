@@ -40,6 +40,8 @@ namespace SistemaInformacao
             this.StrpBtn_Restaurar = new System.Windows.Forms.ToolStripButton();
             this.StrpBtn_Users = new System.Windows.Forms.ToolStripButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -48,23 +50,26 @@ namespace SistemaInformacao
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.StrpStsLbl_DataHora,
+            this.toolStripStatusLabel1,
             this.StrpStsLbl_UserNameFull});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 495);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 493);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(908, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(908, 24);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // StrpStsLbl_DataHora
             // 
             this.StrpStsLbl_DataHora.Name = "StrpStsLbl_DataHora";
-            this.StrpStsLbl_DataHora.Size = new System.Drawing.Size(118, 17);
+            this.StrpStsLbl_DataHora.Size = new System.Drawing.Size(118, 19);
             this.StrpStsLbl_DataHora.Text = "toolStripStatusLabel1";
             // 
             // StrpStsLbl_UserNameFull
             // 
+            this.StrpStsLbl_UserNameFull.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.StrpStsLbl_UserNameFull.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
             this.StrpStsLbl_UserNameFull.Name = "StrpStsLbl_UserNameFull";
-            this.StrpStsLbl_UserNameFull.Size = new System.Drawing.Size(118, 17);
+            this.StrpStsLbl_UserNameFull.Size = new System.Drawing.Size(122, 19);
             this.StrpStsLbl_UserNameFull.Text = "toolStripStatusLabel1";
             // 
             // toolStrip1
@@ -130,11 +135,28 @@ namespace SistemaInformacao
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
+            this.toolStripStatusLabel1.BorderStyle = System.Windows.Forms.Border3DStyle.Etched;
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(54, 19);
+            this.toolStripStatusLabel1.Text = "Usuário:";
+            // 
+            // toolStrip2
+            // 
+            this.toolStrip2.Location = new System.Drawing.Point(0, 25);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(908, 25);
+            this.toolStrip2.TabIndex = 2;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
             // Frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(908, 517);
+            this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -163,5 +185,7 @@ namespace SistemaInformacao
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripStatusLabel StrpStsLbl_UserNameFull;
         private System.Windows.Forms.ToolStripButton StrpBtn_Users;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStrip toolStrip2;
     }
 }

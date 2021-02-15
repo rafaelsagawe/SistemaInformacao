@@ -25,3 +25,9 @@ values
 SELECT *
 FROM usuarios
 where id_user LIKE 1;
+
+
+## Não retornar null na consulta
+SELECT        IFNULL(nome_compelto, 0) AS nome_compelto
+FROM            usuarios
+WHERE        (user_name LIKE @Param1)
