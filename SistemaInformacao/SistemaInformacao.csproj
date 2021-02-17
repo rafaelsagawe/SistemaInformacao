@@ -101,6 +101,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>gestaoInformacaoDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Matricula\Frm_AlunosAnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Matricula\Frm_AlunosAnos.Designer.cs">
+      <DependentUpon>Frm_AlunosAnos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_Login.resx">
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Users.resx">
       <DependentUpon>Frm_Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Matricula\Frm_AlunosAnos.resx">
+      <DependentUpon>Frm_AlunosAnos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

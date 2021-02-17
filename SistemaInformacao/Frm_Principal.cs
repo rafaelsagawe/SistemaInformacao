@@ -49,7 +49,7 @@ namespace SistemaInformacao
         {
             // Formulario de gestão de usuário será chamdo dentro da janela principal
             Frm_Users frm_Users = new Frm_Users();
-            frm_Users.NomeUsuario_frm_users = StrpStsLbl_UserName.Text;
+            frm_Users.NomeUsuario_frm_users = NomeUsuario; // No lugar de enviar o texto da interface foi enviado o valor armazenado na variavel
             frm_Users.MdiParent = this;
             frm_Users.Show();
         }
@@ -60,19 +60,19 @@ namespace SistemaInformacao
             // Nome de usuário
             if (!this.NomeUsuario.Equals(""))
             {
-                StrpStsLbl_UserName.Text = this.NomeUsuario;
+                StrpStsLbl_UserName.Text = "Usuário: " + this.NomeUsuario;
             }
 
             //Nome completo do Usuário
             if (!this.NomeCompleto.Equals(""))
             {
-              StrpStsLbl_UserNameFull.Text = this.NomeCompleto;
+              StrpStsLbl_UserNameFull.Text = "Nome Usuário: " + this.NomeCompleto;
             }
 
             // Id da Unidade cadastrada que o usuário gerencia
-            if (!this.IdUnidade.Equals(""));
+            if (!this.IdUnidade.Equals(""))
             {
-                StrpStsLbl_IdUnidade.Text = this.IdUnidade;
+                StrpStsLbl_IdUnidade.Text = "Codigo da Unidade: " + this.IdUnidade;
             }
 
         }
@@ -85,9 +85,17 @@ namespace SistemaInformacao
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             Frm_Unidade frm_Unidade = new Frm_Unidade();
-
+            frm_Unidade.IdUnidade_frm_Unidade = IdUnidade; // No lugar de enviar o texto da interface foi enviado o valor armazenado na variavel
             frm_Unidade.MdiParent = this;
             frm_Unidade.Show();
+        }
+
+        private void StrpBtn_AunoAno_Click(object sender, EventArgs e)
+        {
+            Matricula.Frm_AlunosAnos frm_AlunosAnos = new Matricula.Frm_AlunosAnos();
+            frm_AlunosAnos.IdUnidade_frm_AlunoAnos = IdUnidade;
+            frm_AlunosAnos.MdiParent = this;
+            frm_AlunosAnos.Show();
         }
     }
 }

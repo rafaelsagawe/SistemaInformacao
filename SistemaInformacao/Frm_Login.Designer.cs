@@ -197,6 +197,7 @@ namespace SistemaInformacao
             this.lbl_IdUnidade.Size = new System.Drawing.Size(56, 13);
             this.lbl_IdUnidade.TabIndex = 6;
             this.lbl_IdUnidade.Text = "IdUnidade";
+            this.lbl_IdUnidade.Click += new System.EventHandler(this.lbl_IdUnidade_Click);
             // 
             // Frm_Login
             // 

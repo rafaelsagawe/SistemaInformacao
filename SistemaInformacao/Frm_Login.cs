@@ -89,5 +89,10 @@ namespace SistemaInformacao
         {
 
         }
+
+        private void lbl_IdUnidade_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
