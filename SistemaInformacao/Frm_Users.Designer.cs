@@ -42,9 +42,12 @@ namespace SistemaInformacao
             this.nome_compeltoTextBox = new System.Windows.Forms.TextBox();
             this.user_passTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.id_unidadeComboBox = new System.Windows.Forms.ComboBox();
             this.txtBx_Busca = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.unidadeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.unidadeTableAdapter = new SistemaInformacao.gestaoInformacaoDataSetTableAdapters.unidadeTableAdapter();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.unidadeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             nome_compeltoLabel = new System.Windows.Forms.Label();
             user_nameLabel = new System.Windows.Forms.Label();
             user_passLabel = new System.Windows.Forms.Label();
@@ -52,6 +55,8 @@ namespace SistemaInformacao
             id_unidadeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestaoInformacaoDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unidadeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unidadeBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // nome_compeltoLabel
@@ -115,6 +120,8 @@ namespace SistemaInformacao
             // 
             // tableAdapterManager
             // 
+            this.tableAdapterManager.alunosAnosManhaTableAdapter = null;
+            this.tableAdapterManager.alunosAnosTardeTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.imp_supreTableAdapter = null;
             this.tableAdapterManager.unidadeTableAdapter = null;
@@ -145,15 +152,6 @@ namespace SistemaInformacao
             this.emailTextBox.Size = new System.Drawing.Size(262, 20);
             this.emailTextBox.TabIndex = 10;
             // 
-            // id_unidadeComboBox
-            // 
-            this.id_unidadeComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "id_unidade", true));
-            this.id_unidadeComboBox.FormattingEnabled = true;
-            this.id_unidadeComboBox.Location = new System.Drawing.Point(103, 123);
-            this.id_unidadeComboBox.Name = "id_unidadeComboBox";
-            this.id_unidadeComboBox.Size = new System.Drawing.Size(262, 21);
-            this.id_unidadeComboBox.TabIndex = 12;
-            // 
             // txtBx_Busca
             // 
             this.txtBx_Busca.Location = new System.Drawing.Point(103, 18);
@@ -173,6 +171,32 @@ namespace SistemaInformacao
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // unidadeBindingSource
+            // 
+            this.unidadeBindingSource.DataMember = "unidade";
+            this.unidadeBindingSource.DataSource = this.gestaoInformacaoDataSet;
+            // 
+            // unidadeTableAdapter
+            // 
+            this.unidadeTableAdapter.ClearBeforeFill = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.usuariosBindingSource, "id_unidade", true));
+            this.comboBox1.DataSource = this.unidadeBindingSource1;
+            this.comboBox1.DisplayMember = "nome";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(103, 126);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(262, 21);
+            this.comboBox1.TabIndex = 15;
+            this.comboBox1.ValueMember = "id_unidade";
+            // 
+            // unidadeBindingSource1
+            // 
+            this.unidadeBindingSource1.DataMember = "unidade";
+            this.unidadeBindingSource1.DataSource = this.gestaoInformacaoDataSet;
+            // 
             // Frm_Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,10 +204,10 @@ namespace SistemaInformacao
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(382, 198);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtBx_Busca);
             this.Controls.Add(id_unidadeLabel);
-            this.Controls.Add(this.id_unidadeComboBox);
             this.Controls.Add(nome_compeltoLabel);
             this.Controls.Add(this.nome_compeltoTextBox);
             this.Controls.Add(user_nameLabel);
@@ -198,6 +222,8 @@ namespace SistemaInformacao
             this.Load += new System.EventHandler(this.Frm_Users_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestaoInformacaoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unidadeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unidadeBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,8 +238,11 @@ namespace SistemaInformacao
         private System.Windows.Forms.TextBox nome_compeltoTextBox;
         private System.Windows.Forms.TextBox user_passTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.ComboBox id_unidadeComboBox;
         private System.Windows.Forms.TextBox txtBx_Busca;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.BindingSource unidadeBindingSource;
+        private gestaoInformacaoDataSetTableAdapters.unidadeTableAdapter unidadeTableAdapter;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.BindingSource unidadeBindingSource1;
     }
 }

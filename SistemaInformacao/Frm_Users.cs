@@ -29,6 +29,8 @@ namespace SistemaInformacao
 
         private void Frm_Users_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'gestaoInformacaoDataSet.unidade'. Você pode movê-la ou removê-la conforme necessário.
+            this.unidadeTableAdapter.Fill(this.gestaoInformacaoDataSet.unidade);
             // TODO: esta linha de código carrega dados na tabela 'gestaoInformacaoDataSet.usuarios'. Você pode movê-la ou removê-la conforme necessário.
             this.usuariosTableAdapter.Fill(this.gestaoInformacaoDataSet.usuarios);
             
