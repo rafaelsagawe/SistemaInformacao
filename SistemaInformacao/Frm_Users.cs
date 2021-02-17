@@ -29,6 +29,8 @@ namespace SistemaInformacao
 
         private void Frm_Users_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'gestaoInformacaoDataSet.unidade'. Você pode movê-la ou removê-la conforme necessário.
+            this.unidadeTableAdapter.Fill(this.gestaoInformacaoDataSet.unidade);
             // TODO: esta linha de código carrega dados na tabela 'gestaoInformacaoDataSet.usuarios'. Você pode movê-la ou removê-la conforme necessário.
             this.usuariosTableAdapter.Fill(this.gestaoInformacaoDataSet.usuarios);
             
@@ -37,7 +39,8 @@ namespace SistemaInformacao
             {
                 txtBx_Busca.Text = this.NomeUsuario_frm_users;
             }
-            this.Text = txtBx_Busca.Text;
+            // Colocaria o nome do usuário na barra de titulo da janela
+            //this.Text = txtBx_Busca.Text;
         }
         private void txtBx_Busca_TextChanged(object sender, EventArgs e)
         {
