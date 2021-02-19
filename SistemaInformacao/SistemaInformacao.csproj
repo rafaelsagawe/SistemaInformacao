@@ -191,6 +191,8 @@
   <ItemGroup>
     <Content Include="Extras\database.sql" />
     <Content Include="iconfinder_website_-_news_3440845.ico" />
+    <None Include="Resources\nova iguacu_2 %281%29.jpg" />
+    <None Include="Resources\logo-2.png" />
     <None Include="Resources\close.png" />
     <None Include="Resources\move.png" />
     <None Include="Resources\minimize.png" />

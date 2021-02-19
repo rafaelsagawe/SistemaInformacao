@@ -15,11 +15,13 @@ namespace SistemaInformacao
         public Frm_Splash()
         {
             InitializeComponent();
+            //Transparencia no label do nome do Sistema
+            label1.Parent = pictureBox2;
+            label1.BackColor = Color.Transparent;
         }
 
         private void Frm_Splash_Load(object sender, EventArgs e)
         {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -44,6 +46,11 @@ namespace SistemaInformacao
                 frm_Login.Show();
                 this.Visible = false;
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

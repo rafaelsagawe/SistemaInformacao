@@ -73,6 +73,16 @@ namespace SistemaInformacao.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_2 {
+            get {
+                object obj = ResourceManager.GetObject("logo-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minimize {
             get {
                 object obj = ResourceManager.GetObject("minimize", resourceCulture);
@@ -86,6 +96,16 @@ namespace SistemaInformacao.Properties {
         internal static System.Drawing.Bitmap move {
             get {
                 object obj = ResourceManager.GetObject("move", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nova_iguacu_2__1_ {
+            get {
+                object obj = ResourceManager.GetObject("nova iguacu_2 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
