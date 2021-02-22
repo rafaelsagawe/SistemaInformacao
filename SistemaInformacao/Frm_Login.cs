@@ -8,10 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace SistemaInformacao
 {
     public partial class Frm_Login : Form
     {
+        
+
         public Frm_Login()
         {
             InitializeComponent();
@@ -35,12 +38,14 @@ namespace SistemaInformacao
             this.usuariosTableAdapter.Fill(this.gestaoInformacaoDataSet.usuarios);
         }
 
+
         private void Btn_Entrar_Click(object sender, EventArgs e)
         {
             int valor = usuariosTableAdapter.Fill_Login(gestaoInformacaoDataSet.usuarios, txtBx_User.Text, txtBx_Senha.Text);
 
             if (valor == 1)
             {
+                
                 Frm_Principal frm_Principal = new Frm_Principal();
                 frm_Principal.NomeUsuario = lbl_NomeUsuario.Text;
                 frm_Principal.NomeCompleto = lbl_NomeCompleto.Text;
@@ -48,6 +53,8 @@ namespace SistemaInformacao
                 frm_Principal.Show();
                 this.Visible = false;
                 MessageBox.Show(lbl_NomeCompleto.Text, "Bem-vindo usuário", MessageBoxButtons.OK);
+
+
             }
 
             else

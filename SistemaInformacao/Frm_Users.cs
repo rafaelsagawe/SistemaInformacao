@@ -61,5 +61,10 @@ namespace SistemaInformacao
             this.tableAdapterManager.UpdateAll(this.gestaoInformacaoDataSet);
             MessageBox.Show("Sucesso", "Alteração de usuário", MessageBoxButtons.OK);
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

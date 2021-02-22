@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace SistemaInformacao
 {
     public partial class Frm_Principal : Form
     {
+
         public Frm_Principal()
         {
             InitializeComponent();
@@ -22,12 +24,17 @@ namespace SistemaInformacao
         public string NomeCompleto {get; set; }
         public string IdUnidade {get; set; }
 
+        private void AbrirJanelaLogin( object obj)
+        {
+            Application.Run(new Frm_Login());
+        }
+
         private void StrpBtn_Fechar_Click(object sender, EventArgs e)
         {
             //Application.Exit();
-            Dispose();
             Frm_Login frm_Login_retorno = new Frm_Login();
             frm_Login_retorno.Show();
+            Dispose();
         }
 
         private void StrpBtn_Restaurar_Click(object sender, EventArgs e)
@@ -56,13 +63,14 @@ namespace SistemaInformacao
 
         private void Frm_Principal_Load(object sender, EventArgs e)
         {
+            
             //Propriodade para carregar o nome do usuário
             // Nome de usuário
             if (!this.NomeUsuario.Equals(""))
             {
                 StrpStsLbl_UserName.Text = "Usuário: " + this.NomeUsuario;
             }
-
+            
             //Nome completo do Usuário
             if (!this.NomeCompleto.Equals(""))
             {
@@ -74,7 +82,6 @@ namespace SistemaInformacao
             {
                 StrpStsLbl_IdUnidade.Text = "Codigo da Unidade: " + this.IdUnidade;
             }
-
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -96,6 +103,31 @@ namespace SistemaInformacao
             frm_AlunosAnos.IdUnidade_frm_AlunoAnos = IdUnidade;
             frm_AlunosAnos.MdiParent = this;
             frm_AlunosAnos.Show();
+        }
+
+        private void unidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripButton1_Click(sender,  e);
+        }
+
+        private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StrpBtn_Users_Click(sender, e);
+        }
+
+        private void sairToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            StrpBtn_Fechar_Click(sender, e);
+        }
+
+        private void sairToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            StrpBtn_Fechar_Click(sender, e);
+        }
+
+        private void alunosPorAnoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StrpBtn_AunoAno_Click( sender, e);
         }
     }
 }

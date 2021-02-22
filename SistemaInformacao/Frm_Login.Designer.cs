@@ -57,6 +57,7 @@ namespace SistemaInformacao
             // 
             // Btn_Entrar
             // 
+            this.Btn_Entrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Entrar.Location = new System.Drawing.Point(7, 284);
             this.Btn_Entrar.Name = "Btn_Entrar";
             this.Btn_Entrar.Size = new System.Drawing.Size(94, 23);
@@ -67,6 +68,7 @@ namespace SistemaInformacao
             // 
             // Btn_Sair
             // 
+            this.Btn_Sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Sair.Location = new System.Drawing.Point(117, 284);
             this.Btn_Sair.Name = "Btn_Sair";
             this.Btn_Sair.Size = new System.Drawing.Size(90, 23);
@@ -77,6 +79,7 @@ namespace SistemaInformacao
             // 
             // txtBx_User
             // 
+            this.txtBx_User.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBx_User.Location = new System.Drawing.Point(6, 19);
             this.txtBx_User.Name = "txtBx_User";
             this.txtBx_User.Size = new System.Drawing.Size(188, 20);
@@ -86,7 +89,7 @@ namespace SistemaInformacao
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtBx_User);
-            this.groupBox1.Location = new System.Drawing.Point(7, 170);
+            this.groupBox1.Location = new System.Drawing.Point(7, 172);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 50);
             this.groupBox1.TabIndex = 0;
@@ -105,6 +108,7 @@ namespace SistemaInformacao
             // 
             // txtBx_Senha
             // 
+            this.txtBx_Senha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBx_Senha.Location = new System.Drawing.Point(6, 19);
             this.txtBx_Senha.Name = "txtBx_Senha";
             this.txtBx_Senha.PasswordChar = '*';
@@ -162,8 +166,17 @@ namespace SistemaInformacao
             // 
             // tableAdapterManager
             // 
+            this.tableAdapterManager.alunosAnosManhaTableAdapter = null;
+            this.tableAdapterManager.alunosAnosTardeTableAdapter = null;
+            this.tableAdapterManager.anoSerieTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CargoServidorTableAdapter = null;
+            this.tableAdapterManager.contatosTableAdapter = null;
+            this.tableAdapterManager.frequenciaFuncionariosTableAdapter = null;
+            this.tableAdapterManager.funcaoTableAdapter = null;
             this.tableAdapterManager.imp_supreTableAdapter = null;
+            this.tableAdapterManager.RegimeServidorTableAdapter = null;
+            this.tableAdapterManager.TurmaUnidadeTableAdapter = null;
             this.tableAdapterManager.unidadeTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = SistemaInformacao.gestaoInformacaoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usuariosTableAdapter = this.usuariosTableAdapter;
@@ -172,7 +185,7 @@ namespace SistemaInformacao
             // 
             this.lbl_NomeUsuario.AutoSize = true;
             this.lbl_NomeUsuario.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "user_name", true));
-            this.lbl_NomeUsuario.Location = new System.Drawing.Point(114, 52);
+            this.lbl_NomeUsuario.Location = new System.Drawing.Point(130, 23);
             this.lbl_NomeUsuario.Name = "lbl_NomeUsuario";
             this.lbl_NomeUsuario.Size = new System.Drawing.Size(71, 13);
             this.lbl_NomeUsuario.TabIndex = 4;
@@ -182,7 +195,7 @@ namespace SistemaInformacao
             // 
             this.lbl_NomeCompleto.AutoSize = true;
             this.lbl_NomeCompleto.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "nome_compelto", true));
-            this.lbl_NomeCompleto.Location = new System.Drawing.Point(114, 76);
+            this.lbl_NomeCompleto.Location = new System.Drawing.Point(130, 47);
             this.lbl_NomeCompleto.Name = "lbl_NomeCompleto";
             this.lbl_NomeCompleto.Size = new System.Drawing.Size(79, 13);
             this.lbl_NomeCompleto.TabIndex = 5;
@@ -192,7 +205,7 @@ namespace SistemaInformacao
             // 
             this.lbl_IdUnidade.AutoSize = true;
             this.lbl_IdUnidade.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "id_unidade", true));
-            this.lbl_IdUnidade.Location = new System.Drawing.Point(117, 101);
+            this.lbl_IdUnidade.Location = new System.Drawing.Point(130, 72);
             this.lbl_IdUnidade.Name = "lbl_IdUnidade";
             this.lbl_IdUnidade.Size = new System.Drawing.Size(56, 13);
             this.lbl_IdUnidade.TabIndex = 6;
@@ -204,7 +217,8 @@ namespace SistemaInformacao
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(218, 321);
+            this.ClientSize = new System.Drawing.Size(218, 318);
+            this.ControlBox = false;
             this.Controls.Add(this.lbl_IdUnidade);
             this.Controls.Add(this.lbl_NomeCompleto);
             this.Controls.Add(this.lbl_NomeUsuario);
@@ -215,7 +229,7 @@ namespace SistemaInformacao
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "4";
+            this.TopMost = true;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_Login_FormClosed);
             this.Load += new System.EventHandler(this.Frm_Login_Load_1);
             this.groupBox1.ResumeLayout(false);

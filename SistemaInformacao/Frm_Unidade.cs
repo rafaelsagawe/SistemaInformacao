@@ -40,7 +40,7 @@ namespace SistemaInformacao
             {
                 txtBx_IdUnidade.Text = this.IdUnidade_frm_Unidade;
             }
-            this.Text = txtBx_IdUnidade.Text;
+            this.Text = nomeTextBox.Text;
         }
 
         private void unidadeBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
@@ -55,7 +55,6 @@ namespace SistemaInformacao
         {
             
            //Para realizar a busca foi preciso converter de string para int
-           
            int intIdUnidade;
            intIdUnidade = Convert.ToInt32(txtBx_IdUnidade.Text);
            this.unidadeTableAdapter.FillBy_IdBuscaUnidade(this.gestaoInformacaoDataSet.unidade, intIdUnidade);

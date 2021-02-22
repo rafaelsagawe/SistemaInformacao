@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>iconfinder_website_-_news_3440845.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\iconfinder_website_-_news_3440845.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <NoWin32Manifest>true</NoWin32Manifest>
@@ -190,7 +190,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Extras\database.sql" />
-    <Content Include="iconfinder_website_-_news_3440845.ico" />
+    <Content Include="Resources\iconfinder_website_-_news_3440845.ico" />
     <None Include="Resources\nova iguacu_2 %281%29.jpg" />
     <None Include="Resources\logo-2.png" />
     <None Include="Resources\close.png" />

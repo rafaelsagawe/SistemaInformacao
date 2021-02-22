@@ -74,3 +74,11 @@ CREATE TABLE gestaoInformacao.frequencia (
 	faltas INT(3) NULL,
 	obs varchar(500) NULL
 );
+
+
+CREATE TABLE gestaoInformacao.contatos (
+	id_contatos INT primary key auto_increment NOT NULL,
+	id_unidade INT NOT NULL,
+	tel int(9),
+	email varchar(250)
+);

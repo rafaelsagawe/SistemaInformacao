@@ -122,8 +122,15 @@ namespace SistemaInformacao
             // 
             this.tableAdapterManager.alunosAnosManhaTableAdapter = null;
             this.tableAdapterManager.alunosAnosTardeTableAdapter = null;
+            this.tableAdapterManager.anoSerieTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CargoServidorTableAdapter = null;
+            this.tableAdapterManager.contatosTableAdapter = null;
+            this.tableAdapterManager.frequenciaFuncionariosTableAdapter = null;
+            this.tableAdapterManager.funcaoTableAdapter = null;
             this.tableAdapterManager.imp_supreTableAdapter = null;
+            this.tableAdapterManager.RegimeServidorTableAdapter = null;
+            this.tableAdapterManager.TurmaUnidadeTableAdapter = null;
             this.tableAdapterManager.unidadeTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = SistemaInformacao.gestaoInformacaoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usuariosTableAdapter = this.usuariosTableAdapter;
@@ -191,6 +198,7 @@ namespace SistemaInformacao
             this.comboBox1.Size = new System.Drawing.Size(262, 21);
             this.comboBox1.TabIndex = 15;
             this.comboBox1.ValueMember = "id_unidade";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // unidadeBindingSource1
             // 
@@ -218,7 +226,7 @@ namespace SistemaInformacao
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Frm_Users";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Usuário";
+            this.Text = "Gestão de Usuário";
             this.Load += new System.EventHandler(this.Frm_Users_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestaoInformacaoDataSet)).EndInit();
