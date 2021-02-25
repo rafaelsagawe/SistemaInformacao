@@ -166,16 +166,9 @@ namespace SistemaInformacao
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.alunosAnosManhaTableAdapter = null;
-            this.tableAdapterManager.alunosAnosTardeTableAdapter = null;
             this.tableAdapterManager.anoSerieTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CargoServidorTableAdapter = null;
-            this.tableAdapterManager.contatosTableAdapter = null;
-            this.tableAdapterManager.frequenciaFuncionariosTableAdapter = null;
-            this.tableAdapterManager.funcaoTableAdapter = null;
             this.tableAdapterManager.imp_supreTableAdapter = null;
-            this.tableAdapterManager.RegimeServidorTableAdapter = null;
             this.tableAdapterManager.TurmaUnidadeTableAdapter = null;
             this.tableAdapterManager.unidadeTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = SistemaInformacao.gestaoInformacaoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;

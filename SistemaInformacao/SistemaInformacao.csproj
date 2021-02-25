@@ -96,10 +96,10 @@
     <Compile Include="Frm_Splash.Designer.cs">
       <DependentUpon>Frm_Splash.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Unidade.cs">
+    <Compile Include="Unidade\Frm_Unidade.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Unidade.Designer.cs">
+    <Compile Include="Unidade\Frm_Unidade.Designer.cs">
       <DependentUpon>Frm_Unidade.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Users.cs">
@@ -115,6 +115,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>gestaoInformacaoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Matricula\Frm_coletaMapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Matricula\Frm_coletaMapa.Designer.cs">
+      <DependentUpon>Frm_coletaMapa.cs</DependentUpon>
     </Compile>
     <Compile Include="Matricula\Frm_AlunosAnos.cs">
       <SubType>Form</SubType>
@@ -133,7 +139,7 @@
     <EmbeddedResource Include="Frm_Splash.resx">
       <DependentUpon>Frm_Splash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Unidade.resx">
+    <EmbeddedResource Include="Unidade\Frm_Unidade.resx">
       <DependentUpon>Frm_Unidade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Users.resx">
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Matricula\Frm_AlunosAnos.resx">
       <DependentUpon>Frm_AlunosAnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Matricula\Frm_coletaMapa.resx">
+      <DependentUpon>Frm_coletaMapa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -191,6 +200,10 @@
   <ItemGroup>
     <Content Include="Extras\database.sql" />
     <Content Include="Resources\iconfinder_website_-_news_3440845.ico" />
+    <None Include="Resources\redimensionar.png" />
+    <None Include="Resources\sair.png" />
+    <None Include="Resources\icons8-casa-64.png" />
+    <None Include="Resources\users.png" />
     <None Include="Resources\nova iguacu_2 %281%29.jpg" />
     <None Include="Resources\logo-2.png" />
     <None Include="Resources\close.png" />

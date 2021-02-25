@@ -1,40 +1,62 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using System.Threading;
 
 namespace SistemaInformacao
 {
     public partial class Frm_Principal : Form
     {
-
+        private Form AtivarForm;
         public Frm_Principal()
         {
             InitializeComponent();
+            visualizacaoMenu();
+            // Tornas as bordas mais finas
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            // Não cobrir a barra de tarefas
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
-        // get e set da Propriedade NomeUsuario para pegar o nome do usuário logado e colocar na barra de status (StrpStsLbl_UserNameFull)
-        public string NomeUsuario {get; set; }
-        public string NomeCompleto {get; set; }
-        public string IdUnidade {get; set; }
+        // Arrastar a janela
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
 
-        private void AbrirJanelaLogin( object obj)
+        [DllImport("user32.dll", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wMsg, int wParam, int lParam);
+
+        // get e set da Propriedade NomeUsuario para pegar o nome do usuário logado e colocar na barra de status (StrpStsLbl_UserNameFull)
+        public string NomeUsuario { get; set; }
+        public string NomeCompleto { get; set; }
+        public string IdUnidade { get; set; }
+
+        private void AbrirJanelaLogin(object obj)
         {
             Application.Run(new Frm_Login());
         }
-
-        private void StrpBtn_Fechar_Click(object sender, EventArgs e)
+        //Abrir os formularios child no pnlDesktop  
+        private void AbrirFormChild(Form childForm, object btnSender)
         {
-            //Application.Exit();
-            Frm_Login frm_Login_retorno = new Frm_Login();
-            frm_Login_retorno.Show();
-            Dispose();
+            if (AtivarForm != null)
+            {
+                AtivarForm.Close();
+            }
+            //ActivatedButton(btnSender);
+            AtivarForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.pnlDesktop.Controls.Add(childForm);
+            this.pnlDesktop.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            lblTituloJanela.Text = childForm.Text;
+        }
+
+        private void pnlTitulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void StrpBtn_Restaurar_Click(object sender, EventArgs e)
@@ -44,44 +66,121 @@ namespace SistemaInformacao
 
         private void StrpButton_Max_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
+
         }
 
+
+        // ------------ Relogio
         private void timer1_Tick(object sender, EventArgs e)
         {
-            StrpStsLbl_DataHora.Text = DateTime.Now.ToString();
+            //StrpStsLbl_DataHora.Text = DateTime.Now.ToString();
         }
+        // ------------ 
 
         private void StrpBtn_Users_Click(object sender, EventArgs e)
         {
+            /*
             // Formulario de gestão de usuário será chamdo dentro da janela principal
             Frm_Users frm_Users = new Frm_Users();
-            frm_Users.NomeUsuario_frm_users = NomeUsuario; // No lugar de enviar o texto da interface foi enviado o valor armazenado na variavel
+            // No lugar de enviar o texto da interface foi enviado o valor armazenado na variavel
+            frm_Users.NomeUsuario_frm_users = NomeUsuario; 
             frm_Users.MdiParent = this;
             frm_Users.Show();
+            */
         }
 
         private void Frm_Principal_Load(object sender, EventArgs e)
         {
-            
-            //Propriodade para carregar o nome do usuário
-            // Nome de usuário
-            if (!this.NomeUsuario.Equals(""))
-            {
-                StrpStsLbl_UserName.Text = "Usuário: " + this.NomeUsuario;
-            }
-            
-            //Nome completo do Usuário
-            if (!this.NomeCompleto.Equals(""))
-            {
-              StrpStsLbl_UserNameFull.Text = "Nome Usuário: " + this.NomeCompleto;
-            }
+            lbl_NomeUsuario.Text = NomeCompleto;
+        }
+        //          Inicio das configurações dos menus
+        private void visualizacaoMenu()
+        {
+            panelUnidade.Visible = false;
+            panelRH.Visible = false;
+        }
 
-            // Id da Unidade cadastrada que o usuário gerencia
-            if (!this.IdUnidade.Equals(""))
+        private void ocultarSubMenu()
+        {
+            if (panelUnidade.Visible == true)
+                panelUnidade.Visible = false;
+            if (panelRH.Visible == true)
+                panelRH.Visible = false;
+        }
+
+        private void mostraMenu(Panel SubMenu)
+        {
+            if (SubMenu.Visible == false)
             {
-                StrpStsLbl_IdUnidade.Text = "Codigo da Unidade: " + this.IdUnidade;
+                ocultarSubMenu();
+                SubMenu.Visible = true;
             }
+            else
+                SubMenu.Visible = false;
+
+        }
+        // -------------- Botões de controle das janelas
+        // -------------- Inicio
+        private void pctrBx_Sair_Click(object sender, EventArgs e)
+        {
+            // Volta para a janela de login
+            Frm_Login frm_Login_retorno = new Frm_Login();
+            frm_Login_retorno.Show();
+            this.Dispose();
+        }
+
+        private void pctrBx_redimencionar_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+        // -------------- Final
+
+        // -------------- Botões do menu Unidade
+        // -------------- Inicio
+        private void btn_Unidade_Click(object sender, EventArgs e)
+        {
+            mostraMenu(panelUnidade);
+        }
+
+        private void btn_Dados_Click(object sender, EventArgs e)
+        {
+            AbrirFormChild(new Frm_Unidade(IdUnidade), sender);
+            ocultarSubMenu();
+
+        }
+
+        private void btn_QTDAlunos_Click(object sender, EventArgs e)
+        {
+            AbrirFormChild(new Matricula.Frm_coletaMapa(IdUnidade), sender);
+            ocultarSubMenu();
+        }
+
+
+        // -------------- Final
+
+
+        private void btn_RH_Click(object sender, EventArgs e)
+        {
+            mostraMenu(panelRH);
+        }
+
+
+        private void btn_user_Click(object sender, EventArgs e)
+        {
+            AbrirFormChild(new Frm_Users(NomeUsuario), sender);
+            ocultarSubMenu();
+        }
+
+
+        //          Final das configurações do menus
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -91,10 +190,7 @@ namespace SistemaInformacao
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            Frm_Unidade frm_Unidade = new Frm_Unidade();
-            frm_Unidade.IdUnidade_frm_Unidade = IdUnidade; // No lugar de enviar o texto da interface foi enviado o valor armazenado na variavel
-            frm_Unidade.MdiParent = this;
-            frm_Unidade.Show();
+
         }
 
         private void StrpBtn_AunoAno_Click(object sender, EventArgs e)
@@ -107,7 +203,6 @@ namespace SistemaInformacao
 
         private void unidadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            toolStripButton1_Click(sender,  e);
         }
 
         private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -117,17 +212,49 @@ namespace SistemaInformacao
 
         private void sairToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            StrpBtn_Fechar_Click(sender, e);
         }
 
         private void sairToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            StrpBtn_Fechar_Click(sender, e);
         }
 
         private void alunosPorAnoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StrpBtn_AunoAno_Click( sender, e);
+            StrpBtn_AunoAno_Click(sender, e);
+        }
+
+
+
+        private void coletaMapaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            /*
+            Matricula.Frm_coletaMapa frm_ColetaMapa = new Matricula.Frm_coletaMapa();
+            frm_ColetaMapa.MdiParent = this;
+            frm_ColetaMapa.coletaMapa_IdUnidade = IdUnidade;
+            frm_ColetaMapa.Show();
+        */
+        }
+
+        private void Frm_Principal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_FecharMDIform_Click(object sender, EventArgs e)
+        {
+            if (AtivarForm != null)
+                ActiveForm.Close();
+            Reset();
+        }
+
+        private void Reset()
+        {
+            lblTituloJanela.Text = "Inicio";
+        }
+
+        private void StrpStsLbl_DataHora_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -78,7 +78,6 @@ namespace SistemaInformacao.Matricula
             this.alunosAnosManhaBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.txtBx_IdUnidade = new System.Windows.Forms.TextBox();
             this.unidadeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.alunosAnosManhaTableAdapter = new SistemaInformacao.gestaoInformacaoDataSetTableAdapters.alunosAnosManhaTableAdapter();
             this.tableAdapterManager = new SistemaInformacao.gestaoInformacaoDataSetTableAdapters.TableAdapterManager();
             this.unidadeTableAdapter = new SistemaInformacao.gestaoInformacaoDataSetTableAdapters.unidadeTableAdapter();
             inf4Label = new System.Windows.Forms.Label();
@@ -547,20 +546,12 @@ namespace SistemaInformacao.Matricula
             // 
             // alunosAnosManhaTableAdapter
             // 
-            this.alunosAnosManhaTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.alunosAnosManhaTableAdapter = this.alunosAnosManhaTableAdapter;
-            this.tableAdapterManager.alunosAnosTardeTableAdapter = null;
             this.tableAdapterManager.anoSerieTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CargoServidorTableAdapter = null;
-            this.tableAdapterManager.contatosTableAdapter = null;
-            this.tableAdapterManager.frequenciaFuncionariosTableAdapter = null;
-            this.tableAdapterManager.funcaoTableAdapter = null;
             this.tableAdapterManager.imp_supreTableAdapter = null;
-            this.tableAdapterManager.RegimeServidorTableAdapter = null;
             this.tableAdapterManager.TurmaUnidadeTableAdapter = null;
             this.tableAdapterManager.unidadeTableAdapter = this.unidadeTableAdapter;
             this.tableAdapterManager.UpdateOrder = SistemaInformacao.gestaoInformacaoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -592,13 +583,11 @@ namespace SistemaInformacao.Matricula
             this.tabPage1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.alunosAnosManhaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestaoInformacaoDataSet)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.alunosAnosManhaBindingNavigator)).EndInit();
             this.alunosAnosManhaBindingNavigator.ResumeLayout(false);
             this.alunosAnosManhaBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.unidadeBindingSource)).EndInit();
@@ -630,7 +619,6 @@ namespace SistemaInformacao.Matricula
         private System.Windows.Forms.Button btn_Salvar;
         private gestaoInformacaoDataSet gestaoInformacaoDataSet;
         private System.Windows.Forms.BindingSource alunosAnosManhaBindingSource;
-        private gestaoInformacaoDataSetTableAdapters.alunosAnosManhaTableAdapter alunosAnosManhaTableAdapter;
         private gestaoInformacaoDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator alunosAnosManhaBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;

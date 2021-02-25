@@ -48,6 +48,8 @@ namespace SistemaInformacao
             this.unidadeTableAdapter = new SistemaInformacao.gestaoInformacaoDataSetTableAdapters.unidadeTableAdapter();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.unidadeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBx_Confirmar = new System.Windows.Forms.TextBox();
             nome_compeltoLabel = new System.Windows.Forms.Label();
             user_nameLabel = new System.Windows.Forms.Label();
             user_passLabel = new System.Windows.Forms.Label();
@@ -65,7 +67,7 @@ namespace SistemaInformacao
             nome_compeltoLabel.Location = new System.Drawing.Point(15, 48);
             nome_compeltoLabel.Name = "nome_compeltoLabel";
             nome_compeltoLabel.Size = new System.Drawing.Size(81, 13);
-            nome_compeltoLabel.TabIndex = 3;
+            nome_compeltoLabel.TabIndex = 4;
             nome_compeltoLabel.Text = "Nome completo";
             // 
             // user_nameLabel
@@ -74,7 +76,7 @@ namespace SistemaInformacao
             user_nameLabel.Location = new System.Drawing.Point(15, 21);
             user_nameLabel.Name = "user_nameLabel";
             user_nameLabel.Size = new System.Drawing.Size(87, 13);
-            user_nameLabel.TabIndex = 5;
+            user_nameLabel.TabIndex = 0;
             user_nameLabel.Text = "Nome de usuário";
             // 
             // user_passLabel
@@ -120,16 +122,9 @@ namespace SistemaInformacao
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.alunosAnosManhaTableAdapter = null;
-            this.tableAdapterManager.alunosAnosTardeTableAdapter = null;
             this.tableAdapterManager.anoSerieTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CargoServidorTableAdapter = null;
-            this.tableAdapterManager.contatosTableAdapter = null;
-            this.tableAdapterManager.frequenciaFuncionariosTableAdapter = null;
-            this.tableAdapterManager.funcaoTableAdapter = null;
             this.tableAdapterManager.imp_supreTableAdapter = null;
-            this.tableAdapterManager.RegimeServidorTableAdapter = null;
             this.tableAdapterManager.TurmaUnidadeTableAdapter = null;
             this.tableAdapterManager.unidadeTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = SistemaInformacao.gestaoInformacaoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -140,16 +135,18 @@ namespace SistemaInformacao
             this.nome_compeltoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "nome_compelto", true));
             this.nome_compeltoTextBox.Location = new System.Drawing.Point(103, 45);
             this.nome_compeltoTextBox.Name = "nome_compeltoTextBox";
-            this.nome_compeltoTextBox.Size = new System.Drawing.Size(259, 20);
-            this.nome_compeltoTextBox.TabIndex = 4;
+            this.nome_compeltoTextBox.Size = new System.Drawing.Size(262, 20);
+            this.nome_compeltoTextBox.TabIndex = 0;
             // 
             // user_passTextBox
             // 
             this.user_passTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "user_pass", true));
             this.user_passTextBox.Location = new System.Drawing.Point(103, 71);
             this.user_passTextBox.Name = "user_passTextBox";
+            this.user_passTextBox.PasswordChar = '*';
             this.user_passTextBox.Size = new System.Drawing.Size(102, 20);
-            this.user_passTextBox.TabIndex = 8;
+            this.user_passTextBox.TabIndex = 1;
+            this.user_passTextBox.Text = "*****";
             // 
             // emailTextBox
             // 
@@ -157,14 +154,14 @@ namespace SistemaInformacao
             this.emailTextBox.Location = new System.Drawing.Point(103, 97);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(262, 20);
-            this.emailTextBox.TabIndex = 10;
+            this.emailTextBox.TabIndex = 3;
             // 
             // txtBx_Busca
             // 
             this.txtBx_Busca.Location = new System.Drawing.Point(103, 18);
             this.txtBx_Busca.Name = "txtBx_Busca";
             this.txtBx_Busca.ReadOnly = true;
-            this.txtBx_Busca.Size = new System.Drawing.Size(259, 20);
+            this.txtBx_Busca.Size = new System.Drawing.Size(262, 20);
             this.txtBx_Busca.TabIndex = 13;
             this.txtBx_Busca.TextChanged += new System.EventHandler(this.txtBx_Busca_TextChanged_1);
             // 
@@ -196,7 +193,7 @@ namespace SistemaInformacao
             this.comboBox1.Location = new System.Drawing.Point(103, 126);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(262, 21);
-            this.comboBox1.TabIndex = 15;
+            this.comboBox1.TabIndex = 4;
             this.comboBox1.ValueMember = "id_unidade";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -205,6 +202,24 @@ namespace SistemaInformacao
             this.unidadeBindingSource1.DataMember = "unidade";
             this.unidadeBindingSource1.DataSource = this.gestaoInformacaoDataSet;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(208, 74);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Conformar";
+            // 
+            // txtBx_Confirmar
+            // 
+            this.txtBx_Confirmar.Location = new System.Drawing.Point(265, 71);
+            this.txtBx_Confirmar.Name = "txtBx_Confirmar";
+            this.txtBx_Confirmar.PasswordChar = '*';
+            this.txtBx_Confirmar.Size = new System.Drawing.Size(100, 20);
+            this.txtBx_Confirmar.TabIndex = 2;
+            this.txtBx_Confirmar.Text = "*****";
+            // 
             // Frm_Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,6 +227,8 @@ namespace SistemaInformacao
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(382, 198);
+            this.Controls.Add(this.txtBx_Confirmar);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtBx_Busca);
@@ -252,5 +269,7 @@ namespace SistemaInformacao
         private gestaoInformacaoDataSetTableAdapters.unidadeTableAdapter unidadeTableAdapter;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource unidadeBindingSource1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBx_Confirmar;
     }
 }

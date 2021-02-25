@@ -60,6 +60,7 @@ namespace SistemaInformacao
             this.unidadeTableAdapter = new SistemaInformacao.gestaoInformacaoDataSetTableAdapters.unidadeTableAdapter();
             this.tableAdapterManager = new SistemaInformacao.gestaoInformacaoDataSetTableAdapters.TableAdapterManager();
             this.txtBx_IdUnidade = new System.Windows.Forms.TextBox();
+            this.txtBx_Busca = new System.Windows.Forms.TextBox();
             id_unidadeLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             nome_comumLabel = new System.Windows.Forms.Label();
@@ -219,7 +220,6 @@ namespace SistemaInformacao
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posição";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -308,10 +308,11 @@ namespace SistemaInformacao
             // 
             // tableAdapterManager
             // 
-            this.tableAdapterManager.alunosAnosManhaTableAdapter = null;
-            this.tableAdapterManager.alunosAnosTardeTableAdapter = null;
+            this.tableAdapterManager.anoSerieTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.coletaMapaQTDAlunosTableAdapter = null;
             this.tableAdapterManager.imp_supreTableAdapter = null;
+            this.tableAdapterManager.TurmaUnidadeTableAdapter = null;
             this.tableAdapterManager.unidadeTableAdapter = this.unidadeTableAdapter;
             this.tableAdapterManager.UpdateOrder = SistemaInformacao.gestaoInformacaoDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usuariosTableAdapter = null;
@@ -325,12 +326,21 @@ namespace SistemaInformacao
             this.txtBx_IdUnidade.TabIndex = 13;
             this.txtBx_IdUnidade.TextChanged += new System.EventHandler(this.txtBx_IdUnidade_TextChanged);
             // 
+            // txtBx_Busca
+            // 
+            this.txtBx_Busca.Location = new System.Drawing.Point(143, 215);
+            this.txtBx_Busca.Name = "txtBx_Busca";
+            this.txtBx_Busca.ReadOnly = true;
+            this.txtBx_Busca.Size = new System.Drawing.Size(235, 20);
+            this.txtBx_Busca.TabIndex = 14;
+            // 
             // Frm_Unidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(441, 247);
+            this.Controls.Add(this.txtBx_Busca);
             this.Controls.Add(this.txtBx_IdUnidade);
             this.Controls.Add(id_unidadeLabel);
             this.Controls.Add(nomeLabel);
@@ -384,5 +394,6 @@ namespace SistemaInformacao
         private System.Windows.Forms.TextBox inepTextBox;
         private System.Windows.Forms.TextBox cnpjTextBox;
         private System.Windows.Forms.TextBox txtBx_IdUnidade;
+        private System.Windows.Forms.TextBox txtBx_Busca;
     }
 }

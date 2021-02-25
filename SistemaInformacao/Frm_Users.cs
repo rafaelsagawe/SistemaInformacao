@@ -13,12 +13,13 @@ namespace SistemaInformacao
     public partial class Frm_Users : Form
     {
 
-        public Frm_Users()
+        public Frm_Users(string nomeUsuario)
         {
             InitializeComponent();
+            NomeUsuario_frm_users = nomeUsuario;
         }
         public string NomeUsuario_frm_users { get; set; }
-
+        
         private void usuariosBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
@@ -38,9 +39,10 @@ namespace SistemaInformacao
             if (!this.NomeUsuario_frm_users.Equals(""))
             {
                 txtBx_Busca.Text = this.NomeUsuario_frm_users;
+                
             }
             // Colocaria o nome do usuário na barra de titulo da janela
-            //this.Text = txtBx_Busca.Text;
+            this.Text = nome_compeltoTextBox.Text;
         }
         private void txtBx_Busca_TextChanged(object sender, EventArgs e)
         {
@@ -56,10 +58,17 @@ namespace SistemaInformacao
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.usuariosBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.gestaoInformacaoDataSet);
-            MessageBox.Show("Sucesso", "Alteração de usuário", MessageBoxButtons.OK);
+            if (user_passTextBox.Text == txtBx_Confirmar.Text)
+            {
+                this.Validate();
+                this.usuariosBindingSource.EndEdit();
+                this.tableAdapterManager.UpdateAll(this.gestaoInformacaoDataSet);
+                MessageBox.Show("Sucesso", "Alteração de usuário", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("Senhas não considem", "Erro de senha", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

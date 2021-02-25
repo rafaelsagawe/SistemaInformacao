@@ -58,3 +58,4 @@ C:\Users\rafael.sagawe\source\repos\SistemaInformacao\SistemaInformacao\obj\Debu
 C:\Users\sagaw\source\repos\SistemaInformacao\SistemaInformacao\obj\Debug\SistemaInformacao.Frm_Users.resources
 C:\Users\rafael.sagawe\source\repos\SistemaInformacao\SistemaInformacao\obj\Debug\SistemaInformacao.Frm_Unidade.resources
 C:\Users\rafael.sagawe\source\repos\SistemaInformacao\SistemaInformacao\obj\Debug\SistemaInformacao.Matricula.Frm_AlunosAnos.resources
+C:\Users\rafael.sagawe\source\repos\SistemaInformacao\SistemaInformacao\obj\Debug\SistemaInformacao.Matricula.Frm_coletaMapa.resources
