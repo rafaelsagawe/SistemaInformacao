@@ -72,12 +72,13 @@ namespace SistemaInformacao
 
 
         // ------------ Relogio
+        #region Funcionamento do Relogio
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //StrpStsLbl_DataHora.Text = DateTime.Now.ToString();
+            lbl_horario.Text = DateTime.Now.ToString();
         }
         // ------------ 
-
+        #endregion
         private void StrpBtn_Users_Click(object sender, EventArgs e)
         {
             /*

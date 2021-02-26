@@ -20,8 +20,7 @@ namespace SistemaInformacao.Matricula.Relatorio
         private void Frm_RelatorioMapa_Load(object sender, EventArgs e)
         {
 
-            this.reportViewer1.RefreshReport();
-            this.reportViewer1.RefreshReport();
+
         }
     }
 }

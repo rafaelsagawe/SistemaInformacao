@@ -118,5 +118,3 @@ C:\Users\rafael.sagawe\source\repos\SistemaInformacao\SistemaInformacao\bin\Debu
 C:\Users\rafael.sagawe\source\repos\SistemaInformacao\SistemaInformacao\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\rafael.sagawe\source\repos\SistemaInformacao\SistemaInformacao\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\rafael.sagawe\source\repos\SistemaInformacao\SistemaInformacao\obj\Debug\SistemaInformacao.Matricula.Relatorio.Frm_RelatorioMapa.resources
-C:\Users\rafael.sagawe\source\repos\SistemaInformacao\SistemaInformacao\obj\Debug\RdlCompile.cache
-C:\Users\rafael.sagawe\source\repos\SistemaInformacao\SistemaInformacao\obj\Debug\RdlCompile.compiled
