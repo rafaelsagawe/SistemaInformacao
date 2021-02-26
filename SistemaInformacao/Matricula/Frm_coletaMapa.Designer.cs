@@ -97,6 +97,7 @@ namespace SistemaInformacao.Matricula
             this.femininoNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             anoLabel = new System.Windows.Forms.Label();
             pTurnoLabel = new System.Windows.Forms.Label();
             sTurnoLabel = new System.Windows.Forms.Label();
@@ -154,7 +155,7 @@ namespace SistemaInformacao.Matricula
             // pTurnoLabel
             // 
             pTurnoLabel.AutoSize = true;
-            pTurnoLabel.Location = new System.Drawing.Point(9, 18);
+            pTurnoLabel.Location = new System.Drawing.Point(9, 22);
             pTurnoLabel.Name = "pTurnoLabel";
             pTurnoLabel.Size = new System.Drawing.Size(44, 13);
             pTurnoLabel.TabIndex = 8;
@@ -163,7 +164,7 @@ namespace SistemaInformacao.Matricula
             // sTurnoLabel
             // 
             sTurnoLabel.AutoSize = true;
-            sTurnoLabel.Location = new System.Drawing.Point(9, 51);
+            sTurnoLabel.Location = new System.Drawing.Point(9, 48);
             sTurnoLabel.Name = "sTurnoLabel";
             sTurnoLabel.Size = new System.Drawing.Size(50, 13);
             sTurnoLabel.TabIndex = 10;
@@ -172,7 +173,7 @@ namespace SistemaInformacao.Matricula
             // internLabel
             // 
             internLabel.AutoSize = true;
-            internLabel.Location = new System.Drawing.Point(21, 20);
+            internLabel.Location = new System.Drawing.Point(20, 27);
             internLabel.Name = "internLabel";
             internLabel.Size = new System.Drawing.Size(36, 13);
             internLabel.TabIndex = 12;
@@ -181,7 +182,7 @@ namespace SistemaInformacao.Matricula
             // ejaLabel
             // 
             ejaLabel.AutoSize = true;
-            ejaLabel.Location = new System.Drawing.Point(21, 46);
+            ejaLabel.Location = new System.Drawing.Point(20, 53);
             ejaLabel.Name = "ejaLabel";
             ejaLabel.Size = new System.Drawing.Size(24, 13);
             ejaLabel.TabIndex = 14;
@@ -190,7 +191,7 @@ namespace SistemaInformacao.Matricula
             // vagasLabel
             // 
             vagasLabel.AutoSize = true;
-            vagasLabel.Location = new System.Drawing.Point(21, 72);
+            vagasLabel.Location = new System.Drawing.Point(406, 371);
             vagasLabel.Name = "vagasLabel";
             vagasLabel.Size = new System.Drawing.Size(39, 13);
             vagasLabel.TabIndex = 16;
@@ -208,7 +209,7 @@ namespace SistemaInformacao.Matricula
             // hi_sTurnoLabel
             // 
             hi_sTurnoLabel.AutoSize = true;
-            hi_sTurnoLabel.Location = new System.Drawing.Point(6, 51);
+            hi_sTurnoLabel.Location = new System.Drawing.Point(6, 48);
             hi_sTurnoLabel.Name = "hi_sTurnoLabel";
             hi_sTurnoLabel.Size = new System.Drawing.Size(50, 13);
             hi_sTurnoLabel.TabIndex = 20;
@@ -226,7 +227,7 @@ namespace SistemaInformacao.Matricula
             // integralLabel
             // 
             integralLabel.AutoSize = true;
-            integralLabel.Location = new System.Drawing.Point(115, 51);
+            integralLabel.Location = new System.Drawing.Point(140, 48);
             integralLabel.Name = "integralLabel";
             integralLabel.Size = new System.Drawing.Size(45, 13);
             integralLabel.TabIndex = 24;
@@ -271,7 +272,7 @@ namespace SistemaInformacao.Matricula
             // infrequentesLabel
             // 
             infrequentesLabel.AutoSize = true;
-            infrequentesLabel.Location = new System.Drawing.Point(590, 277);
+            infrequentesLabel.Location = new System.Drawing.Point(259, 369);
             infrequentesLabel.Name = "infrequentesLabel";
             infrequentesLabel.Size = new System.Drawing.Size(68, 13);
             infrequentesLabel.TabIndex = 30;
@@ -280,7 +281,7 @@ namespace SistemaInformacao.Matricula
             // neeLabel
             // 
             neeLabel.AutoSize = true;
-            neeLabel.Location = new System.Drawing.Point(613, 307);
+            neeLabel.Location = new System.Drawing.Point(630, 314);
             neeLabel.Name = "neeLabel";
             neeLabel.Size = new System.Drawing.Size(28, 13);
             neeLabel.TabIndex = 31;
@@ -322,7 +323,8 @@ namespace SistemaInformacao.Matricula
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.coletaMapaQTDAlunosBindingNavigatorSaveItem});
+            this.coletaMapaQTDAlunosBindingNavigatorSaveItem,
+            this.toolStripButton1});
             this.coletaMapaQTDAlunosBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.coletaMapaQTDAlunosBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.coletaMapaQTDAlunosBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -397,6 +399,7 @@ namespace SistemaInformacao.Matricula
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posição";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -450,7 +453,7 @@ namespace SistemaInformacao.Matricula
             this.coletaMapaQTDAlunosDataGridView.Dock = System.Windows.Forms.DockStyle.Left;
             this.coletaMapaQTDAlunosDataGridView.Location = new System.Drawing.Point(0, 25);
             this.coletaMapaQTDAlunosDataGridView.Name = "coletaMapaQTDAlunosDataGridView";
-            this.coletaMapaQTDAlunosDataGridView.Size = new System.Drawing.Size(241, 418);
+            this.coletaMapaQTDAlunosDataGridView.Size = new System.Drawing.Size(223, 418);
             this.coletaMapaQTDAlunosDataGridView.TabIndex = 1;
             this.coletaMapaQTDAlunosDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.coletaMapaQTDAlunosDataGridView_CellContentClick);
             // 
@@ -460,6 +463,7 @@ namespace SistemaInformacao.Matricula
             this.dataGridViewTextBoxColumn3.HeaderText = "ano";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 80;
             // 
             // totalRegular
             // 
@@ -519,7 +523,7 @@ namespace SistemaInformacao.Matricula
             // 
             this.internNumericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.internNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.coletaMapaQTDAlunosBindingSource, "intern", true));
-            this.internNumericUpDown.Location = new System.Drawing.Point(86, 20);
+            this.internNumericUpDown.Location = new System.Drawing.Point(85, 27);
             this.internNumericUpDown.Maximum = new decimal(new int[] {
             999,
             0,
@@ -534,7 +538,7 @@ namespace SistemaInformacao.Matricula
             // 
             this.ejaNumericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ejaNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.coletaMapaQTDAlunosBindingSource, "eja", true));
-            this.ejaNumericUpDown.Location = new System.Drawing.Point(86, 46);
+            this.ejaNumericUpDown.Location = new System.Drawing.Point(85, 53);
             this.ejaNumericUpDown.Maximum = new decimal(new int[] {
             999,
             0,
@@ -549,7 +553,7 @@ namespace SistemaInformacao.Matricula
             // 
             this.vagasNumericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.vagasNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.coletaMapaQTDAlunosBindingSource, "vagas", true));
-            this.vagasNumericUpDown.Location = new System.Drawing.Point(86, 72);
+            this.vagasNumericUpDown.Location = new System.Drawing.Point(471, 371);
             this.vagasNumericUpDown.Maximum = new decimal(new int[] {
             999,
             0,
@@ -564,7 +568,7 @@ namespace SistemaInformacao.Matricula
             // 
             this.hi_pTurnoNumericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hi_pTurnoNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.coletaMapaQTDAlunosBindingSource, "hi_pTurno", true));
-            this.hi_pTurnoNumericUpDown.Location = new System.Drawing.Point(56, 18);
+            this.hi_pTurnoNumericUpDown.Location = new System.Drawing.Point(56, 14);
             this.hi_pTurnoNumericUpDown.Maximum = new decimal(new int[] {
             999,
             0,
@@ -594,7 +598,7 @@ namespace SistemaInformacao.Matricula
             // 
             this.hi_internNumericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.hi_internNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.coletaMapaQTDAlunosBindingSource, "hi_intern", true));
-            this.hi_internNumericUpDown.Location = new System.Drawing.Point(187, 18);
+            this.hi_internNumericUpDown.Location = new System.Drawing.Point(187, 14);
             this.hi_internNumericUpDown.Maximum = new decimal(new int[] {
             999,
             0,
@@ -743,7 +747,7 @@ namespace SistemaInformacao.Matricula
             // infrequentesNumericUpDown
             // 
             this.infrequentesNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.coletaMapaQTDAlunosBindingSource, "infrequentes", true));
-            this.infrequentesNumericUpDown.Location = new System.Drawing.Point(664, 277);
+            this.infrequentesNumericUpDown.Location = new System.Drawing.Point(333, 369);
             this.infrequentesNumericUpDown.Maximum = new decimal(new int[] {
             999,
             0,
@@ -756,7 +760,7 @@ namespace SistemaInformacao.Matricula
             // neeNumericUpDown
             // 
             this.neeNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.coletaMapaQTDAlunosBindingSource, "nee", true));
-            this.neeNumericUpDown.Location = new System.Drawing.Point(647, 307);
+            this.neeNumericUpDown.Location = new System.Drawing.Point(664, 314);
             this.neeNumericUpDown.Maximum = new decimal(new int[] {
             999,
             0,
@@ -808,17 +812,25 @@ namespace SistemaInformacao.Matricula
             // groupBox5
             // 
             this.groupBox5.Controls.Add(internLabel);
-            this.groupBox5.Controls.Add(this.vagasNumericUpDown);
-            this.groupBox5.Controls.Add(vagasLabel);
             this.groupBox5.Controls.Add(this.ejaNumericUpDown);
             this.groupBox5.Controls.Add(ejaLabel);
             this.groupBox5.Controls.Add(this.internNumericUpDown);
-            this.groupBox5.Location = new System.Drawing.Point(247, 254);
+            this.groupBox5.Location = new System.Drawing.Point(247, 263);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(156, 100);
+            this.groupBox5.Size = new System.Drawing.Size(156, 83);
             this.groupBox5.TabIndex = 36;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "groupBox5";
+            this.groupBox5.Text = "EJA";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // Frm_coletaMapa
             // 
@@ -826,7 +838,9 @@ namespace SistemaInformacao.Matricula
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(734, 443);
             this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.vagasNumericUpDown);
             this.Controls.Add(this.groupBox4);
+            this.Controls.Add(vagasLabel);
             this.Controls.Add(neeLabel);
             this.Controls.Add(this.neeNumericUpDown);
             this.Controls.Add(infrequentesLabel);
@@ -920,13 +934,14 @@ namespace SistemaInformacao.Matricula
         private System.Windows.Forms.Label inepLabel1;
         private System.Windows.Forms.Label num_protoLabel1;
         private System.Windows.Forms.Label nomeLabel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalRegular;
         private System.Windows.Forms.NumericUpDown infrequentesNumericUpDown;
         private System.Windows.Forms.NumericUpDown neeNumericUpDown;
         private System.Windows.Forms.NumericUpDown masculinoNumericUpDown;
         private System.Windows.Forms.NumericUpDown femininoNumericUpDown;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalRegular;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

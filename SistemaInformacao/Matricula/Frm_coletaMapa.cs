@@ -78,5 +78,11 @@ namespace SistemaInformacao.Matricula
         {
             
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Matricula.Relatorio.Frm_RelatorioMapa frm_RelatorioMapa = new Relatorio.Frm_RelatorioMapa();
+            frm_RelatorioMapa.Show();
+        }
     }
 }
