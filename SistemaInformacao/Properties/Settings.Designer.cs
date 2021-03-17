@@ -26,7 +26,7 @@ namespace SistemaInformacao.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=172.15.0.1;user id=user_dev_vs;password=@Vs_dev;persistsecurityinfo=True;d" +
+        [global::System.Configuration.DefaultSettingValueAttribute("server=172.15.0.2;user id=user_dev_vs;password=@Vs_dev;persistsecurityinfo=True;d" +
             "atabase=gestaoInformacao")]
         public string gestaoInformacaoConnectionString {
             get {
