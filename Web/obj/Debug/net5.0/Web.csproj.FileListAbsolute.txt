@@ -787,3 +787,7 @@ C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\r
 C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Web.pdb
 C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Web.genruntimeconfig.cache
 C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Home\Mapa.cshtml.g.cs
+C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\bin\Debug\net5.0\MySqlConnector.dll
+C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\bin\Debug\net5.0\Pomelo.EntityFrameworkCore.MySql.Design.dll
