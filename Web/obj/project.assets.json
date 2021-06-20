@@ -6720,19 +6720,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sagaw\\.nuget\\packages\\": {}
+    "C:\\Users\\Sala\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sagaw\\source\\repos\\SistemaInformacao\\SistemaInformacao\\Web\\Web.csproj",
+      "projectUniqueName": "C:\\Users\\Sala\\Source\\Repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj",
       "projectName": "Web",
-      "projectPath": "C:\\Users\\sagaw\\source\\repos\\SistemaInformacao\\SistemaInformacao\\Web\\Web.csproj",
-      "packagesPath": "C:\\Users\\sagaw\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sagaw\\source\\repos\\SistemaInformacao\\SistemaInformacao\\Web\\obj\\",
+      "projectPath": "C:\\Users\\Sala\\Source\\Repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj",
+      "packagesPath": "C:\\Users\\Sala\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Sala\\Source\\Repos\\rafaelsagawe\\SistemaInformacao\\Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\sagaw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sala\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6801,7 +6801,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
