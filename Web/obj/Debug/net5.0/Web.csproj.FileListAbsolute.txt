@@ -787,4 +787,3 @@ C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\r
 C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Web.pdb
 C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Web.genruntimeconfig.cache
 C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Home\Mapa.cshtml.g.cs
-C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Home\MapaNI.cshtml.g.cs
