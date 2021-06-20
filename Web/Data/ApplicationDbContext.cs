@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Web.Models;
 
 namespace Web.Data
 {
@@ -12,5 +13,6 @@ namespace Web.Data
             : base(options)
         {
         }
+        public DbSet<Web.Models.SupImp> SupImp { get; set; }
     }
 }
