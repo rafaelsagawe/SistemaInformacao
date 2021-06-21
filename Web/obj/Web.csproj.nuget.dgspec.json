@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sala\\Source\\Repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj": {}
+    "C:\\Users\\Sala\\source\\repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sala\\Source\\Repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj": {
+    "C:\\Users\\Sala\\source\\repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sala\\Source\\Repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj",
+        "projectUniqueName": "C:\\Users\\Sala\\source\\repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj",
         "projectName": "Web",
-        "projectPath": "C:\\Users\\Sala\\Source\\Repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj",
+        "projectPath": "C:\\Users\\Sala\\source\\repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj",
         "packagesPath": "C:\\Users\\Sala\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sala\\Source\\Repos\\rafaelsagawe\\SistemaInformacao\\Web\\obj\\",
+        "outputPath": "C:\\Users\\Sala\\source\\repos\\rafaelsagawe\\SistemaInformacao\\Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sala\\AppData\\Roaming\\NuGet\\NuGet.Config",

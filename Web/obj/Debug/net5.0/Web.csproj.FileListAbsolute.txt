@@ -839,3 +839,9 @@ C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\R
 C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\SupImps\Details.cshtml.g.cs
 C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\SupImps\Edit.cshtml.g.cs
 C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\SupImps\Index.cshtml.g.cs
+C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Web.csproj.AssemblyReference.cache
+C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\SupImps1\Create.cshtml.g.cs
+C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\SupImps1\Delete.cshtml.g.cs
+C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\SupImps1\Details.cshtml.g.cs
+C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\SupImps1\Edit.cshtml.g.cs
+C:\Users\Sala\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\SupImps1\Index.cshtml.g.cs

@@ -27,7 +27,7 @@ namespace Web.Models
         {
             get
             {
-                return QtdImpressoas + QtdToner;
+                return QtdToner - QtdImpressoas;
             }
         }
 
