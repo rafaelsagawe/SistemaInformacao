@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaInformacao", "SistemaInformacao\SistemaInformacao.csproj", "{4EF06A4B-5C29-4228-BA36-86AEDD76DDFD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desktop", "SistemaInformacao\Desktop.csproj", "{4EF06A4B-5C29-4228-BA36-86AEDD76DDFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web2\Web.csproj", "{A3C71613-1EFC-4345-9CAB-75401B3EBC4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web", "Web2\Web.csproj", "{A3C71613-1EFC-4345-9CAB-75401B3EBC4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

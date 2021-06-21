@@ -124,6 +124,7 @@ namespace SistemaInformacao
             // 
             this.tableAdapterManager.anoSerieTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.coletaMapaQTDAlunosTableAdapter = null;
             this.tableAdapterManager.imp_supreTableAdapter = null;
             this.tableAdapterManager.TurmaUnidadeTableAdapter = null;
             this.tableAdapterManager.unidadeTableAdapter = null;
@@ -244,6 +245,7 @@ namespace SistemaInformacao
             this.Name = "Frm_Users";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestão de Usuário";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Frm_Users_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usuariosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestaoInformacaoDataSet)).EndInit();

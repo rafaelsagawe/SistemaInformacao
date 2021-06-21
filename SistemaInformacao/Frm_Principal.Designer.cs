@@ -162,7 +162,7 @@ namespace SistemaInformacao
             this.btn_RH.Name = "btn_RH";
             this.btn_RH.Size = new System.Drawing.Size(200, 40);
             this.btn_RH.TabIndex = 10;
-            this.btn_RH.Text = "Rucursos Humanos";
+            this.btn_RH.Text = "Alunos";
             this.btn_RH.UseVisualStyleBackColor = true;
             this.btn_RH.Click += new System.EventHandler(this.btn_RH_Click);
             // 
@@ -265,9 +265,9 @@ namespace SistemaInformacao
             this.lbl_NomeUsuario.ForeColor = System.Drawing.Color.White;
             this.lbl_NomeUsuario.Location = new System.Drawing.Point(19, 61);
             this.lbl_NomeUsuario.Name = "lbl_NomeUsuario";
-            this.lbl_NomeUsuario.Size = new System.Drawing.Size(35, 13);
+            this.lbl_NomeUsuario.Size = new System.Drawing.Size(89, 13);
             this.lbl_NomeUsuario.TabIndex = 1;
-            this.lbl_NomeUsuario.Text = "label2";
+            this.lbl_NomeUsuario.Text = "Nome do Usuário";
             this.lbl_NomeUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -293,7 +293,7 @@ namespace SistemaInformacao
             this.pnlTitulo.Controls.Add(this.lblTituloJanela);
             this.pnlTitulo.Location = new System.Drawing.Point(197, 0);
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(753, 77);
+            this.pnlTitulo.Size = new System.Drawing.Size(656, 77);
             this.pnlTitulo.TabIndex = 6;
             this.pnlTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTitulo_MouseDown);
             // 
@@ -302,7 +302,7 @@ namespace SistemaInformacao
             this.pctrBx_redimencionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pctrBx_redimencionar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pctrBx_redimencionar.Image = global::SistemaInformacao.Properties.Resources.redimensionar;
-            this.pctrBx_redimencionar.Location = new System.Drawing.Point(694, 0);
+            this.pctrBx_redimencionar.Location = new System.Drawing.Point(597, 0);
             this.pctrBx_redimencionar.Name = "pctrBx_redimencionar";
             this.pctrBx_redimencionar.Size = new System.Drawing.Size(24, 27);
             this.pctrBx_redimencionar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -315,7 +315,7 @@ namespace SistemaInformacao
             this.pctrBx_Sair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pctrBx_Sair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pctrBx_Sair.Image = global::SistemaInformacao.Properties.Resources.sair;
-            this.pctrBx_Sair.Location = new System.Drawing.Point(724, 1);
+            this.pctrBx_Sair.Location = new System.Drawing.Point(627, 1);
             this.pctrBx_Sair.Name = "pctrBx_Sair";
             this.pctrBx_Sair.Size = new System.Drawing.Size(24, 27);
             this.pctrBx_Sair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -330,9 +330,9 @@ namespace SistemaInformacao
             this.lblTituloJanela.ForeColor = System.Drawing.SystemColors.Control;
             this.lblTituloJanela.Location = new System.Drawing.Point(225, 22);
             this.lblTituloJanela.Name = "lblTituloJanela";
-            this.lblTituloJanela.Size = new System.Drawing.Size(76, 25);
+            this.lblTituloJanela.Size = new System.Drawing.Size(199, 25);
             this.lblTituloJanela.TabIndex = 0;
-            this.lblTituloJanela.Text = "label2";
+            this.lblTituloJanela.Text = "Nome da Unidade";
             // 
             // pnlDesktop
             // 
@@ -342,31 +342,31 @@ namespace SistemaInformacao
             this.pnlDesktop.Controls.Add(this.lbl_horario);
             this.pnlDesktop.Location = new System.Drawing.Point(200, 77);
             this.pnlDesktop.Name = "pnlDesktop";
-            this.pnlDesktop.Size = new System.Drawing.Size(750, 482);
+            this.pnlDesktop.Size = new System.Drawing.Size(653, 482);
             this.pnlDesktop.TabIndex = 8;
             // 
             // lbl_horario
             // 
             this.lbl_horario.AutoSize = true;
             this.lbl_horario.Font = new System.Drawing.Font("Miriam Libre", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_horario.Location = new System.Drawing.Point(218, 218);
+            this.lbl_horario.Location = new System.Drawing.Point(6, 3);
             this.lbl_horario.Name = "lbl_horario";
-            this.lbl_horario.Size = new System.Drawing.Size(139, 53);
+            this.lbl_horario.Size = new System.Drawing.Size(166, 53);
             this.lbl_horario.TabIndex = 0;
-            this.lbl_horario.Text = "label2";
+            this.lbl_horario.Text = "Relogio";
             // 
             // Frm_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 558);
+            this.ClientSize = new System.Drawing.Size(853, 558);
             this.Controls.Add(this.pnlDesktop);
             this.Controls.Add(this.pnlTitulo);
             this.Controls.Add(this.pnlMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(612, 373);
+            this.MinimumSize = new System.Drawing.Size(598, 373);
             this.Name = "Frm_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Principal";
