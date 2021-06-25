@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sala\\source\\repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj": {}
+    "C:\\Users\\rafael.sagawe\\source\\repos\\SistemaInformacao\\Web\\Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sala\\source\\repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj": {
+    "C:\\Users\\rafael.sagawe\\source\\repos\\SistemaInformacao\\Web\\Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sala\\source\\repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj",
+        "projectUniqueName": "C:\\Users\\rafael.sagawe\\source\\repos\\SistemaInformacao\\Web\\Web.csproj",
         "projectName": "Web",
-        "projectPath": "C:\\Users\\Sala\\source\\repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj",
-        "packagesPath": "C:\\Users\\Sala\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sala\\source\\repos\\rafaelsagawe\\SistemaInformacao\\Web\\obj\\",
+        "projectPath": "C:\\Users\\rafael.sagawe\\source\\repos\\SistemaInformacao\\Web\\Web.csproj",
+        "packagesPath": "C:\\Users\\rafael.sagawe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rafael.sagawe\\source\\repos\\SistemaInformacao\\Web\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Sala\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rafael.sagawe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

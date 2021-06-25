@@ -1,0 +1,77 @@
+﻿@model Web.Models.Unidades
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Unidades</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NomeUE" class="control-label"></label>
+                <input asp-for="NomeUE" class="form-control" />
+                <span asp-validation-for="NomeUE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="INEP" class="control-label"></label>
+                <input asp-for="INEP" class="form-control" />
+                <span asp-validation-for="INEP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CNPJ" class="control-label"></label>
+                <input asp-for="CNPJ" class="form-control" />
+                <span asp-validation-for="CNPJ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NProtocolo" class="control-label"></label>
+                <input asp-for="NProtocolo" class="form-control" />
+                <span asp-validation-for="NProtocolo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                <label asp-for="URG" class="control-label"></label>
+                <select asp-for="URG" class="form-control" name="URG">
+                    <option value="I">URG I</option>
+                    <option value="II">URG II</option>
+                    <option value="III">URG III</option>
+                </select>
+                <span asp-validation-for="URG" class="custom-select"></span>
+
+                <!-- <label asp-for="URG" class="control-label"></label>
+                  <input asp-for="URG" class="form-control" />
+                  <span asp-validation-for="URG" class="text-danger"></span> -->
+            </div>
+            <div class="form-group">
+                <label asp-for="Endereco" class="control-label"></label>
+                <input asp-for="Endereco" class="form-control" />
+                <span asp-validation-for="Endereco" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CEP" class="control-label"></label>
+                <input asp-for="CEP" class="form-control" />
+                <span asp-validation-for="CEP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UETel" class="control-label"></label>
+                <input asp-for="UETel" class="form-control" />
+                <span asp-validation-for="UETel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
