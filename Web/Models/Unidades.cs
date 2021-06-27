@@ -38,9 +38,5 @@ namespace Web.Models
         [Display(Name = "Telefone")]
         public int UETel { get; set; }
 
-
-
-
-
     }
 }
