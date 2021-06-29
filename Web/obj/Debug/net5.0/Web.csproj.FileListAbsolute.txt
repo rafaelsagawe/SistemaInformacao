@@ -2202,4 +2202,4 @@ C:\Users\rafael.sagawe\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug
 C:\Users\rafael.sagawe\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\ref\Web.dll
 C:\Users\rafael.sagawe\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Web.pdb
 C:\Users\rafael.sagawe\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Web.genruntimeconfig.cache
-C:\Users\rafael.sagawe\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Web.csproj.AssemblyReference.cache
+C:\Users\rafael.sagawe\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Equipamentos\Adicionar.cshtml.g.cs

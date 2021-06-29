@@ -15,5 +15,6 @@ namespace Web.Data
         }
         public DbSet<Web.Models.SupImp> SupImp { get; set; }
         public DbSet<Web.Models.Unidades> Unidades { get; set; }
+        public DbSet<Web.Models.Equipamentos> Equipamentos { get; set; }
     }
 }

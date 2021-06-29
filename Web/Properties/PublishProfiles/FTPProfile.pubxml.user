@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Esse arquivo é usado pelo processo de publicação/pacote do seu projeto Web. É possível personalizar o comportamento deste processo
+ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAaK00a1OKq0KXSAAgucU8JgAAAAACAAAAAAADZgAAwAAAABAAAABbxeSrUeakIn9lb9TpiBTUAAAAAASAAACgAAAAEAAAAKFTFhfNqTtexdCJ+5BXKIIYAAAA5dj4MeUOK3D9uoDnAdPD2esDE6goFcJSFAAAAH6lcyiOKdvgqZr82VOaM0NjQDEo</EncryptedPassword>
+    <_PublishTargetUrl>ftp://172.15.35.243:22/var/web/ubuntu.16.04-x64/publish#</_PublishTargetUrl>
+    <History>False|2021-06-29T13:36:15.2948939Z;</History>
+  </PropertyGroup>
+</Project>
