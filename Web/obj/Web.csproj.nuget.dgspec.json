@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rafael.sagawe\\Source\\Repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj": {}
+    "C:\\Users\\rafael.sagawe\\source\\repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rafael.sagawe\\Source\\Repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj": {
+    "C:\\Users\\rafael.sagawe\\source\\repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rafael.sagawe\\Source\\Repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj",
+        "projectUniqueName": "C:\\Users\\rafael.sagawe\\source\\repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj",
         "projectName": "Web",
-        "projectPath": "C:\\Users\\rafael.sagawe\\Source\\Repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj",
+        "projectPath": "C:\\Users\\rafael.sagawe\\source\\repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj",
         "packagesPath": "C:\\Users\\rafael.sagawe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rafael.sagawe\\Source\\Repos\\rafaelsagawe\\SistemaInformacao\\Web\\obj\\",
+        "outputPath": "C:\\Users\\rafael.sagawe\\source\\repos\\rafaelsagawe\\SistemaInformacao\\Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

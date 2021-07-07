@@ -219,6 +219,44 @@ namespace Web.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("Web.Models.Equipamentos", b =>
+                {
+                    b.Property<int>("IdEquipamento")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("EquipDescricao")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EquipNuControle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EquipNuSerie")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EquipOrigem")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EquipTipo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("EquipValor")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdUE")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("UnidadesIdUE")
+                        .HasColumnType("int");
+
+                    b.HasKey("IdEquipamento");
+
+                    b.HasIndex("UnidadesIdUE");
+
+                    b.ToTable("Equipamentos");
+                });
+
             modelBuilder.Entity("Web.Models.SupImp", b =>
                 {
                     b.Property<int>("IdSupImp")
@@ -325,6 +363,15 @@ namespace Web.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Web.Models.Equipamentos", b =>
+                {
+                    b.HasOne("Web.Models.Unidades", "Unidades")
+                        .WithMany()
+                        .HasForeignKey("UnidadesIdUE");
+
+                    b.Navigation("Unidades");
                 });
 #pragma warning restore 612, 618
         }

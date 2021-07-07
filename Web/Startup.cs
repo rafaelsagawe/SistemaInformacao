@@ -12,11 +12,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Web.Data;
+// Para o Servidor Web
+using Microsoft.AspNetCore.HttpOverrides;
 
 namespace Web
 {
     public class Startup
     {
+
+        
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;

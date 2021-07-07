@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Controle de Estoque dos Toners</h1>
 
 <p>
     <a asp-action="Create">Novo toner</a>
@@ -33,7 +33,9 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.ModeloToner)
+                <a asp-action="Edit" asp-route-id="@item.IdSupImp">
+                    @Html.DisplayFor(modelItem => item.ModeloToner)
+                </a>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.QtdImpressoas)
@@ -47,9 +49,9 @@
             </td>
 
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdSupImp">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdSupImp">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdSupImp">Delete</a>
+                <!-- <a asp-action="Edit" asp-route-id="@item.IdSupImp">Edit</a> |
+    <a asp-action="Details" asp-route-id="@item.IdSupImp">Details</a> |
+    <a asp-action="Delete" asp-route-id="@item.IdSupImp">Delete</a> -->
             </td>
         </tr>
 }

@@ -18,7 +18,8 @@ namespace Web.Models
         public string EquipNuControle { get; set; }
 
         // Setor ou escola onde esta instalado
-        public string EquipLocalizacao { get; set; }
+        //public string EquipLocalizacao { get; set; }
+        public virtual Unidades Unidades { get; set; }
 
         // Tipo Impressora, notebook, computador
         public string EquipTipo { get; set; }

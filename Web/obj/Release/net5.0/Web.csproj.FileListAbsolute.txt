@@ -451,3 +451,8 @@ C:\Users\rafael.sagawe\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Relea
 C:\Users\rafael.sagawe\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\ref\Web.dll
 C:\Users\rafael.sagawe\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Web.pdb
 C:\Users\rafael.sagawe\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Web.genruntimeconfig.cache
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Razor\Views\Equipamentos1\Create.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Razor\Views\Equipamentos1\Delete.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Razor\Views\Equipamentos1\Details.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Razor\Views\Equipamentos1\Edit.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Razor\Views\Equipamentos1\Index.cshtml.g.cs

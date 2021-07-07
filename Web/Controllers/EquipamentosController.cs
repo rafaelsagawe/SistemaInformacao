@@ -54,7 +54,7 @@ namespace Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdEquipamento,EquipDescricao,EquipNuSerie,EquipNuControle,EquipLocalizacao,EquipTipo,EquipOrigem,EquipValor")] Equipamentos equipamentos)
+        public async Task<IActionResult> Create([Bind("IdEquipamento,EquipDescricao,EquipNuSerie,EquipNuControle,IdUE,EquipTipo,EquipOrigem,EquipValor")] Equipamentos equipamentos)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdEquipamento,EquipDescricao,EquipNuSerie,EquipNuControle,EquipLocalizacao,EquipTipo,EquipOrigem,EquipValor")] Equipamentos equipamentos)
+        public async Task<IActionResult> Edit(int id, [Bind("IdEquipamento,EquipDescricao,EquipNuSerie,EquipNuControle,IdUE,EquipTipo,EquipOrigem,EquipValor")] Equipamentos equipamentos)
         {
             if (id != equipamentos.IdEquipamento)
             {

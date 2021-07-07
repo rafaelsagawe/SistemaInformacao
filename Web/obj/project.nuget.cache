@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NE/vSzAPs63RX81Z+svZ3sQVSTBLo946tnBVVxiB8iaujClCx7k5yEAazAio0P1Av4MBxuUsuQaAkAYikAtLdw==",
+  "dgSpecHash": "UIsYKqt9eLE1j1Rj6/N+75dngV5BKC2htXqEvgia55eLmayX9jC7BTur4MHgXLapcoYf6n/+iGPGBiLVHX3Log==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rafael.sagawe\\Source\\Repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj",
+  "projectFilePath": "C:\\Users\\rafael.sagawe\\source\\repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rafael.sagawe\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\rafael.sagawe\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.4\\microsoft.aspnetcore.cryptography.internal.5.0.4.nupkg.sha512",

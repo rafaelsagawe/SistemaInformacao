@@ -36,6 +36,7 @@ namespace Web.Models
 
         // Telefone da Unidade
         [Display(Name = "Telefone")]
+        [DataType(DataType.PhoneNumber)]
         public int UETel { get; set; }
 
     }
