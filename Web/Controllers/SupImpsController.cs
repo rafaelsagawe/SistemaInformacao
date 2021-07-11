@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Web.Data;
 using Web.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Web.Controllers
 {
@@ -66,6 +67,8 @@ namespace Web.Controllers
         }
 
         // GET: SupImps/Edit/5
+        // TODO deve logar para acessar alterar os quantitativos do itens
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)

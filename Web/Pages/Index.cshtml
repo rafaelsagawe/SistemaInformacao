@@ -1,0 +1,48 @@
+﻿@page
+@model Web.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SupImp[0].ModeloToner)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupImp[0].QtdImpressoas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SupImp[0].QtdToner)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.SupImp) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModeloToner)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QtdImpressoas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QtdToner)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.IdSupImp">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.IdSupImp">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.IdSupImp">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
