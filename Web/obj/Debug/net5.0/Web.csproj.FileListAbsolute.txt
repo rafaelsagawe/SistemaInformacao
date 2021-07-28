@@ -2207,4 +2207,9 @@ C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Equipamentos1\Details.cshtml.g.cs
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Equipamentos1\Edit.cshtml.g.cs
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Equipamentos1\Index.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Portifolios\Create.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Portifolios\Delete.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Portifolios\Details.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Portifolios\Edit.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Portifolios\Index.cshtml.g.cs
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Web.csproj.AssemblyReference.cache

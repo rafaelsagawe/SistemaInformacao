@@ -1,0 +1,82 @@
+﻿@model Web.Models.Unidades
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Unidades</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeUE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeUE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.INEP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.INEP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CNPJ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CNPJ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NProtocolo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NProtocolo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.URG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.URG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Endereco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CEP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CEP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UETel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UETel)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdUE }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

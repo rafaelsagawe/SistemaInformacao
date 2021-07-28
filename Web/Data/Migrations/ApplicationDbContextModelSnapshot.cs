@@ -16,8 +16,23 @@ namespace Web.Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.6")
+                .HasAnnotation("ProductVersion", "5.0.8")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("ControleAtivosTI.Models.Portifolios", b =>
+                {
+                    b.Property<int>("IdPortefolio")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("NomeSistema")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IdPortefolio");
+
+                    b.ToTable("Portifolios");
+                });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -242,9 +257,6 @@ namespace Web.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("EquipValor")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdUE")
                         .HasColumnType("int");
 
                     b.Property<int?>("UnidadesIdUE")
