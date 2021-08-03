@@ -20,75 +20,10 @@ namespace Web.Controllers
         }
 
         // GET: Unidades
-        // Classificação por URG
-        // Metodo Index original
-
-        public async Task<IActionResult> Index(string sortOrder, string buscaString, string filtroCorrent, int? NumeroPagina)
+        public async Task<IActionResult> Index()
         {
-            // Recurso de Classificação
-            ViewData["OrdenURG"] = String.IsNullOrEmpty(sortOrder) ? "urg_des" : "";
-            // -----
-
-            // Recurso de busca (Somente por nome)
-            ViewData["filtroCorrent"] = buscaString;
-            var unidades =  from s in _context.Unidades select s;
-
-            if (!String.IsNullOrEmpty(buscaString))
-            {
-                unidades = unidades.Where(s => s.NomeUE.Contains(buscaString));
-            }
-            // -----
-
-            if (buscaString != null)
-            { 
-                NumeroPagina = 1; 
-            }
-            else
-            {
-                buscaString = filtroCorrent;
-            }
-            
-            // Cases do sistema de classificação
-            switch (sortOrder)
-            {
-
-                case "urg_des":
-                    unidades = unidades.OrderByDescending(s => s.URG);
-                    break;
-
-                default:
-                    unidades = unidades.OrderBy(s => s.URG);
-                    break;
-            }
-            //return View(await _context.Unidades.ToListAsync());
-            int tamahoPagina = 5;
-            //return View(await unidades.AsNoTracking().ToListAsync());
-            return View(await ListaPaginada<Unidades>.CreateAsync(unidades.AsNoTracking(), NumeroPagina ?? 1, tamahoPagina));
+            return View(await _context.Unidades.ToListAsync());
         }
-        
-        /*
-        public ActionResult Index(string sortOrder)
-        {
-            ViewBag.OrdenNome = string.IsNullOrEmpty(sortOrder) ? "Nome_des" : "";
-            ViewBag.OrdenURG = sortOrder == "URG" ? "URD_desc" : "URG";
-            var unidades = from s in db.Unidades
-                           select s;
-            switch (sortOrder)
-            {
-                case "Nome_des":
-                    unidades = unidades.OrderByDescending(s => s.NomeUES);
-                    break;
-
-                case "URG":
-                    unidades = unidades.OrderBy(s => s.URG);
-                    break;
-                default:
-                    unidades = unidades.OrderBy(s => s.NomeUE);
-                    break;
-            }
-            return View(Unidades.ToList());
-        }
-        */
 
         // GET: Unidades/Details/5
         public async Task<IActionResult> Details(int? id)

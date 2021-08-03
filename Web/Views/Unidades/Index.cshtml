@@ -1,5 +1,4 @@
 ﻿@model IEnumerable<Web.Models.Unidades>
-@model ListaPaginada<Web.Models.Unidades>
 
 @{
     ViewData["Title"] = "Index";
@@ -10,44 +9,20 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-
-<!-- Busca -->
-<form asp-action="Index" method="get">
-    <div class="form-action no-color">
-        <p>
-            Busca por nome e urg <input type="text" name="BuscaString" value="@ViewData["FiltroCorrent"]" />
-            <input type="submit" value="Search" class="btn btn-default" />
-            <a asp-action="Index">Back to Full List</a>
-        </p>
-    </div>
-</form>
-
-
-<table class="table">
+<table id="myTable" class="table">
     <thead>
         <tr>
-            <!--Filtros-->
-            <th>
-                <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParm"]">@Html.DisplayNameFor(model => model.NomeUE)</a>
-            </th>
-
-            <th>
-                @Html.DisplayNameFor(model => model.INEP)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CNPJ)
-            </th>
             <th>
                 @Html.DisplayNameFor(model => model.NProtocolo)
             </th>
             <th>
-                <a asp-action="Index" asp-route-sortOrder="@ViewData["OrdenURG"]"> @Html.DisplayNameFor(model => model.URG)</a>
+                @Html.DisplayNameFor(model => model.NomeUE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.URG)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Endereco)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CEP)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.UETel)
@@ -58,51 +33,44 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    <!--<a asp-action="Details" asp-route-id="@item.IdUE">Details</a> |-->
-                    <a asp-action="Details" asp-route-id="@item.IdUE">
-                        @Html.DisplayFor(modelItem => item.NomeUE)
-                    </a>
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.INEP)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CNPJ)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.NProtocolo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.URG)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Endereco)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CEP)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.UETel)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.IdUE">Edit</a> |
-                    <!--<a asp-action="Details" asp-route-id="@item.IdUE">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.IdUE">Delete</a>-->
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NProtocolo)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.IdUE">
+                    @Html.DisplayFor(modelItem => item.NomeUE)
+                </a>
+                
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.URG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Endereco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UETel)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdUE">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdUE">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdUE">Delete</a>
+            </td>
+        </tr>
         }
     </tbody>
 </table>
 
-@{
-    var anteriorDesabilitado = !Model.ProximaPagina ? "disabled" : "";
-    var proximaDesabilitada = !Model.AnteriorPagina ? "disabled" : "";
+@section Scripts
+{
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese-Brasil.json"
+                }
+            });
+        });
+    </script>
 }
-
-<a asp-action="Index"
-   asp-route-sortOrder="@ViewData["filtroCorrent"]"
-   asp-route-NumeroPagina="@(Model.PaginIndex - 1)"
-   asp-route-filtroCorrent="@ViewData["filtroCorrent"]"
-   class="btn btn-default @anteriorDesabilitado">Anterior</a> 
