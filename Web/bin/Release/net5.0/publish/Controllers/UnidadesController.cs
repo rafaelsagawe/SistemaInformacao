@@ -34,8 +34,6 @@ namespace Web.Controllers
             }
 
             var unidades = await _context.Unidades
-                .Include(e => e.Equipamentos)
-                .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.IdUE == id);
             if (unidades == null)
             {

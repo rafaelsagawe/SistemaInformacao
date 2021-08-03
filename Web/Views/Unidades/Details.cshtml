@@ -58,6 +58,31 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.UETel)
         </dd>
+
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.Equipamentos)
+        </dt>
+
+        <dd class="col-sm-10">
+            <table class="table">
+                <tr> 
+                    <th>Equipamento</th>
+                </tr>
+                @foreach (var item in Model.Equipamentos)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EquipDescricao)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.EquipNuSerie)
+                </td>
+            </tr>
+            }
+            </table>
+        </dd>
+
     </dl>
 </div>
 <div>

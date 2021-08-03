@@ -10,16 +10,31 @@ using Web.Data;
 namespace Web.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210703013516_RelacaoEntreUnidadeEquipamentos1")]
-    partial class RelacaoEntreUnidadeEquipamentos1
+    [Migration("20210803163252_RelacionamentoUnidadeEquipamneto02")]
+    partial class RelacionamentoUnidadeEquipamneto02
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.6")
+                .HasAnnotation("ProductVersion", "5.0.8")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("ControleAtivosTI.Models.Portifolios", b =>
+                {
+                    b.Property<int>("IdPortefolio")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("NomeSistema")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IdPortefolio");
+
+                    b.ToTable("Portifolios");
+                });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -249,12 +264,7 @@ namespace Web.Data.Migrations
                     b.Property<int>("IdUE")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UnidadesIdUE")
-                        .HasColumnType("int");
-
                     b.HasKey("IdEquipamento");
-
-                    b.HasIndex("UnidadesIdUE");
 
                     b.ToTable("Equipamentos");
                 });
@@ -296,6 +306,9 @@ namespace Web.Data.Migrations
                     b.Property<string>("Endereco")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("EquipamentosIdEquipamento")
+                        .HasColumnType("int");
+
                     b.Property<int>("INEP")
                         .HasColumnType("int");
 
@@ -312,6 +325,8 @@ namespace Web.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdUE");
+
+                    b.HasIndex("EquipamentosIdEquipamento");
 
                     b.ToTable("Unidades");
                 });
@@ -367,12 +382,15 @@ namespace Web.Data.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Web.Models.Unidades", b =>
+                {
+                    b.HasOne("Web.Models.Equipamentos", null)
+                        .WithMany("Unidades")
+                        .HasForeignKey("EquipamentosIdEquipamento");
+                });
+
             modelBuilder.Entity("Web.Models.Equipamentos", b =>
                 {
-                    b.HasOne("Web.Models.Unidades", "Unidades")
-                        .WithMany()
-                        .HasForeignKey("UnidadesIdUE");
-
                     b.Navigation("Unidades");
                 });
 #pragma warning restore 612, 618

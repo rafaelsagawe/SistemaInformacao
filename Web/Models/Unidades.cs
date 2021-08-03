@@ -39,5 +39,6 @@ namespace Web.Models
         [DataType(DataType.PhoneNumber)]
         public int UETel { get; set; }
 
+        public ICollection<Equipamentos> Equipamentos { get; set; }
     }
 }

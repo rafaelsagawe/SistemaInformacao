@@ -10,16 +10,46 @@ using Web.Data;
 namespace Web.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210620234107_SupImp2")]
-    partial class SupImp2
+    [Migration("20210803171755_RelacionamentoUnidadeEquipamneto01")]
+    partial class RelacionamentoUnidadeEquipamneto01
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.6")
+                .HasAnnotation("ProductVersion", "5.0.8")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("ControleAtivosTI.Models.Portifolios", b =>
+                {
+                    b.Property<int>("IdPortefolio")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("NomeSistema")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IdPortefolio");
+
+                    b.ToTable("Portifolios");
+                });
+
+            modelBuilder.Entity("EquipamentosUnidades", b =>
+                {
+                    b.Property<int>("EquipamentosIdEquipamento")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UnidadesIdUE")
+                        .HasColumnType("int");
+
+                    b.HasKey("EquipamentosIdEquipamento", "UnidadesIdUE");
+
+                    b.HasIndex("UnidadesIdUE");
+
+                    b.ToTable("EquipamentosUnidades");
+                });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
@@ -221,6 +251,39 @@ namespace Web.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("Web.Models.Equipamentos", b =>
+                {
+                    b.Property<int>("IdEquipamento")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("EquipDescricao")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EquipNuControle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EquipNuSerie")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EquipOrigem")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EquipTipo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("EquipValor")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdUE")
+                        .HasColumnType("int");
+
+                    b.HasKey("IdEquipamento");
+
+                    b.ToTable("Equipamentos");
+                });
+
             modelBuilder.Entity("Web.Models.SupImp", b =>
                 {
                     b.Property<int>("IdSupImp")
@@ -240,6 +303,57 @@ namespace Web.Data.Migrations
                     b.HasKey("IdSupImp");
 
                     b.ToTable("SupImp");
+                });
+
+            modelBuilder.Entity("Web.Models.Unidades", b =>
+                {
+                    b.Property<int>("IdUE")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CEP")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CNPJ")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Endereco")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("INEP")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NProtocolo")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NomeUE")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UETel")
+                        .HasColumnType("int");
+
+                    b.Property<string>("URG")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IdUE");
+
+                    b.ToTable("Unidades");
+                });
+
+            modelBuilder.Entity("EquipamentosUnidades", b =>
+                {
+                    b.HasOne("Web.Models.Equipamentos", null)
+                        .WithMany()
+                        .HasForeignKey("EquipamentosIdEquipamento")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Web.Models.Unidades", null)
+                        .WithMany()
+                        .HasForeignKey("UnidadesIdUE")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

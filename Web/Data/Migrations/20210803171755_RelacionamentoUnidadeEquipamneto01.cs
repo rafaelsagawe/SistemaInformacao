@@ -2,21 +2,21 @@
 
 namespace Web.Data.Migrations
 {
-    public partial class teste02 : Migration
+    public partial class RelacionamentoUnidadeEquipamneto01 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Equipamentos_Unidades_UnidadesIdUE",
-                table: "Equipamentos");
+                name: "FK_Unidades_Equipamentos_EquipamentosIdEquipamento",
+                table: "Unidades");
 
             migrationBuilder.DropIndex(
-                name: "IX_Equipamentos_UnidadesIdUE",
-                table: "Equipamentos");
+                name: "IX_Unidades_EquipamentosIdEquipamento",
+                table: "Unidades");
 
             migrationBuilder.DropColumn(
-                name: "UnidadesIdUE",
-                table: "Equipamentos");
+                name: "EquipamentosIdEquipamento",
+                table: "Unidades");
 
             migrationBuilder.CreateTable(
                 name: "EquipamentosUnidades",
@@ -54,22 +54,22 @@ namespace Web.Data.Migrations
                 name: "EquipamentosUnidades");
 
             migrationBuilder.AddColumn<int>(
-                name: "UnidadesIdUE",
-                table: "Equipamentos",
+                name: "EquipamentosIdEquipamento",
+                table: "Unidades",
                 type: "int",
                 nullable: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Equipamentos_UnidadesIdUE",
-                table: "Equipamentos",
-                column: "UnidadesIdUE");
+                name: "IX_Unidades_EquipamentosIdEquipamento",
+                table: "Unidades",
+                column: "EquipamentosIdEquipamento");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Equipamentos_Unidades_UnidadesIdUE",
-                table: "Equipamentos",
-                column: "UnidadesIdUE",
-                principalTable: "Unidades",
-                principalColumn: "IdUE",
+                name: "FK_Unidades_Equipamentos_EquipamentosIdEquipamento",
+                table: "Unidades",
+                column: "EquipamentosIdEquipamento",
+                principalTable: "Equipamentos",
+                principalColumn: "IdEquipamento",
                 onDelete: ReferentialAction.Restrict);
         }
     }

@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ControleAtivosTI.Models;
 using Web.Data;
-using System.ComponentModel.DataAnnotations;
 
 namespace Web.Controllers
 {

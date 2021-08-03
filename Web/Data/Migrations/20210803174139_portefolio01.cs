@@ -2,7 +2,7 @@
 
 namespace Web.Data.Migrations
 {
-    public partial class SupImp2 : Migration
+    public partial class portefolio01 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

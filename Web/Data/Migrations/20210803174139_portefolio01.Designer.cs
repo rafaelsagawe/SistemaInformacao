@@ -10,8 +10,8 @@ using Web.Data;
 namespace Web.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210716203149_Portifolio-01")]
-    partial class Portifolio01
+    [Migration("20210803174139_portefolio01")]
+    partial class portefolio01
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -34,6 +34,21 @@ namespace Web.Data.Migrations
                     b.HasKey("IdPortefolio");
 
                     b.ToTable("Portifolios");
+                });
+
+            modelBuilder.Entity("EquipamentosUnidades", b =>
+                {
+                    b.Property<int>("EquipamentosIdEquipamento")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UnidadesIdUE")
+                        .HasColumnType("int");
+
+                    b.HasKey("EquipamentosIdEquipamento", "UnidadesIdUE");
+
+                    b.HasIndex("UnidadesIdUE");
+
+                    b.ToTable("EquipamentosUnidades");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -261,12 +276,10 @@ namespace Web.Data.Migrations
                     b.Property<int>("EquipValor")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UnidadesIdUE")
+                    b.Property<int>("IdUE")
                         .HasColumnType("int");
 
                     b.HasKey("IdEquipamento");
-
-                    b.HasIndex("UnidadesIdUE");
 
                     b.ToTable("Equipamentos");
                 });
@@ -328,6 +341,21 @@ namespace Web.Data.Migrations
                     b.ToTable("Unidades");
                 });
 
+            modelBuilder.Entity("EquipamentosUnidades", b =>
+                {
+                    b.HasOne("Web.Models.Equipamentos", null)
+                        .WithMany()
+                        .HasForeignKey("EquipamentosIdEquipamento")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Web.Models.Unidades", null)
+                        .WithMany()
+                        .HasForeignKey("UnidadesIdUE")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -377,15 +405,6 @@ namespace Web.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Web.Models.Equipamentos", b =>
-                {
-                    b.HasOne("Web.Models.Unidades", "Unidades")
-                        .WithMany()
-                        .HasForeignKey("UnidadesIdUE");
-
-                    b.Navigation("Unidades");
                 });
 #pragma warning restore 612, 618
         }

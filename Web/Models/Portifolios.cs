@@ -33,6 +33,9 @@ namespace ControleAtivosTI.Models
         [Display(Name ="Nome do sistema")]
         public string NomeSistema {get; set;}
 
-
+        public enum Criticidade
+        {
+            Alta, Media, Baixa
+        }
     }
 }

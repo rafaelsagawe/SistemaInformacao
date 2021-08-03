@@ -2,7 +2,7 @@
 
 namespace Web.Data.Migrations
 {
-    public partial class SupImp3 : Migration
+    public partial class RelacionamentoUnidadeEquipamneto02 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

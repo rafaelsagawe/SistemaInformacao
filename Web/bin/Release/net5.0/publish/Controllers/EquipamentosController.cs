@@ -10,22 +10,22 @@ using Web.Models;
 
 namespace Web.Controllers
 {
-    public class UnidadesController : Controller
+    public class EquipamentosController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public UnidadesController(ApplicationDbContext context)
+        public EquipamentosController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: Unidades
+        // GET: Equipamentos
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Unidades.ToListAsync());
+            return View(await _context.Equipamentos.ToListAsync());
         }
 
-        // GET: Unidades/Details/5
+        // GET: Equipamentos/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,41 +33,39 @@ namespace Web.Controllers
                 return NotFound();
             }
 
-            var unidades = await _context.Unidades
-                .Include(e => e.Equipamentos)
-                .AsNoTracking()
-                .FirstOrDefaultAsync(m => m.IdUE == id);
-            if (unidades == null)
+            var equipamentos = await _context.Equipamentos
+                .FirstOrDefaultAsync(m => m.IdEquipamento == id);
+            if (equipamentos == null)
             {
                 return NotFound();
             }
 
-            return View(unidades);
+            return View(equipamentos);
         }
 
-        // GET: Unidades/Create
+        // GET: Equipamentos/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Unidades/Create
+        // POST: Equipamentos/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdUE,NomeUE,INEP,CNPJ,NProtocolo,URG,Endereco,CEP,UETel")] Unidades unidades)
+        public async Task<IActionResult> Create([Bind("IdEquipamento,EquipDescricao,EquipNuSerie,EquipNuControle,EquipTipo,EquipOrigem,EquipValor,IdUE")] Equipamentos equipamentos)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(unidades);
+                _context.Add(equipamentos);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(unidades);
+            return View(equipamentos);
         }
 
-        // GET: Unidades/Edit/5
+        // GET: Equipamentos/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -75,22 +73,22 @@ namespace Web.Controllers
                 return NotFound();
             }
 
-            var unidades = await _context.Unidades.FindAsync(id);
-            if (unidades == null)
+            var equipamentos = await _context.Equipamentos.FindAsync(id);
+            if (equipamentos == null)
             {
                 return NotFound();
             }
-            return View(unidades);
+            return View(equipamentos);
         }
 
-        // POST: Unidades/Edit/5
+        // POST: Equipamentos/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdUE,NomeUE,INEP,CNPJ,NProtocolo,URG,Endereco,CEP,UETel")] Unidades unidades)
+        public async Task<IActionResult> Edit(int id, [Bind("IdEquipamento,EquipDescricao,EquipNuSerie,EquipNuControle,EquipTipo,EquipOrigem,EquipValor,IdUE")] Equipamentos equipamentos)
         {
-            if (id != unidades.IdUE)
+            if (id != equipamentos.IdEquipamento)
             {
                 return NotFound();
             }
@@ -99,12 +97,12 @@ namespace Web.Controllers
             {
                 try
                 {
-                    _context.Update(unidades);
+                    _context.Update(equipamentos);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!UnidadesExists(unidades.IdUE))
+                    if (!EquipamentosExists(equipamentos.IdEquipamento))
                     {
                         return NotFound();
                     }
@@ -115,10 +113,10 @@ namespace Web.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(unidades);
+            return View(equipamentos);
         }
 
-        // GET: Unidades/Delete/5
+        // GET: Equipamentos/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -126,30 +124,30 @@ namespace Web.Controllers
                 return NotFound();
             }
 
-            var unidades = await _context.Unidades
-                .FirstOrDefaultAsync(m => m.IdUE == id);
-            if (unidades == null)
+            var equipamentos = await _context.Equipamentos
+                .FirstOrDefaultAsync(m => m.IdEquipamento == id);
+            if (equipamentos == null)
             {
                 return NotFound();
             }
 
-            return View(unidades);
+            return View(equipamentos);
         }
 
-        // POST: Unidades/Delete/5
+        // POST: Equipamentos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var unidades = await _context.Unidades.FindAsync(id);
-            _context.Unidades.Remove(unidades);
+            var equipamentos = await _context.Equipamentos.FindAsync(id);
+            _context.Equipamentos.Remove(equipamentos);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool UnidadesExists(int id)
+        private bool EquipamentosExists(int id)
         {
-            return _context.Unidades.Any(e => e.IdUE == id);
+            return _context.Equipamentos.Any(e => e.IdEquipamento == id);
         }
     }
 }
