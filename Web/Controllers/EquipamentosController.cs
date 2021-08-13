@@ -19,6 +19,18 @@ namespace Web.Controllers
             _context = context;
         }
 
+        /* Combo box com as unidades escolares
+         * O PopularUnidadeCmbBx metodo deve ser aplicado nos itens do CRUD
+         * Que será refletido nas views         
+         */
+        private void PopularUnidadeCmbBx(object selecaoUnidade = null)
+        {
+            var unidadeQuery = from u in _context.Unidades
+                               orderby u.NomeUE
+                               select u;
+            ViewBag.IdUE = new SelectList(unidadeQuery.AsNoTracking(), "IdUE", "NomeUE", selecaoUnidade);
+        }
+
         // GET: Equipamentos
         public async Task<IActionResult> Index()
         {
@@ -46,6 +58,7 @@ namespace Web.Controllers
         // GET: Equipamentos/Create
         public IActionResult Create()
         {
+            PopularUnidadeCmbBx(); // Chamada do metodos para papular a Combobox
             return View();
         }
 
@@ -62,6 +75,8 @@ namespace Web.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
+            PopularUnidadeCmbBx(equipamentos.IdUE);// Local onde será aplica os valores obtidos
             return View(equipamentos);
         }
 
@@ -73,11 +88,15 @@ namespace Web.Controllers
                 return NotFound();
             }
 
-            var equipamentos = await _context.Equipamentos.FindAsync(id);
+            var equipamentos = await _context.Equipamentos
+                .AsNoTracking()
+                .FirstOrDefaultAsync(e => e.IdUE == id);
+                //.FindAsync(id);
             if (equipamentos == null)
             {
                 return NotFound();
             }
+            PopularUnidadeCmbBx(equipamentos.IdUE);
             return View(equipamentos);
         }
 
