@@ -32,11 +32,25 @@
                 <input asp-for="NProtocolo" class="form-control" />
                 <span asp-validation-for="NProtocolo" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="URG" class="control-label"></label>
-                <input asp-for="URG" class="form-control" />
-                <span asp-validation-for="URG" class="text-danger"></span>
-            </div>
+            
+    <div class="form-group">
+        <label asp-for="URG" class="control-label"></label>
+        <input asp-for="URG" class="form-control" />
+        <span asp-validation-for="URG" class="text-danger"></span>
+    </div>
+        
+            <!-- Listagem de URGs Estaticos
+    <div class="form-group">
+        <label asp-for="URG" class="control-label"></label>
+        <select id="Urgs" class="form-control">
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+        </select>
+        <span asp-validation-for="URG" class="text-danger"></span>
+    </div>-->
+
             <div class="form-group">
                 <label asp-for="Endereco" class="control-label"></label>
                 <input asp-for="Endereco" class="form-control" />

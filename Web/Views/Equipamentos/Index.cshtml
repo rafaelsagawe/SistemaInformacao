@@ -4,12 +4,10 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1 class="text-center">Listagem de Equipamentos</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+
+<table id="myTable" class="table table-striped">
     <thead>
         <tr>
             <th>
@@ -27,9 +25,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.EquipOrigem)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EquipValor)
-            </th>
+
             <th>
                 @Html.DisplayNameFor(model => model.IdUE)
             </th>
@@ -37,7 +33,8 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+        @foreach (var item in Model)
+        {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.EquipDescricao)
@@ -54,18 +51,42 @@
             <td>
                 @Html.DisplayFor(modelItem => item.EquipOrigem)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EquipValor)
-            </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.IdUE)
             </td>
+            
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdEquipamento">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdEquipamento">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdEquipamento">Delete</a>
+                <div class="btn-group">
+                    <a asp-action="Edit" asp-route-id="@item.IdEquipamento" class="btn btn-outline-primary">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.IdEquipamento" class="btn btn-outline-secondary">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.IdEquipamento" class="btn btn-outline-danger">Delete</a>
+                </div>
             </td>
+
         </tr>
-}
+        }
     </tbody>
 </table>
+<br/>
+<p class="float-right">
+    <a asp-action="Create" class="btn btn-success">Novo Equipamento</a>
+</p>
+
+@section Scripts
+{
+    <!-- script para o funcionamento do DataTables, invoca o ID da tabela myTable
+        URL da tradução
+        -->
+
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese-Brasil.json"
+                }
+            });
+        });
+    </script>
+}
+

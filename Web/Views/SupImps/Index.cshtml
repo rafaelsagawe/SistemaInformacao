@@ -4,12 +4,12 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Controle de Estoque dos Toners</h1>
+<h1 class="text-center">Controle de Estoque dos Toners</h1>
 
-<p>
-    <a asp-action="Create">Novo toner</a>
+<p class="float-right">
+    <a asp-action="Create" class="btn btn-success">Novo tipo de toner</a>
 </p>
-<table class="table">
+<table class="table table-striped" id="myTable">
     <thead>
         <tr>
             <th>
@@ -30,30 +30,49 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.IdSupImp">
-                    @Html.DisplayFor(modelItem => item.ModeloToner)
-                </a>
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QtdImpressoas)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QtdToner)
-            </td>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdSupImp">
+                        @Html.DisplayFor(modelItem => item.ModeloToner)
+                    </a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QtdImpressoas)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QtdToner)
+                </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.Estoque)
-            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Estoque)
+                </td>
 
-            <td>
-                <!-- <a asp-action="Edit" asp-route-id="@item.IdSupImp">Edit</a> |
-    <a asp-action="Details" asp-route-id="@item.IdSupImp">Details</a> |
-    <a asp-action="Delete" asp-route-id="@item.IdSupImp">Delete</a> -->
-            </td>
-        </tr>
-}
+                <td>
+                    <!-- <a asp-action="Edit" asp-route-id="@item.IdSupImp">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdSupImp">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdSupImp">Delete</a> -->
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+
+
+@section Scripts
+{
+    <!-- script para o funcionamento do DataTables, invoca o ID da tabela myTable
+        URL da tradução
+        -->
+
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese-Brasil.json"
+                }
+            });
+        });
+    </script>
+}
