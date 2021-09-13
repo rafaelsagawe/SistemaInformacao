@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Portifolios\**" />
+    <Content Remove="Views\Portifolios\**" />
+    <EmbeddedResource Remove="Views\Portifolios\**" />
+    <None Remove="Views\Portifolios\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.4" />
@@ -19,6 +26,14 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.0" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql.Design" Version="1.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Portifolios\Create.cshtml" />
+    <None Include="Views\Portifolios\Delete.cshtml" />
+    <None Include="Views\Portifolios\Details.cshtml" />
+    <None Include="Views\Portifolios\Edit.cshtml" />
+    <None Include="Views\Portifolios\Index.cshtml" />
   </ItemGroup>
 
 </Project>

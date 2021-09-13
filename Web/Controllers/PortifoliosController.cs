@@ -33,14 +33,14 @@ namespace Web.Controllers
                 return NotFound();
             }
 
-            var portifolios = await _context.Portifolios
+            var portifolio = await _context.Portifolios
                 .FirstOrDefaultAsync(m => m.IdPortefolio == id);
-            if (portifolios == null)
+            if (portifolio == null)
             {
                 return NotFound();
             }
 
-            return View(portifolios);
+            return View(portifolio);
         }
 
         // GET: Portifolios/Create
@@ -54,15 +54,15 @@ namespace Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdPortefolio,NomeSistema")] Portifolios portifolios)
+        public async Task<IActionResult> Create([Bind("IdPortefolio,NomeSistema,NomePlataforma,Descricao,Acesso,CodigoFonte,Linguagem,BandoDados,Documentacao,Hospedagem,Clientes,EstadoDesenvolvimento,Criticidade")] Portifolio portifolio)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(portifolios);
+                _context.Add(portifolio);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(portifolios);
+            return View(portifolio);
         }
 
         // GET: Portifolios/Edit/5
@@ -73,12 +73,12 @@ namespace Web.Controllers
                 return NotFound();
             }
 
-            var portifolios = await _context.Portifolios.FindAsync(id);
-            if (portifolios == null)
+            var portifolio = await _context.Portifolios.FindAsync(id);
+            if (portifolio == null)
             {
                 return NotFound();
             }
-            return View(portifolios);
+            return View(portifolio);
         }
 
         // POST: Portifolios/Edit/5
@@ -86,9 +86,9 @@ namespace Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdPortefolio,NomeSistema")] Portifolios portifolios)
+        public async Task<IActionResult> Edit(int id, [Bind("IdPortefolio,NomeSistema,NomePlataforma,Descricao,Acesso,CodigoFonte,Linguagem,BandoDados,Documentacao,Hospedagem,Clientes,EstadoDesenvolvimento,Criticidade")] Portifolio portifolio)
         {
-            if (id != portifolios.IdPortefolio)
+            if (id != portifolio.IdPortefolio)
             {
                 return NotFound();
             }
@@ -97,12 +97,12 @@ namespace Web.Controllers
             {
                 try
                 {
-                    _context.Update(portifolios);
+                    _context.Update(portifolio);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PortifoliosExists(portifolios.IdPortefolio))
+                    if (!PortifolioExists(portifolio.IdPortefolio))
                     {
                         return NotFound();
                     }
@@ -113,7 +113,7 @@ namespace Web.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(portifolios);
+            return View(portifolio);
         }
 
         // GET: Portifolios/Delete/5
@@ -124,14 +124,14 @@ namespace Web.Controllers
                 return NotFound();
             }
 
-            var portifolios = await _context.Portifolios
+            var portifolio = await _context.Portifolios
                 .FirstOrDefaultAsync(m => m.IdPortefolio == id);
-            if (portifolios == null)
+            if (portifolio == null)
             {
                 return NotFound();
             }
 
-            return View(portifolios);
+            return View(portifolio);
         }
 
         // POST: Portifolios/Delete/5
@@ -139,13 +139,13 @@ namespace Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var portifolios = await _context.Portifolios.FindAsync(id);
-            _context.Portifolios.Remove(portifolios);
+            var portifolio = await _context.Portifolios.FindAsync(id);
+            _context.Portifolios.Remove(portifolio);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PortifoliosExists(int id)
+        private bool PortifolioExists(int id)
         {
             return _context.Portifolios.Any(e => e.IdPortefolio == id);
         }

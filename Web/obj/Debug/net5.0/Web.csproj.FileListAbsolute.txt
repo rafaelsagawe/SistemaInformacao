@@ -2623,7 +2623,6 @@ C:\git\SistemaInformacao\Web\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet
 C:\git\SistemaInformacao\Web\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\git\SistemaInformacao\Web\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\git\SistemaInformacao\Web\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Web.csproj.AssemblyReference.cache
 C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Web.GeneratedMSBuildEditorConfig.editorconfig
 C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Web.AssemblyInfoInputs.cache
 C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Web.AssemblyInfo.cs
@@ -2646,11 +2645,6 @@ C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Equipamentos\Index.csh
 C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Home\Mapa.cshtml.g.cs
 C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Portifolios\Create.cshtml.g.cs
-C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Portifolios\Delete.cshtml.g.cs
-C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Portifolios\Details.cshtml.g.cs
-C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Portifolios\Edit.cshtml.g.cs
-C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Portifolios\Index.cshtml.g.cs
 C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ControleAtivosTI.Models.Portifolios>
+﻿@model IEnumerable<ControleAtivosTI.Models.Portifolio>
 
 @{
     ViewData["Title"] = "Index";
@@ -15,6 +15,39 @@
             <th>
                 @Html.DisplayNameFor(model => model.NomeSistema)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomePlataforma)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Acesso)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodigoFonte)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Linguagem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BandoDados)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Documentacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hospedagem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clientes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoDesenvolvimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Criticidade)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -23,6 +56,39 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.NomeSistema)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomePlataforma)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Acesso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoFonte)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Linguagem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BandoDados)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Documentacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hospedagem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Clientes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoDesenvolvimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Criticidade)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.IdPortefolio">Edit</a> |
