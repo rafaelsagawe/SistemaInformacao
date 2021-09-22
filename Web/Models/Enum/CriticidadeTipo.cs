@@ -11,9 +11,7 @@ namespace Web.Models.Enum
 
         public enum CriticidadeTipo
         {
-            [Display(Name = "Emergencia")]
-            Emergencia,
-
+        
             [Display(Name = "Alta")]
             Alta,
 

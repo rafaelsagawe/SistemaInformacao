@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\git\\SistemaInformacao\\Web\\Web.csproj": {}
+    "C:\\Users\\rafael.sagawe\\Source\\Repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj": {}
   },
   "projects": {
-    "C:\\git\\SistemaInformacao\\Web\\Web.csproj": {
+    "C:\\Users\\rafael.sagawe\\Source\\Repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\git\\SistemaInformacao\\Web\\Web.csproj",
+        "projectUniqueName": "C:\\Users\\rafael.sagawe\\Source\\Repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj",
         "projectName": "Web",
-        "projectPath": "C:\\git\\SistemaInformacao\\Web\\Web.csproj",
-        "packagesPath": "C:\\Users\\sagaw\\.nuget\\packages\\",
-        "outputPath": "C:\\git\\SistemaInformacao\\Web\\obj\\",
+        "projectPath": "C:\\Users\\rafael.sagawe\\Source\\Repos\\rafaelsagawe\\SistemaInformacao\\Web\\Web.csproj",
+        "packagesPath": "C:\\Users\\rafael.sagawe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rafael.sagawe\\Source\\Repos\\rafaelsagawe\\SistemaInformacao\\Web\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\sagaw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rafael.sagawe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -97,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

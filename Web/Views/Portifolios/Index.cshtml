@@ -18,30 +18,11 @@
             <th>
                 @Html.DisplayNameFor(model => model.NomePlataforma)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Descricao)
-            </th>
+
             <th>
                 @Html.DisplayNameFor(model => model.Acesso)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CodigoFonte)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Linguagem)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BandoDados)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Documentacao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Hospedagem)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Clientes)
-            </th>
+
             <th>
                 @Html.DisplayNameFor(model => model.EstadoDesenvolvimento)
             </th>
@@ -60,30 +41,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.NomePlataforma)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descricao)
-            </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.Acesso)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CodigoFonte)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Linguagem)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BandoDados)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Documentacao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Hospedagem)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Clientes)
-            </td>
+ 
             <td>
                 @Html.DisplayFor(modelItem => item.EstadoDesenvolvimento)
             </td>
@@ -91,9 +53,11 @@
                 @Html.DisplayFor(modelItem => item.Criticidade)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdPortefolio">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdPortefolio">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdPortefolio">Delete</a>
+                <div class="btn-group">
+                    <a asp-action="Edit" asp-route-id="@item.IdPortefolio" class="btn btn-outline-primary">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.IdPortefolio" class="btn btn-outline-secondary">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.IdPortefolio" class="btn btn-outline-danger">Delete</a>
+                </div>
             </td>
         </tr>
 }

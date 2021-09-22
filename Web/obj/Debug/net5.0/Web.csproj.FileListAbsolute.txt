@@ -2197,11 +2197,6 @@ C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\ref\Web.dll
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Web.pdb
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Web.genruntimeconfig.cache
-C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Portifolios\Create.cshtml.g.cs
-C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Portifolios\Delete.cshtml.g.cs
-C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Portifolios\Details.cshtml.g.cs
-C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Portifolios\Edit.cshtml.g.cs
-C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Portifolios\Index.cshtml.g.cs
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Unidades\Create.cshtml.g.cs
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Unidades\Delete.cshtml.g.cs
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Unidades\Details.cshtml.g.cs

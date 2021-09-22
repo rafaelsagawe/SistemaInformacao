@@ -54,6 +54,7 @@ namespace ControleAtivosTI.Models
         public string Descricao { get; set; }
 
         [Display(Name ="Acesso")]
+        [DataType(DataType.Url)] // Gera url na tela index
         public string Acesso { get; set; }
 
         [Display(Name = "Codigo fonte")]
