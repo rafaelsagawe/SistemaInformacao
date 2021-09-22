@@ -29,7 +29,24 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Unidades" asp-action="Index">Unidades<span class="caret"></span></a>
+                            <a class="btn nav-link text-dark" asp-area="" asp-controller="Unidades" asp-action="Index">Unidades<span class="caret"></span></a>
+                        </li>
+
+                        <li class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" 
+                                    id="dropdownCadastro" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false"
+                                    >Cadastros</button>
+
+                            <div class="dropdown-menu" aria-labelledby="dropdownCadastro">
+                                <a class="nav-link text-dark dropdown-item" asp-area="" asp-controller="Equipamentos" asp-action="Create">Equipamentos</a>
+
+                                <a class="nav-link text-dark dropdown-item" asp-area="" asp-controller="SupImps" asp-action="Create">Suprimentos</a>
+
+                                <a class="nav-link text-dark dropdown-item" asp-area="" asp-controller="Portifolios" asp-action="Create">Protifolio</a>
+
+                            </div>
+
                         </li>
 
                         <li class="nav-item">

@@ -10,6 +10,16 @@
     <a asp-action="Create">Adicionar novo item</a>
 </p>
 
+<!--
+    
+    Implementação futura:
+    As cores das bordas dos cards devem ser customizadas comforme a criaticidade do serviço:
+    Baixo - Verde
+    Medio - Amarelo
+    Alto - vermelho
+
+-->
+
 <div class="card-group">
     @foreach (var item in Model)
     {
@@ -17,7 +27,7 @@
             <div class="card border-primary">
                 <div class="card-header text-center">
                     <!--Atribuir função de link para a página de detalhes -->
-                    <a asp-action="Details" asp-route-id="@item.IdPortefolio"> 
+                    <a asp-action="Details" asp-route-id="@item.IdPortefolio">
                         @Html.DisplayFor(modelItem => item.NomeSistema)
                     </a>
                 </div>
@@ -83,6 +93,6 @@
                     </div>
                 </td>
             </tr>
-        }-->
+        }
     </tbody>
-</table>
+</table>-->

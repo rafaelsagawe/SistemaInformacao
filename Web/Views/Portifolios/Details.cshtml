@@ -84,7 +84,9 @@
         </dd>
     </dl>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.IdPortefolio">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+<div class="btn-group">
+    <a asp-action="Edit" asp-route-id="@Model.IdPortefolio" class="btn btn-outline-info">Edit</a>
+    <a asp-action="Delete" asp-route-id="@Model.IdPortefolio" class="btn btn-outline-danger">Delete</a>
+    <a asp-action="Index" class="btn btn-outline-primary">Back to List</a>
+
 </div>
