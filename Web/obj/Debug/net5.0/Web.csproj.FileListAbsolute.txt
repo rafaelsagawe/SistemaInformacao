@@ -2665,3 +2665,4 @@ C:\git\SistemaInformacao\Web\obj\Debug\net5.0\ref\Web.dll
 C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Web.pdb
 C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Web.genruntimeconfig.cache
 C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Equipamentos\Details.cshtml.g.cs
+C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Web.csproj.AssemblyReference.cache

@@ -20,6 +20,21 @@
 
 -->
 
+<!--Transferir para o arquivo de CSS-->
+<style>
+    body {
+        margin: 20px;
+    }
+
+    .card-body {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* number of lines to show */
+        -webkit-box-orient: vertical;
+    }
+</style>
+
 <div class="card-group">
     @foreach (var item in Model)
     {
