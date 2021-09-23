@@ -11,7 +11,7 @@
 </p>
 
 <!--
-    
+
     Implementação futura:
     As cores das bordas dos cards devem ser customizadas comforme a criaticidade do serviço:
     Baixo - Verde
@@ -19,12 +19,8 @@
     Alto - vermelho
 
 -->
-
 <!--Transferir para o arquivo de CSS-->
 <style>
-    body {
-        margin: 20px;
-    }
 
     .card-body {
         overflow: hidden;
@@ -33,19 +29,32 @@
         -webkit-line-clamp: 3; /* number of lines to show */
         -webkit-box-orient: vertical;
     }
+
+    .card {
+        cursor: grab;
+    }
+
+        .card:active {
+            cursor: grabbing;
+        }
 </style>
 
 <div class="card-group">
     @foreach (var item in Model)
     {
         <div class="col-3 my-3">
-            <div class="card border-primary">
+            <div class="card border-primary" draggable="true" ondragstart="drag(event)">
+                <!-- Adição de imagem
+                     <img class="card-img-top" src="https://miro.medium.com/max/1400/1*5QdT3tR-u0z3Zk8dt_72lg.jpeg" />
+                -->
+
                 <div class="card-header text-center">
-                    <!--Atribuir função de link para a página de detalhes -->
+                    <!--Atribuir função de link para a página de detalhes-->
                     <a asp-action="Details" asp-route-id="@item.IdPortefolio">
                         @Html.DisplayFor(modelItem => item.NomeSistema)
                     </a>
                 </div>
+
                 <div class="card-body text-justify"> @Html.DisplayFor(modelItem => item.Descricao) </div>
                 <div class="card-footer"> @Html.DisplayFor(modelItem => item.Acesso)</div>
             </div>

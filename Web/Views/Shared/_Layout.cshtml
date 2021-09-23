@@ -33,10 +33,11 @@
                         </li>
 
                         <li class="dropdown">
-                            <button class="btn dropdown-toggle" type="button" 
+                            <button class="btn dropdown-toggle" type="button"
                                     id="dropdownCadastro" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false"
-                                    >Cadastros</button>
+                                    aria-haspopup="true" aria-expanded="false">
+                                Cadastros
+                            </button>
 
                             <div class="dropdown-menu" aria-labelledby="dropdownCadastro">
                                 <a class="nav-link text-dark dropdown-item" asp-area="" asp-controller="Equipamentos" asp-action="Create">Equipamentos</a>
@@ -83,10 +84,11 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- JavaSript para o funcionamento do DataTables-->
-        <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <!-- JavaSript para o funcionamento da combobox com texto-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.3/chosen.jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.3/chosen.jquery.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/drag-n-drop.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
