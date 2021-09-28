@@ -31,7 +31,7 @@
                         <li class="nav-item">
                             <a class="btn nav-link text-dark" asp-area="" asp-controller="Unidades" asp-action="Index">Unidades<span class="caret"></span></a>
                         </li>
-
+                        <!-- Oculta o dropdown para usuários visitantes -->
                         @if(User.Identity.IsAuthenticated)
                         { 
                         <li class="dropdown">
