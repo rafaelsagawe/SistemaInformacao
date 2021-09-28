@@ -2666,3 +2666,7 @@ C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Web.pdb
 C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Web.genruntimeconfig.cache
 C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Equipamentos\Details.cshtml.g.cs
 C:\git\SistemaInformacao\Web\obj\Debug\net5.0\Web.csproj.AssemblyReference.cache
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
