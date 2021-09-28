@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ControleAtivosTI.Models;
 using Web.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Web.Controllers
 {
@@ -44,6 +45,7 @@ namespace Web.Controllers
         }
 
         // GET: Portifolios/Create
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -66,6 +68,7 @@ namespace Web.Controllers
         }
 
         // GET: Portifolios/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -117,6 +120,7 @@ namespace Web.Controllers
         }
 
         // GET: Portifolios/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

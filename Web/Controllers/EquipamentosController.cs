@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -31,6 +32,8 @@ namespace Web.Controllers
             ViewBag.IdUE = new SelectList(unidadeQuery.AsNoTracking(), "IdUE", "NomeUE", selecaoUnidade);
         }
 
+
+       
         // GET: Equipamentos
         public async Task<IActionResult> Index()
         {
@@ -54,7 +57,7 @@ namespace Web.Controllers
 
             return View(equipamentos);
         }
-
+        [Authorize]
         // GET: Equipamentos/Create
         public IActionResult Create()
         {
@@ -81,6 +84,7 @@ namespace Web.Controllers
         }
 
         // GET: Equipamentos/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -136,6 +140,7 @@ namespace Web.Controllers
         }
 
         // GET: Equipamentos/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

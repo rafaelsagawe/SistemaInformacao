@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -46,6 +47,8 @@ namespace Web.Controllers
         }
 
         // GET: Unidades/Create
+        //Decoração para informar que apenas usuários autenticados tem acesso a função
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -68,6 +71,7 @@ namespace Web.Controllers
         }
 
         // GET: Unidades/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -119,6 +123,7 @@ namespace Web.Controllers
         }
 
         // GET: Unidades/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

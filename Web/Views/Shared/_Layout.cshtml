@@ -32,6 +32,8 @@
                             <a class="btn nav-link text-dark" asp-area="" asp-controller="Unidades" asp-action="Index">Unidades<span class="caret"></span></a>
                         </li>
 
+                        @if(User.Identity.IsAuthenticated)
+                        { 
                         <li class="dropdown">
                             <button class="btn dropdown-toggle" type="button"
                                     id="dropdownCadastro" data-toggle="dropdown"
@@ -45,10 +47,9 @@
                                 <a class="nav-link text-dark dropdown-item" asp-area="" asp-controller="SupImps" asp-action="Create">Suprimentos</a>
 
                                 <a class="nav-link text-dark dropdown-item" asp-area="" asp-controller="Portifolios" asp-action="Create">Protifolio</a>
-
                             </div>
-
                         </li>
+                        }
 
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Equipamentos" asp-action="Index">Equipamentos<span class="caret"></span></a>
