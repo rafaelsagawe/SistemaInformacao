@@ -5,23 +5,23 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <_PublishTargetUrl>\\172.15.0.8\wwwroot\SistemaWeb</_PublishTargetUrl>
-    <History>True|2021-09-07T00:26:56.6026555Z;True|2021-09-06T19:51:40.1360239-03:00;True|2021-09-06T19:46:50.7635078-03:00;True|2021-06-29T11:51:35.7353705-03:00;False|2021-06-29T11:49:51.0590124-03:00;True|2021-06-29T10:32:09.0264135-03:00;True|2021-06-28T18:27:33.2402693-03:00;True|2021-06-28T18:25:44.7682976-03:00;</History>
+    <History>False|2021-09-29T17:17:41.8777846Z;False|2021-09-29T13:11:21.6708779-03:00;True|2021-09-06T21:26:56.6026555-03:00;True|2021-09-06T19:51:40.1360239-03:00;True|2021-09-06T19:46:50.7635078-03:00;True|2021-06-29T11:51:35.7353705-03:00;False|2021-06-29T11:49:51.0590124-03:00;True|2021-06-29T10:32:09.0264135-03:00;True|2021-06-28T18:27:33.2402693-03:00;True|2021-06-28T18:25:44.7682976-03:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="Controllers/EquipamentosController.cs">
-      <publishTime>08/03/2021 13:32:34</publishTime>
+      <publishTime>03/08/2021 13:32:34</publishTime>
     </File>
     <File Include="Controllers/HomeController.cs">
-      <publishTime>06/28/2021 14:43:41</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Controllers/PortifoliosController.cs">
-      <publishTime>07/16/2021 17:39:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Controllers/SupImpsController.cs">
-      <publishTime>07/28/2021 17:38:02</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Controllers/UnidadesController.cs">
-      <publishTime>08/03/2021 13:33:44</publishTime>
+      <publishTime>03/08/2021 13:33:44</publishTime>
     </File>
   </ItemGroup>
 </Project>

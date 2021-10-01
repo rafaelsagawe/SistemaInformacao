@@ -35,8 +35,9 @@ namespace Web.Controllers
 
        
         // GET: Equipamentos
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? id)
         {
+
             return View(await _context.Equipamentos.ToListAsync());
         }
 
@@ -54,9 +55,10 @@ namespace Web.Controllers
             {
                 return NotFound();
             }
-
+            PopularUnidadeCmbBx(equipamentos.IdUE);
             return View(equipamentos);
         }
+
         [Authorize]
         // GET: Equipamentos/Create
         public IActionResult Create()
@@ -80,6 +82,7 @@ namespace Web.Controllers
             }
 
             PopularUnidadeCmbBx(equipamentos.IdUE);// Local onde será aplica os valores obtidos
+
             return View(equipamentos);
         }
 
@@ -150,6 +153,7 @@ namespace Web.Controllers
 
             var equipamentos = await _context.Equipamentos
                 .FirstOrDefaultAsync(m => m.IdEquipamento == id);
+            
             if (equipamentos == null)
             {
                 return NotFound();

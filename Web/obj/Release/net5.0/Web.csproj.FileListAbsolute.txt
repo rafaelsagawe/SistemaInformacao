@@ -451,11 +451,6 @@ C:\Users\rafael.sagawe\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Relea
 C:\Users\rafael.sagawe\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\ref\Web.dll
 C:\Users\rafael.sagawe\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Web.pdb
 C:\Users\rafael.sagawe\Source\Repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Web.genruntimeconfig.cache
-C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Razor\Views\Equipamentos1\Create.cshtml.g.cs
-C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Razor\Views\Equipamentos1\Delete.cshtml.g.cs
-C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Razor\Views\Equipamentos1\Details.cshtml.g.cs
-C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Razor\Views\Equipamentos1\Edit.cshtml.g.cs
-C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Razor\Views\Equipamentos1\Index.cshtml.g.cs
 C:\git\SistemaInformacao\Web\bin\Release\net5.0\appsettings.Development.json
 C:\git\SistemaInformacao\Web\bin\Release\net5.0\appsettings.json
 C:\git\SistemaInformacao\Web\bin\Release\net5.0\Web.StaticWebAssets.xml
@@ -919,3 +914,15 @@ C:\git\SistemaInformacao\Web\obj\Release\net5.0\Web.dll
 C:\git\SistemaInformacao\Web\obj\Release\net5.0\ref\Web.dll
 C:\git\SistemaInformacao\Web\obj\Release\net5.0\Web.pdb
 C:\git\SistemaInformacao\Web\obj\Release\net5.0\Web.genruntimeconfig.cache
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Razor\Areas\Identity\Pages\Account\Manage\Index.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Razor\Views\Equipamentos\Create.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Razor\Views\Equipamentos\Delete.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Razor\Views\Equipamentos\Details.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Razor\Views\Equipamentos\Edit.cshtml.g.cs
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Release\net5.0\Razor\Views\Equipamentos\Index.cshtml.g.cs

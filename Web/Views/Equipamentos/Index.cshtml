@@ -55,7 +55,23 @@
             <td>
                 @Html.DisplayFor(modelItem => item.IdUE)
             </td>
-            
+
+
+            <!--
+
+                    <div class="form-group">
+        <label asp-for="IdUE" class="control-label"></label>
+        <select id="equipamentos" asp-for="IdUE" class="form-control" asp-items="ViewBag.IdUE">
+            <option value=""> -- Selação Unidade --</option>
+        </select>
+        <span asp-validation-for="IdUE" class="text-danger" />
+    </div>
+
+
+    -->
+
+
+
             <td>
                 <div class="btn-group">
                     <a asp-action="Edit" asp-route-id="@item.IdEquipamento" class="btn btn-outline-primary">Edit</a>
