@@ -11,4 +11,4 @@ document.querySelectorAll('.card').forEach(card => {
     card.addEventListener('dragend', dragEnd);
 });
 
-https://www.webtips.dev/how-to-create-native-drag-and-drop-functionality-in-javascript
+// https://www.webtips.dev/how-to-create-native-drag-and-drop-functionality-in-javascript

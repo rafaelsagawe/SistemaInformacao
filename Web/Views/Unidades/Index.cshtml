@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<Web.Models.Unidades>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Listagem de Unidades";
 }
 
-<h1 class="text-center">Listagem de Unidades</h1><!-- Titulo da pagina centralizado-->
-
+<!-- Titulo da pagina centralizado-->
+<h1 class="text-center">Listagem de Unidades</h1>
 
 <table id="myTable" class="table table-striped">
     <thead>
@@ -25,48 +25,50 @@
             <th></th>
         </tr>
     </thead>
+
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.URG)
-            </td>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.URG)
+                </td>
 
-            <td>
-                <a asp-action="Details" asp-route-id="@item.IdUE">
-                    @Html.DisplayFor(modelItem => item.NomeUE)
-                </a>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.IdUE">
+                        @Html.DisplayFor(modelItem => item.NomeUE)
+                    </a>
+                </td>
 
-            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Endereco)
+                </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.Endereco)
-            </td>
-
-            <td>
-                <div class="btn-group">
-                    <a asp-action="Edit" asp-route-id="@item.IdUE" class="btn btn-outline-primary">Edit</a>
-
-                    <a asp-action="Delete" asp-route-id="@item.IdUE" class="btn btn-outline-danger">Delete</a>
-                </div>
-            </td>
-        </tr>
+                <td>
+                    <div class="btn-group">
+                        <a asp-action="Edit" asp-route-id="@item.IdUE" class="btn btn-outline-primary">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@item.IdUE" class="btn btn-outline-danger ">Delete</a>
+                    </div>
+                </td>
+            </tr>
         }
     </tbody>
 </table>
 
-<p class="float-right">
+<p class="float-right btn-group">
     <a asp-action="Create" class="btn btn-success">Nova Unidade</a>
+    <!--     <a class="btn btn-primary" id="Teste">Teste</a>   -->
 </p>
 
 @section Scripts
 {
-    <!-- script para o funcionamento do DataTables, invoca o ID da tabela myTable
-        URL da tradução
-        -->
 
     <script>
+
+        /* Script do datatables
+         * para o funcionamento do DataTables, invoca o ID da tabela myTable
+         * URL da tradução
+         */
         $(document).ready(function () {
             $('#myTable').DataTable({
                 "language": {
@@ -74,5 +76,18 @@
                 }
             });
         });
+
+        /*Criação das models
+         1 - Download do arquivo bootbox.js para a pasta js no wwwroot
+         2 - Criação do link do script em _Layout.cshtml
+         3 - Dar um id ao btn de criação e class para os btns na tabela
+         */
+        $(document).on('click', '#Teste', function () {
+            bootbox.dialog({
+                title: 'Cadastrar nova unidade',
+                message: 'Olá mundo'
+            })
+        });
+
     </script>
 }
