@@ -44,12 +44,7 @@
                     @Html.DisplayFor(modelItem => item.Endereco)
                 </td>
 
-                <td>
-                    <div class="btn-group">
-                        <a asp-action="Edit" asp-route-id="@item.IdUE" class="btn btn-outline-primary">Edit</a>
-                        <a asp-action="Delete" asp-route-id="@item.IdUE" class="btn btn-outline-danger ">Delete</a>
-                    </div>
-                </td>
+                <td></td>
             </tr>
         }
     </tbody>
@@ -57,7 +52,7 @@
 
 <p class="float-right btn-group">
     <a asp-action="Create" class="btn btn-success">Nova Unidade</a>
-    <!--     <a class="btn btn-primary" id="Teste">Teste</a>   -->
+    <!-- teste do bootbox     <a class="btn btn-primary" id="Teste">Teste</a>   -->
 </p>
 
 @section Scripts

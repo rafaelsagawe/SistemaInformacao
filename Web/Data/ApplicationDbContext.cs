@@ -18,5 +18,9 @@ namespace Web.Data
         public DbSet<Web.Models.Unidades> Unidades { get; set; }
         public DbSet<Web.Models.Equipamentos> Equipamentos { get; set; }
         public DbSet<ControleAtivosTI.Models.Portifolio> Portifolios { get; set; }
+        public DbSet<Web.Models.Linha> Linha { get; set; }
+        public DbSet<Web.Models.Ramal> Ramal { get; set; }
+        public DbSet<Web.Models.Camera> Camera { get; set; }
+        public DbSet<Web.Models.Setor> Setor { get; set; }
     }
 }

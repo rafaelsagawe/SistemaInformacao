@@ -17,20 +17,23 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Sistema</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Sistema </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Unidades" asp-action="Index">Unidades<span class="caret"></span></a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="btn nav-link text-dark" asp-area="" asp-controller="Unidades" asp-action="Index">Unidades<span class="caret"></span></a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Setors" asp-action="Index">Setores<span class="caret"></span></a>
                         </li>
+
                         <!-- Oculta o dropdown para usuários visitantes -->
                         @if (User.Identity.IsAuthenticated)
                         {
@@ -38,30 +41,23 @@
                                 <button class="btn dropdown-toggle" type="button"
                                         id="dropdownCadastro" data-toggle="dropdown"
                                         aria-haspopup="true" aria-expanded="false">
-                                    Cadastros
+                                    Setor de TI
                                 </button>
 
                                 <div class="dropdown-menu" aria-labelledby="dropdownCadastro">
-                                    <a class="nav-link text-dark dropdown-item" asp-area="" asp-controller="Equipamentos" asp-action="Create">Equipamentos</a>
+                                    <a class="nav-link text-dark dropdown-item" asp-area="" asp-controller="Equipamentos" asp-action="Index">Equipamentos</a>
 
-                                    <a class="nav-link text-dark dropdown-item" asp-area="" asp-controller="SupImps" asp-action="Create">Suprimentos</a>
+                                    <a class="nav-link text-dark dropdown-item" asp-area="" asp-controller="SupImps" asp-action="Index">Suprimentos</a>
 
-                                    <a class="nav-link text-dark dropdown-item" asp-area="" asp-controller="Portifolios" asp-action="Create">Protifolio</a>
+                                    <a class="nav-link text-dark dropdown-item" asp-area="" asp-controller="Ramais" asp-action="Index">Telefonia</a>
+
+                                    <a class="nav-link text-dark dropdown-item" asp-area="" asp-controller="Cameras" asp-action="Index">Cameras</a>
+
+                                    <a class="nav-link text-dark dropdown-item" asp-area="" asp-controller="Portifolios" asp-action="Index">Protifolio</a>
                                 </div>
                             </li>
                         }
 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Equipamentos" asp-action="Index">Equipamentos<span class="caret"></span></a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="SupImps" asp-action="Index">Suprimentos</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Portifolios" asp-action="Index">Protifolio</a>
-                        </li>
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>

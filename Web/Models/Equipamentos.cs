@@ -39,4 +39,18 @@ namespace Web.Models
         //public string EquipLocalizacao { get; set; }
         public ICollection<Unidades> Unidades { get; set; }
     }
+
+    public class Camera
+    {
+        [Key]
+        public int IdCamera { get; set; }
+
+        public string MAC { get; set; }
+
+        public string IP { get; set; }
+        public string Modelo { get; set; }
+        public string Local { get; set; }
+        public string NumeroSerie { get; set; }
+
+    }
 }

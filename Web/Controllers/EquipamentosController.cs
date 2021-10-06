@@ -31,8 +31,6 @@ namespace Web.Controllers
                                select u;
             ViewBag.IdUE = new SelectList(unidadeQuery.AsNoTracking(), "IdUE", "NomeUE", selecaoUnidade);
         }
-
-
        
         // GET: Equipamentos
         public async Task<IActionResult> Index(int? id)

@@ -16,7 +16,7 @@ namespace Web.Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.8")
+                .HasAnnotation("ProductVersion", "5.0.10")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("ControleAtivosTI.Models.Portifolio", b =>
@@ -282,6 +282,33 @@ namespace Web.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("Web.Models.Camera", b =>
+                {
+                    b.Property<int>("IdCamera")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("IP")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Local")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MAC")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Modelo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NumeroSerie")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IdCamera");
+
+                    b.ToTable("Camera");
+                });
+
             modelBuilder.Entity("Web.Models.Equipamentos", b =>
                 {
                     b.Property<int>("IdEquipamento")
@@ -313,6 +340,71 @@ namespace Web.Data.Migrations
                     b.HasKey("IdEquipamento");
 
                     b.ToTable("Equipamentos");
+                });
+
+            modelBuilder.Entity("Web.Models.Linha", b =>
+                {
+                    b.Property<int>("IdLinha")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("NumeroLinha")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("RamalidRamal")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Slot")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Tronco")
+                        .HasColumnType("int");
+
+                    b.HasKey("IdLinha");
+
+                    b.HasIndex("RamalidRamal");
+
+                    b.ToTable("Linha");
+                });
+
+            modelBuilder.Entity("Web.Models.Ramal", b =>
+                {
+                    b.Property<int>("idRamal")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("IP")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdLinha")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MACAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("localizacao")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("idRamal");
+
+                    b.ToTable("Ramal");
+                });
+
+            modelBuilder.Entity("Web.Models.Setor", b =>
+                {
+                    b.Property<int>("IdSetor")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("NomeSetor")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IdSetor");
+
+                    b.ToTable("Setor");
                 });
 
             modelBuilder.Entity("Web.Models.SupImp", b =>
@@ -436,6 +528,18 @@ namespace Web.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Web.Models.Linha", b =>
+                {
+                    b.HasOne("Web.Models.Ramal", null)
+                        .WithMany("Linhas")
+                        .HasForeignKey("RamalidRamal");
+                });
+
+            modelBuilder.Entity("Web.Models.Ramal", b =>
+                {
+                    b.Navigation("Linhas");
                 });
 #pragma warning restore 612, 618
         }
