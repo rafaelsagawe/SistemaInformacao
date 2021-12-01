@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.3/chosen.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/fontawesome.min.css" />
 </head>
 
 <body>
@@ -53,9 +55,15 @@
 
                                     <a class="nav-link text-dark dropdown-item" asp-area="" asp-controller="Cameras" asp-action="Index">Cameras</a>
 
-                                    <a class="nav-link text-dark dropdown-item" asp-area="" asp-controller="Portifolios" asp-action="Index">Protifolio</a>
+                                    <a class="nav-link text-dark dropdown-item" asp-area="" asp-controller="Portifolios" asp-action="Index">Portfolio</a>
                                 </div>
                             </li>
+                            <!-- Link para as tarefas -->
+                            <li>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Tarefas" asp-action="Index">Tarefas</a>
+
+                            </li>
+
                         }
 
                     </ul>
@@ -88,6 +96,8 @@
     <!-- Script par geração das modals do curso do canal DotNet na veia  -->
     <script src="~/js/bootbox.min.js"></script>
     <script src="~/js/drag-n-drop.js"></script>
+    <script src="~/js/all.min.js"></script>
+    <script src="~/js/fontawesome.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

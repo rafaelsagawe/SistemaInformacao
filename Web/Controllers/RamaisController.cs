@@ -65,7 +65,7 @@ namespace Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("idRamal,MACAddress,IP,Linha,localizacao")] Ramal ramal)
+        public async Task<IActionResult> Create([Bind("idRamal,MACAddress,IP,Linha,localizacao,IdLinha")] Ramal ramal)
         {
             if (ModelState.IsValid)
             {
@@ -91,6 +91,9 @@ namespace Web.Controllers
             {
                 return NotFound();
             }
+
+            PopularLinhasCmbBx(ramal.Linhas);
+
             return View(ramal);
         }
 

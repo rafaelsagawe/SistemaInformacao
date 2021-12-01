@@ -16,7 +16,7 @@ namespace Web.Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.10")
+                .HasAnnotation("ProductVersion", "5.0.12")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("ControleAtivosTI.Models.Portifolio", b =>
@@ -426,6 +426,34 @@ namespace Web.Data.Migrations
                     b.HasKey("IdSupImp");
 
                     b.ToTable("SupImp");
+                });
+
+            modelBuilder.Entity("Web.Models.Tarefa", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("concluido")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("dataAlteracao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("dataCriacao")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("titulo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("usuario")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Tarefa");
                 });
 
             modelBuilder.Entity("Web.Models.Unidades", b =>

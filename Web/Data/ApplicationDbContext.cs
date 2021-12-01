@@ -22,5 +22,6 @@ namespace Web.Data
         public DbSet<Web.Models.Ramal> Ramal { get; set; }
         public DbSet<Web.Models.Camera> Camera { get; set; }
         public DbSet<Web.Models.Setor> Setor { get; set; }
+        public DbSet<Web.Models.Tarefa> Tarefa { get; set; }
     }
 }

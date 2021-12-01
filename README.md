@@ -45,3 +45,7 @@ source ~/.bashrc
 
 sqlcmd -S localhost -U SA -P '----------'
 ~~~~
+
+
+# Icones nos botões
+https://fontawesome.com/v5.15/how-to-use/on-the-web/setup/hosting-font-awesome-yourself
