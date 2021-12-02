@@ -26,10 +26,14 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
+    <!-- Alteração das tarefas realizadas-->
+
+
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.titulo)
             </td>
+
             <td>
                 @Html.DisplayFor(modelItem => item.concluido)
             </td>

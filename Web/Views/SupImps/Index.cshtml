@@ -32,7 +32,7 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
+            <tr >
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.IdSupImp">
                         @Html.DisplayFor(modelItem => item.ModeloToner)
@@ -44,8 +44,18 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.QtdToner)
                 </td>
-
-                <td>
+                @{ 
+                    var NivelEstoque = "text-white bg-success"; // Variavel NivelEstoque verde 
+                    if (item.QtdToner < item.QtdImpressoas)     // se tiver mais toners que impressoas
+                    {
+                        NivelEstoque = "text-white bg-danger";  // Se não vermelho estoque baixo
+                    }
+                    else if (item.Estoque.Equals(0)) // Mas ser estoque estiver no limite de dois  
+                    {
+                        NivelEstoque = "bg-warning"; // Fica amarelo
+                    }
+                }
+                <td class="@NivelEstoque">
                     @Html.DisplayFor(modelItem => item.Estoque)
                 </td>
 
