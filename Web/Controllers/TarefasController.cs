@@ -142,36 +142,24 @@ namespace Web.Controllers
             return View(tarefa);
         }
 
-        // GET: Tarefas/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var tarefa = await _context.Tarefa
-                .FirstOrDefaultAsync(m => m.id == id);
-            if (tarefa == null)
-                if (tarefa.usuario != User.Identity.Name || User.Identity.Name == "admin@admin.com")
-                {
-                return NotFound();
-            }
-
-            return View(tarefa);
-        }
-
-        // POST: Tarefas/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+ // Parametros para deletar tarefa com auxilio do modal
+        public async Task<IActionResult> Deletar(int id)
         {
             var tarefa = await _context.Tarefa.FindAsync(id);
             _context.Tarefa.Remove(tarefa);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("index");
         }
-
+        /* Criar um btn na tela de index para marcar como comcluido
+        [HttpPost]
+        public async Task<IActionResult> Conformar(int id, bool concluido)
+        {
+            var tarefa = await _context.Tarefa.FindAsync(id);
+            _context.Tarefa.Update(tarefa.concluido = "0" );
+            await _context.SaveChangesAsync();
+            return RedirectToAction("index");
+        }
+        */
         private bool TarefaExists(int id)
         {
             return _context.Tarefa.Any(e => e.id == id);

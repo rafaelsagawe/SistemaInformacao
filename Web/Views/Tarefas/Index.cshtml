@@ -39,17 +39,16 @@
             <td class="btn btn-group">
                 <a asp-action="Edit" asp-route-id="@item.id" class="btn btn-outline-warning"><i class="fa fa-edit"></i></a>
                 <a asp-action="Details" asp-route-id="@item.id" class="btn btn-outline-primary"><i class="fa fa-search"></i></a>
-                
 
-                <!-- Modals-->                
-                <!-- Modal Excluir  inicio ===================================== 
-                    Para funcionar de forma correta e necessario criar as model com os id's  das tarefas 
-                    -->
 
+                <!-- Modals-->
+                <!-- Modal Excluir  inicio =====================================
+    Para funcionar de forma correta e necessario criar as model com os id's  das tarefas
+    -->
                 <!-- Button trigger modal -->
 
                 <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#DeleteModal-@item.id">
-                    <i class="fa fa-trash"></i>Excluir Modal
+                    <i class="fa fa-trash"></i>
                 </button>
 
                 <!-- Modals -->
@@ -66,7 +65,7 @@
                                 @item.titulo?
                             </div>
                             <div class="modal-footer align-items-center">
-                                <a asp-action="Delete" asp-route-id="@item.id" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>
+                                <a asp-action="Deletar" asp-route-id="@item.id" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>
 
                                 <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Não</button>
                             </div>
@@ -75,6 +74,8 @@
                 </div>
                 <!-- Modal Excluir  Final ===================================== -->
 
+
+                <!-- <a asp-action="Conformar" asp-route-id="@item.id" class="btn btn-outline-warning"><i class="fa fa-check"></i></a> -->
 
             </td>
         </tr>

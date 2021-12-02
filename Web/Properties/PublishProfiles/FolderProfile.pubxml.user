@@ -9,7 +9,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
   </PropertyGroup>
   <ItemGroup>
     <File Include="Controllers/EquipamentosController.cs">
-      <publishTime>08/03/2021 13:32:34</publishTime>
+      <publishTime>03/08/2021 13:32:34</publishTime>
     </File>
     <File Include="Controllers/HomeController.cs">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -21,7 +21,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Controllers/UnidadesController.cs">
-      <publishTime>08/03/2021 13:33:44</publishTime>
+      <publishTime>03/08/2021 13:33:44</publishTime>
+    </File>
+    <File Include="Views/Tarefas/Index.cshtml">
+      <publishTime>12/02/2021 10:31:10</publishTime>
     </File>
   </ItemGroup>
 </Project>
