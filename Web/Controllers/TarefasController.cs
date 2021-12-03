@@ -14,6 +14,8 @@ using Microsoft.AspNetCore.Authorization;
  * 2º ao criar tarefa o nome do usuário deve ser salva no banco automaticamente;
  * 3º As tarefas pertence apenas ao usuário que a criou e não podendo ser visualizada pelos outros usuários;
  * 4º O campo data de criação não pode ser alterado pela edição;
+ * 5º Botão de excluir deve abrir uma model;
+  6º Na model o valor de concluido deve ser (Compluido ou Em andamento)
  */
 
 namespace Web.Controllers

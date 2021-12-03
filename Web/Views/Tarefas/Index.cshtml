@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<Web.Models.Tarefa>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Tarefas";
 }
 
 <h1 class="text-center">Minhas tarefas</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-outline-success"> <i class="fa fa-plus-circle"></i> Adicionar tarefa</a>
+    <a asp-action="Create" class="btn btn-outline-primary"> <i class="fa fa-plus-circle"></i> Adicionar tarefa</a>
 </p>
 <table class="table table-striped">
     <thead>
@@ -41,8 +41,8 @@
                 @Html.DisplayFor(modelItem => item.dataCriacao)
             </td>
             <td class="btn btn-group">
+                <a asp-action="Details" asp-route-id="@item.id" class="btn btn-outline-info"><i class="fa fa-search"></i></a>
                 <a asp-action="Edit" asp-route-id="@item.id" class="btn btn-outline-warning"><i class="fa fa-edit"></i></a>
-                <a asp-action="Details" asp-route-id="@item.id" class="btn btn-outline-primary"><i class="fa fa-search"></i></a>
 
 
                 <!-- Modals-->
@@ -66,19 +66,29 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                @item.titulo?
+                                <p>
+                                    @item.titulo
+                                </p>
+                                <p>
+                                    @item.dataCriacao
+                                </p>
+                                <p>
+                                    @item.dataAlteracao
+                                </p>
+                                @item.concluido
                             </div>
-                            <div class="modal-footer align-items-center">
-                                <a asp-action="Deletar" asp-route-id="@item.id" class="btn btn-outline-danger"><i class="fa fa-trash"></i></a>
 
-                                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Não</button>
+                            <div class="modal-footer align-items-center">
+                                <a asp-action="Deletar" asp-route-id="@item.id" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+
+                                <button type="button" class="btn btn-success" data-dismiss="modal">Manter</button>
+
+
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Modal Excluir  Final ===================================== -->
-
-
                 <!-- <a asp-action="Conformar" asp-route-id="@item.id" class="btn btn-outline-warning"><i class="fa fa-check"></i></a> -->
 
             </td>
