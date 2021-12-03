@@ -29,8 +29,9 @@ namespace Web.Controllers
             var unidadeQuery = from u in _context.Unidades
                                orderby u.NomeUE
                                select u;
-            ViewBag.IdUE = new SelectList(unidadeQuery.AsNoTracking(), "IdUE", "NomeUE", selecaoUnidade);
+            ViewBag.NomeUE = new SelectList(unidadeQuery.AsNoTracking(), "NomeUE" , "NomeUE", selecaoUnidade);
         }
+
        
         // GET: Equipamentos
         public async Task<IActionResult> Index(int? id)
@@ -70,7 +71,7 @@ namespace Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdEquipamento,EquipDescricao,EquipNuSerie,EquipNuControle,EquipTipo,EquipOrigem,EquipValor,IdUE")] Equipamentos equipamentos)
+        public async Task<IActionResult> Create([Bind("IdEquipamento,EquipDescricao,EquipNuSerie,EquipNuControle,EquipTipo,EquipOrigem,EquipValor,NomeUE")] Equipamentos equipamentos)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +80,7 @@ namespace Web.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            PopularUnidadeCmbBx(equipamentos.IdUE);// Local onde será aplica os valores obtidos
+            PopularUnidadeCmbBx(equipamentos.NomeUE);// Local onde será aplica os valores obtidos
 
             return View(equipamentos);
         }

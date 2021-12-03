@@ -2646,9 +2646,6 @@ C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Cameras\Edit.cshtml.g.cs
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Cameras\Index.cshtml.g.cs
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Equipamentos\Create.cshtml.g.cs
-C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Equipamentos\Delete.cshtml.g.cs
-C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Equipamentos\Details.cshtml.g.cs
-C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Equipamentos\Edit.cshtml.g.cs
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Equipamentos\Index.cshtml.g.cs
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Razor\Views\Home\Mapa.cshtml.g.cs
@@ -2696,4 +2693,3 @@ C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\ref\Web.dll
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Web.pdb
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Web.genruntimeconfig.cache
-C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\Web.csproj.AssemblyReference.cache

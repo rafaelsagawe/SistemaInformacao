@@ -36,6 +36,9 @@ namespace Web.Models
         [Display(Name ="Unidade de locação")]
         public int IdUE { get; set; }
 
+        [Display(Name = "Unidade de locação - NOME TESTE")]
+        public string NomeUE { get; set; }
+
         //public string EquipLocalizacao { get; set; }
         public ICollection<Unidades> Unidades { get; set; }
     }
