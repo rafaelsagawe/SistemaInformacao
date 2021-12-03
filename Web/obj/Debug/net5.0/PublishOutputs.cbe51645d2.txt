@@ -1,9 +1,13 @@
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\PubTmp\Out\Web.exe
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\PubTmp\Out\wwwroot\css\all.min.css
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\PubTmp\Out\wwwroot\css\fontawesome.min.css
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\PubTmp\Out\wwwroot\css\site.css
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\PubTmp\Out\wwwroot\favicon.ico
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\PubTmp\Out\wwwroot\js\all.min.js
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\PubTmp\Out\wwwroot\js\bootbox.js
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\PubTmp\Out\wwwroot\js\bootbox.min.js
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\PubTmp\Out\wwwroot\js\drag-n-drop.js
+C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\PubTmp\Out\wwwroot\js\fontawesome.min.js
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\PubTmp\Out\wwwroot\js\site.js
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Users\rafael.sagawe\source\repos\rafaelsagawe\SistemaInformacao\Web\obj\Debug\net5.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
