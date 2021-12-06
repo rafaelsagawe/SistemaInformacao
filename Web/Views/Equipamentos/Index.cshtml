@@ -6,6 +6,9 @@
 
 <h1 class="text-center">Listagem de Equipamentos</h1>
 
+<p class="float-left">
+    <a asp-action="Create" class="btn btn-outline-primary"><i class="fa fa-plus-circle"></i>Novo Equipamento</a>
+</p>
 
 <table id="myTable" class="table table-striped">
     <thead>
@@ -46,7 +49,6 @@
                 @Html.DisplayFor(modelItem => item.EquipOrigem)
             </td>
 
-
             <td>
                 <div class="btn-group">
                     <a asp-action="Edit" asp-route-id="@item.IdEquipamento" class="btn btn-outline-primary">Edit</a>
@@ -60,9 +62,7 @@
     </tbody>
 </table>
 <br/>
-<p class="float-right">
-    <a asp-action="Create" class="btn btn-success">Novo Equipamento</a>
-</p>
+
 
 @section Scripts
 {

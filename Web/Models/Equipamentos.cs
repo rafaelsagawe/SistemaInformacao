@@ -15,7 +15,7 @@ namespace Web.Models
         public string EquipDescricao {
             get
             { 
-                return string.Concat(NomeUE + " " + EquipTipo);
+                return string.Concat(NomeUE + " - " + EquipTipo); // Retorna concatenação do Nome da Unidade com o tipoo 
             }
         }
     
@@ -34,6 +34,7 @@ namespace Web.Models
         public string EquipTipo { get; set; }
 
         //Alugado ou proprio
+        [Display(Name = "Origem")]
         public string EquipOrigem { get; set; }
 
         [Display(Name = "Valor do equipamento")]

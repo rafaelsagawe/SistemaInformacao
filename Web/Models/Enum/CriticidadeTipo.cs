@@ -21,5 +21,12 @@ namespace Web.Models.Enum
             [Display(Name = "Baixa")]
             Baixa
         }
-    }
+
+        public enum EquipTipo
+        {
+            [Display(Name = "Impressora")] Impressora,
+            [Display(Name = "Notebook")] Notebook,
+            [Display(Name = "Computador")] Computador
+        }
+}
 
