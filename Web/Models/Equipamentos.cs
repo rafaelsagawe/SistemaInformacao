@@ -12,7 +12,13 @@ namespace Web.Models
         public int IdEquipamento { get; set; }
 
         [Display(Name ="Descrição")]
-        public string EquipDescricao { get; set; }
+        public string EquipDescricao {
+            get
+            { 
+                return string.Concat(NomeUE + " " + EquipTipo);
+            }
+        }
+    
 
         [Display(Name ="Numero de Serie")]
         public string EquipNuSerie { get; set; }
@@ -36,7 +42,7 @@ namespace Web.Models
         [Display(Name ="Unidade de locação")]
         public int IdUE { get; set; }
 
-        [Display(Name = "Unidade de locação - NOME TESTE")]
+        [Display(Name = "Unidade de locação")]
         public string NomeUE { get; set; }
 
         //public string EquipLocalizacao { get; set; }
@@ -47,9 +53,7 @@ namespace Web.Models
     {
         [Key]
         public int IdCamera { get; set; }
-
         public string MAC { get; set; }
-
         public string IP { get; set; }
         public string Modelo { get; set; }
         public string Local { get; set; }

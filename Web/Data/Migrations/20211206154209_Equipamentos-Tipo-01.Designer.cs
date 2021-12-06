@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Web.Data;
 
 namespace Web.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211206154209_Equipamentos-Tipo-01")]
+    partial class EquipamentosTipo01
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -343,33 +345,6 @@ namespace Web.Data.Migrations
                     b.HasKey("IdEquipamento");
 
                     b.ToTable("Equipamentos");
-                });
-
-            modelBuilder.Entity("Web.Models.EquipamentosV2", b =>
-                {
-                    b.Property<int>("IdEquipamento")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("EquipDescricao")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EquipNuControle")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("EquipNuSerie")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("EquipValor")
-                        .HasColumnType("int");
-
-                    b.Property<string>("NomeUE")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("IdEquipamento");
-
-                    b.ToTable("EquipamentosV2");
                 });
 
             modelBuilder.Entity("Web.Models.Linha", b =>

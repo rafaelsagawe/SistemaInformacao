@@ -8,23 +8,179 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <History>True|2021-12-03T17:54:23.3624063Z;True|2021-12-03T09:21:06.2962729-03:00;False|2021-12-03T09:18:31.1271217-03:00;True|2021-10-07T10:33:46.2466939-03:00;False|2021-10-07T09:33:47.1442086-03:00;True|2021-10-07T09:17:57.2168466-03:00;False|2021-10-07T09:16:27.9989989-03:00;True|2021-10-04T14:58:09.1384776-03:00;False|2021-10-04T14:44:31.4859873-03:00;True|2021-10-04T14:37:45.6494609-03:00;False|2021-10-04T14:27:39.2336839-03:00;False|2021-09-29T14:17:41.8777846-03:00;False|2021-09-29T13:11:21.6708779-03:00;True|2021-09-06T21:26:56.6026555-03:00;True|2021-09-06T19:51:40.1360239-03:00;True|2021-09-06T19:46:50.7635078-03:00;True|2021-06-29T11:51:35.7353705-03:00;False|2021-06-29T11:49:51.0590124-03:00;True|2021-06-29T10:32:09.0264135-03:00;True|2021-06-28T18:27:33.2402693-03:00;True|2021-06-28T18:25:44.7682976-03:00;</History>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="Controllers/CamerasController.cs">
+      <publishTime>10/06/2021 12:01:50</publishTime>
+    </File>
     <File Include="Controllers/EquipamentosController.cs">
-      <publishTime>03/08/2021 13:32:34</publishTime>
+      <publishTime>12/06/2021 13:14:58</publishTime>
     </File>
     <File Include="Controllers/HomeController.cs">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>09/22/2021 10:58:17</publishTime>
+    </File>
+    <File Include="Controllers/LinhasController.cs">
+      <publishTime>10/05/2021 20:55:20</publishTime>
     </File>
     <File Include="Controllers/PortifoliosController.cs">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>09/28/2021 12:05:09</publishTime>
+    </File>
+    <File Include="Controllers/RamaisController.cs">
+      <publishTime>10/07/2021 12:41:58</publishTime>
+    </File>
+    <File Include="Controllers/SetorsController.cs">
+      <publishTime>10/06/2021 12:28:40</publishTime>
     </File>
     <File Include="Controllers/SupImpsController.cs">
-      <publishTime>01/01/0001 00:00:00</publishTime>
+      <publishTime>09/28/2021 12:05:09</publishTime>
+    </File>
+    <File Include="Controllers/TarefasController.cs">
+      <publishTime>12/06/2021 11:59:51</publishTime>
     </File>
     <File Include="Controllers/UnidadesController.cs">
-      <publishTime>03/08/2021 13:33:44</publishTime>
+      <publishTime>09/28/2021 12:09:55</publishTime>
+    </File>
+    <File Include="Views/Cameras/Create.cshtml">
+      <publishTime>10/06/2021 12:01:50</publishTime>
+    </File>
+    <File Include="Views/Cameras/Delete.cshtml">
+      <publishTime>10/06/2021 12:01:51</publishTime>
+    </File>
+    <File Include="Views/Cameras/Details.cshtml">
+      <publishTime>10/06/2021 12:01:51</publishTime>
+    </File>
+    <File Include="Views/Cameras/Edit.cshtml">
+      <publishTime>10/06/2021 12:01:50</publishTime>
+    </File>
+    <File Include="Views/Cameras/Index.cshtml">
+      <publishTime>10/06/2021 12:01:51</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>09/22/2021 10:58:17</publishTime>
+    </File>
+    <File Include="Views/Home/Mapa.cshtml">
+      <publishTime>09/22/2021 10:58:17</publishTime>
+    </File>
+    <File Include="Views/Home/Privacy.cshtml">
+      <publishTime>09/22/2021 10:58:17</publishTime>
+    </File>
+    <File Include="Views/Linhas/Create.cshtml">
+      <publishTime>10/05/2021 20:55:20</publishTime>
+    </File>
+    <File Include="Views/Linhas/Delete.cshtml">
+      <publishTime>10/05/2021 20:55:20</publishTime>
+    </File>
+    <File Include="Views/Linhas/Details.cshtml">
+      <publishTime>10/05/2021 20:55:20</publishTime>
+    </File>
+    <File Include="Views/Linhas/Edit.cshtml">
+      <publishTime>10/05/2021 20:55:20</publishTime>
+    </File>
+    <File Include="Views/Linhas/Index.cshtml">
+      <publishTime>10/05/2021 20:55:20</publishTime>
+    </File>
+    <File Include="Views/Portifolios/Create.cshtml">
+      <publishTime>09/22/2021 10:58:17</publishTime>
+    </File>
+    <File Include="Views/Portifolios/Delete.cshtml">
+      <publishTime>09/22/2021 10:58:17</publishTime>
+    </File>
+    <File Include="Views/Portifolios/Details.cshtml">
+      <publishTime>09/22/2021 15:50:09</publishTime>
+    </File>
+    <File Include="Views/Portifolios/Edit.cshtml">
+      <publishTime>09/22/2021 13:14:17</publishTime>
+    </File>
+    <File Include="Views/Portifolios/Index.cshtml">
+      <publishTime>10/07/2021 14:07:46</publishTime>
+    </File>
+    <File Include="Views/Ramais/Create.cshtml">
+      <publishTime>10/06/2021 11:54:31</publishTime>
+    </File>
+    <File Include="Views/Ramais/Delete.cshtml">
+      <publishTime>10/06/2021 10:09:35</publishTime>
+    </File>
+    <File Include="Views/Ramais/Details.cshtml">
+      <publishTime>10/06/2021 10:09:35</publishTime>
+    </File>
+    <File Include="Views/Ramais/Edit.cshtml">
+      <publishTime>10/07/2021 12:40:46</publishTime>
+    </File>
+    <File Include="Views/Ramais/Index.cshtml">
+      <publishTime>10/07/2021 12:44:36</publishTime>
+    </File>
+    <File Include="Views/Setors/Create.cshtml">
+      <publishTime>10/06/2021 12:28:40</publishTime>
+    </File>
+    <File Include="Views/Setors/Delete.cshtml">
+      <publishTime>10/06/2021 12:28:40</publishTime>
+    </File>
+    <File Include="Views/Setors/Details.cshtml">
+      <publishTime>10/06/2021 12:28:40</publishTime>
+    </File>
+    <File Include="Views/Setors/Edit.cshtml">
+      <publishTime>10/06/2021 12:28:40</publishTime>
+    </File>
+    <File Include="Views/Setors/Index.cshtml">
+      <publishTime>10/06/2021 12:28:40</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>09/22/2021 10:58:17</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>12/01/2021 15:31:21</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>09/22/2021 10:58:17</publishTime>
+    </File>
+    <File Include="Views/Shared/_ValidationScriptsPartial.cshtml">
+      <publishTime>09/22/2021 10:58:17</publishTime>
+    </File>
+    <File Include="Views/SupImps/Create.cshtml">
+      <publishTime>09/22/2021 10:58:17</publishTime>
+    </File>
+    <File Include="Views/SupImps/Delete.cshtml">
+      <publishTime>09/22/2021 10:58:17</publishTime>
+    </File>
+    <File Include="Views/SupImps/Details.cshtml">
+      <publishTime>09/22/2021 10:58:17</publishTime>
+    </File>
+    <File Include="Views/SupImps/Edit.cshtml">
+      <publishTime>09/22/2021 10:58:17</publishTime>
+    </File>
+    <File Include="Views/SupImps/Index.cshtml">
+      <publishTime>12/02/2021 16:56:45</publishTime>
+    </File>
+    <File Include="Views/Tarefas/Create.cshtml">
+      <publishTime>12/01/2021 10:13:09</publishTime>
+    </File>
+    <File Include="Views/Tarefas/Details.cshtml">
+      <publishTime>12/01/2021 13:44:22</publishTime>
+    </File>
+    <File Include="Views/Tarefas/Edit.cshtml">
+      <publishTime>12/06/2021 11:48:30</publishTime>
     </File>
     <File Include="Views/Tarefas/Index.cshtml">
-      <publishTime>12/02/2021 10:31:10</publishTime>
+      <publishTime>12/06/2021 12:04:32</publishTime>
+    </File>
+    <File Include="Views/Unidades/Create.cshtml">
+      <publishTime>09/22/2021 10:58:17</publishTime>
+    </File>
+    <File Include="Views/Unidades/Delete.cshtml">
+      <publishTime>09/22/2021 10:58:17</publishTime>
+    </File>
+    <File Include="Views/Unidades/Details.cshtml">
+      <publishTime>10/05/2021 14:08:36</publishTime>
+    </File>
+    <File Include="Views/Unidades/Edit.cshtml">
+      <publishTime>09/22/2021 10:58:17</publishTime>
+    </File>
+    <File Include="Views/Unidades/Index.cshtml">
+      <publishTime>10/05/2021 14:23:10</publishTime>
+    </File>
+    <File Include="Views/_ViewImports.cshtml">
+      <publishTime>09/22/2021 10:58:17</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>09/22/2021 10:58:17</publishTime>
     </File>
   </ItemGroup>
 </Project>
