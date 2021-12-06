@@ -37,7 +37,9 @@ namespace ControleAtivosTI.Models
         Media, 
 
         [Display(Name = "Baixa")]
-        Baixa
+        Baixa,
+                    [Display(Name = "Teste")]
+        teste
     }
     public class Portifolio
     {

@@ -19,7 +19,7 @@ namespace Web.Models
             }
         }
     
-
+        // Identificadores de registro do equipamento
         [Display(Name ="Numero de Serie")]
         public string EquipNuSerie { get; set; }
 

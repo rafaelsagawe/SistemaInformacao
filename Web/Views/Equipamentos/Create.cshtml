@@ -4,55 +4,72 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Adicionar novo equipamento</h1>
 
-<h4>Equipamentos</h4>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            <div class="form-group">
-                <label asp-for="EquipNuSerie" class="control-label"></label>
-                <input asp-for="EquipNuSerie" class="form-control" />
-                <span asp-validation-for="EquipNuSerie" class="text-danger"></span>
+            <div class="card">
+                <div class="card-header text-center">
+                    Registros
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label asp-for="EquipNuSerie" class="control-label"></label>
+                        <input asp-for="EquipNuSerie" class="form-control" />
+                        <span asp-validation-for="EquipNuSerie" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="EquipNuControle" class="control-label"></label>
+                        <input asp-for="EquipNuControle" class="form-control" />
+                        <span asp-validation-for="EquipNuControle" class="text-danger"></span>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="EquipNuControle" class="control-label"></label>
-                <input asp-for="EquipNuControle" class="form-control" />
-                <span asp-validation-for="EquipNuControle" class="text-danger"></span>
+            <br />
+
+            <div class="card">
+                <div class="card-header">Infromações adcionais</div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label asp-for="EquipTipo" class="control-label"></label>
+                        <input asp-for="EquipTipo" class="form-control" />
+                        <span asp-validation-for="EquipTipo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EquipOrigem" class="control-label"></label>
+                        <input asp-for="EquipOrigem" class="form-control" />
+                        <span asp-validation-for="EquipOrigem" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EquipValor" class="control-label"></label>
+                        <input asp-for="EquipValor" class="form-control" />
+                        <span asp-validation-for="EquipValor" class="text-danger"></span>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="EquipTipo" class="control-label"></label>
-                <input asp-for="EquipTipo" class="form-control" />
-                <span asp-validation-for="EquipTipo" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="EquipOrigem" class="control-label"></label>
-                <input asp-for="EquipOrigem" class="form-control" />
-                <span asp-validation-for="EquipOrigem" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="EquipValor" class="control-label"></label>
-                <input asp-for="EquipValor" class="form-control" />
-                <span asp-validation-for="EquipValor" class="text-danger"></span>
-            </div>
-            <!--
-            <div class="form-group">
-                <label asp-for="IdUE" class="control-label"></label>
-                <input asp-for="IdUE" class="form-control" />
-                <span asp-validation-for="IdUE" class="text-danger"></span>
-            </div>
-            -->
+            <br/>
             <!--Combo box com as unidades escolares-->
-            <div class="form-group">
-                <label asp-for="NomeUE" class="control-label"></label>
-                <select id="equipamentos" asp-for="NomeUE" class="form-control" asp-items="ViewBag.NomeUE">
-                    <option value=""> -- Selação Unidade --</option>
-                </select>
-                <span asp-validation-for="NomeUE" class="text-danger" />
+            <div class="card">
+                <div class="card-header"> Localização</div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label asp-for="NomeUE" class="control-label"></label>
+                        <select id="equipamentos" asp-for="NomeUE" class="form-control" asp-items="ViewBag.NomeUE">
+                            <option value=""> -- Selação Unidade --</option>
+                        </select>
+                        <span asp-validation-for="NomeUE" class="text-danger" />
+                    </div>
+                </div>
             </div>
+
+
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
