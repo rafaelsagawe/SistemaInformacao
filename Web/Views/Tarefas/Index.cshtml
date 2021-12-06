@@ -7,7 +7,7 @@
 <h1 class="text-center">Minhas tarefas</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-outline-primary"> <i class="fa fa-plus-circle"></i> Adicionar tarefa</a>
+    <a asp-action="Create" class="btn btn-outline-primary"> <i class="fa fa-plus-circle"></i>Adicionar tarefa</a>
 </p>
 <table class="table table-striped">
     <thead>
@@ -15,44 +15,48 @@
             <th>
                 @Html.DisplayNameFor(model => model.titulo)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.concluido)
-            </th>
+
             <th>
                 @Html.DisplayNameFor(model => model.dataCriacao)
             </th>
             <th></th>
         </tr>
     </thead>
+
     <tbody>
-@foreach (var item in Model) {
-    <!-- Alteração das tarefas realizadas-->
+        @foreach (var item in Model)
+        {
 
+            <!-- Alteração das tarefas realizadas-->              
 
-        <tr>
-            <td>
+        <tr >
+            @{
+                var Status = "text-white bg-danger"; // Variavel NivelEstoque verde
+                if (item.concluido == true)     // se tiver mais toners que impressoas
+                {
+                    Status = "text-white bg-success";  // Se não vermelho estoque baixo
+                }
+            }
+            <td class="@Status">
                 @Html.DisplayFor(modelItem => item.titulo)
             </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.concluido)
-            </td>
-            <td>
+            <td class="@Status">
                 @Html.DisplayFor(modelItem => item.dataCriacao)
             </td>
             <td class="btn btn-group">
-                <a asp-action="Details" asp-route-id="@item.id" class="btn btn-outline-info"><i class="fa fa-search"></i></a>
-                <a asp-action="Edit" asp-route-id="@item.id" class="btn btn-outline-warning"><i class="fa fa-edit"></i></a>
+
+                <a asp-action="Details" asp-route-id="@item.id" class="btn btn-outline-info" data-toggle="tooltip" title="Detalhes"><i class="fa fa-search"></i></a>
+                <a asp-action="Edit" asp-route-id="@item.id" class="btn btn-outline-warning" data-toggle="tooltip" title="Editar"><i class="fa fa-edit"></i></a>
 
 
-                <!-- Modals-->
+                <!-- Modal's-->
                 <!-- Modal Excluir  inicio =====================================
-    Para funcionar de forma correta e necessario criar as model com os id's  das tarefas
-    -->
+        Para funcionar de forma correta e necessario criar as model com os id's  das tarefas -->
                 <!-- Button trigger modal -->
 
                 <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#DeleteModal-@item.id">
-                    <i class="fa fa-trash"></i>
+                    <i class="fa fa-trash" data-toggle="tooltip" title="Excluir"></i>
                 </button>
 
                 <!-- Modals -->
@@ -75,29 +79,30 @@
                                 <p>
                                     @item.dataAlteracao
                                 </p>
-                                @item.concluido
+                                <p>
+                                    @item.concluido
+                                </p>
                             </div>
 
-                            <div class="modal-footer align-items-center">
+                            <div class="modal-footer align-items-lg-center btn btn-group">
                                 <a asp-action="Deletar" asp-route-id="@item.id" class="btn btn-danger"><i class="fa fa-trash"></i></a>
 
-                                <button type="button" class="btn btn-success" data-dismiss="modal">Manter</button>
-
-
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Manter</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Modal Excluir  Final ===================================== -->
-                <!-- <a asp-action="Conformar" asp-route-id="@item.id" class="btn btn-outline-warning"><i class="fa fa-check"></i></a> -->
-
             </td>
         </tr>
-
-
-
-
-
-}
+        }
     </tbody>
 </table>
+
+@section Scripts {
+    <script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+    </script>
+}

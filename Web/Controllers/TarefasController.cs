@@ -15,7 +15,7 @@ using Microsoft.AspNetCore.Authorization;
  * 3º As tarefas pertence apenas ao usuário que a criou e não podendo ser visualizada pelos outros usuários;
  * 4º O campo data de criação não pode ser alterado pela edição;
  * 5º Botão de excluir deve abrir uma model;
-  6º Na model o valor de concluido deve ser (Compluido ou Em andamento)
+  6º Na model o valor de concluido deve ser (Concluido ou Em andamento)
  */
 
 namespace Web.Controllers
@@ -121,7 +121,6 @@ namespace Web.Controllers
             {
                 try
                 {
-                    
                     tarefa.dataAlteracao = DateTime.Now;
                     tarefa.usuario = User.Identity.Name;
                     _context.Update(tarefa);
@@ -144,7 +143,15 @@ namespace Web.Controllers
             return View(tarefa);
         }
 
- // Parametros para deletar tarefa com auxilio do modal
+        // Parametros para alterar deletar tarefa com auxilio do modal
+
+        public async Task<IActionResult> Alterar(int id)
+        {
+            var tarefa = await _context.Tarefa.FindAsync(id);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("index");
+        }
+
         public async Task<IActionResult> Deletar(int id)
         {
             var tarefa = await _context.Tarefa.FindAsync(id);
@@ -152,12 +159,13 @@ namespace Web.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction("index");
         }
-        /* Criar um btn na tela de index para marcar como comcluido
+        // Criar um btn na tela de index para marcar como concluido
+        /*
         [HttpPost]
         public async Task<IActionResult> Conformar(int id, bool concluido)
         {
             var tarefa = await _context.Tarefa.FindAsync(id);
-            _context.Tarefa.Update(tarefa.concluido = "0" );
+            _context.Tarefa.Update(tarefa.concluido == 0);
             await _context.SaveChangesAsync();
             return RedirectToAction("index");
         }
